@@ -1,6 +1,6 @@
 use std::{
     fmt::Display,
-    fs::{self, DirEntry},
+    fs::{self, DirEntry, ReadDir},
 };
 
 #[derive(Debug)]
@@ -46,6 +46,24 @@ impl ListFiles {
         }
 
         Ok(paths_vector)
+    }
+}
+
+trait FSReadDir {
+    fn read_dir(path: &str) -> Result<ReadDir, std::io::Error>;
+}
+
+struct RealFSReadDir {}
+impl FSReadDir for RealFSReadDir {
+    fn read_dir(path: &str) -> Result<ReadDir, std::io::Error> {
+        return fs::read_dir(path)
+    }
+}
+
+struct StubbedReadDir {}
+impl FSReadDir for StubbedReadDir {
+    fn read_dir(path: &str) -> Result<ReadDir, std::io::Error> {
+        return Ok(ReadDir {})
     }
 }
 
