@@ -36,11 +36,11 @@ impl ListFiles {
         let paths = fs::read_dir(dir)?;
         let mut paths_vector: Vec<String> = vec![];
 
-        let mut dir_entry: DirEntry;
+        let mut dir_entry: RealFSDirEntry;
         for path_result in paths {
-            dir_entry = path_result?;
+            dir_entry = RealFSDirEntry::new(path_result?);
 
-            if let Some(str_path) = dir_entry.path().to_str() {
+            if let Some(str_path) = dir_entry.str_path() {
                 paths_vector.push(str_path.to_owned());
             }
         }
@@ -49,25 +49,51 @@ impl ListFiles {
     }
 }
 
-trait FSReadDir {
+trait FSDirEntry {
+    fn str_path(&self) -> Option<&str>;
+}
+
+struct RealFSDirEntry {
+    dir_entry: DirEntry,
+}
+impl RealFSDirEntry {
+    pub fn new(dir_entry: DirEntry) -> Self {
+        Self { dir_entry }
+    }
+}
+impl FSDirEntry for RealFSDirEntry {
+    fn str_path(&self) -> Option<&str> {
+        self.dir_entry.path().to_str()
+    }
+}
+
+trait FSReadDir: Iterator {}
+struct RealFSReadDir {}
+impl<T> FSReadDir for T
+where
+    T: Iterator,
+{
+    fn next(&mut self) -> Option<Box<dyn FSDirEntry>> {
+        todo!()
+    }
+}
+trait FS {
     fn read_dir(path: &str) -> Result<ReadDir, std::io::Error>;
 }
 
-struct RealFSReadDir {}
-impl FSReadDir for RealFSReadDir {
+struct RealFS {}
+impl FS for RealFS {
     fn read_dir(path: &str) -> Result<ReadDir, std::io::Error> {
-        return fs::read_dir(path)
+        return fs::read_dir(path);
     }
 }
 
-struct StubbedReadDir {}
-impl FSReadDir for StubbedReadDir {
+struct StubbedFS {}
+impl FS for StubbedFS {
     fn read_dir(path: &str) -> Result<ReadDir, std::io::Error> {
-        return Ok(ReadDir {})
+        return Ok();
     }
 }
-
-
 #[cfg(test)]
 mod tests {
     use super::*;
