@@ -1,8 +1,8 @@
 use std::{
     fmt::Display,
-    fs::{self, DirEntry, ReadDir},
+    fs::{self},
     io,
-    os::unix::fs::DirEntryExt2,
+    path::PathBuf,
 };
 
 #[derive(Debug)]
@@ -24,84 +24,65 @@ impl From<std::io::Error> for ListFilesError {
     }
 }
 
-pub struct ListFiles {}
+pub struct ListFiles {
+    list_files_wrapper: Box<dyn ListFilesWrapper>,
+}
 
 impl ListFiles {
     pub fn nullable() -> Self {
-        Self {}
+        Self {
+            list_files_wrapper: Box::new(StubbedListFiles {}),
+        }
     }
     pub fn new() -> Self {
-        Self {}
+        Self {
+            list_files_wrapper: Box::new(RealListFiles {}),
+        }
     }
 
-    pub fn list_files(&self, dir: &str) -> Result<Vec<&str>, ListFilesError> {
+    pub fn list_files(&self, dir: &str) -> Result<Vec<PathBuf>, ListFilesError> {
+        self.list_files_wrapper.list_files(dir)
+    }
+}
+impl Default for ListFiles {
+    fn default() -> Self {
+        Self::new()
+    }
+}
+
+trait ListFilesWrapper {
+    fn list_files(&self, dir: &str) -> Result<Vec<PathBuf>, ListFilesError>;
+}
+
+struct RealListFiles {}
+impl ListFilesWrapper for RealListFiles {
+    fn list_files(&self, dir: &str) -> Result<Vec<PathBuf>, ListFilesError> {
         Ok(fs::read_dir(dir)?
-            .collect::<Result<Vec<DirEntry>, io::Error>>()?
+            .collect::<Result<Vec<_>, io::Error>>()?
             .iter()
-            .map(|entry| entry.path().to_str())
-            .flatten()
-            .collect::<Vec<&str>>())
-
-
+            .map(|entry| entry.path())
+            .collect::<Vec<_>>())
     }
 }
 
-trait FSDirEntry {
-    fn str_path(&self) -> Option<&str>;
-}
-
-struct RealFSDirEntry {
-    dir_entry: DirEntry,
-}
-impl RealFSDirEntry {
-    pub fn new(dir_entry: DirEntry) -> Self {
-        Self { dir_entry }
-    }
-}
-impl FSDirEntry for RealFSDirEntry {
-    fn str_path(&self) -> Option<&str> {
-        self.dir_entry.path().to_str()
+struct StubbedListFiles {}
+impl ListFilesWrapper for StubbedListFiles {
+    fn list_files(&self, _dir: &str) -> Result<Vec<PathBuf>, ListFilesError> {
+        Ok(vec![])
     }
 }
 
-trait FSReadDir: Iterator {}
-struct RealFSReadDir {}
-impl FSReadDir for RealFSReadDir {}
-impl Iterator for RealFSReadDir {
-    type Item;
-
-    fn next(&mut self) -> Option<Self::Item> {
-        todo!()
-    }
-}
-
-trait FS {
-    fn read_dir(path: &str) -> Result<ReadDir, std::io::Error>;
-}
-
-struct RealFS {}
-impl FS for RealFS {
-    fn read_dir(path: &str) -> Result<ReadDir, std::io::Error> {
-        return fs::read_dir(path);
-    }
-}
-
-struct StubbedFS {}
-impl FS for StubbedFS {
-    fn read_dir(path: &str) -> Result<ReadDir, std::io::Error> {
-        return Ok();
-    }
-}
 #[cfg(test)]
 mod tests {
     use super::*;
 
     #[test]
     fn returns_vec_of_dir_contents() {
+        let path = PathBuf::new();
         let list_files = ListFiles::nullable();
 
         let result = list_files.list_files("./a/directory");
 
-        assert_eq!(result.unwrap(), vec![String::new()]);
+        assert_eq!(result.unwrap(), vec![path]);
     }
 }
