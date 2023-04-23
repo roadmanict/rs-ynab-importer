@@ -1,9 +1,4 @@
-use std::{
-    fmt::Display,
-    fs::{self},
-    io,
-    path::PathBuf,
-};
+use std::{fmt::Display, fs, io, path::PathBuf, cell::RefCell};
 
 #[derive(Debug)]
 pub enum ListFilesError {
@@ -29,9 +24,9 @@ pub struct ListFiles {
 }
 
 impl ListFiles {
-    pub fn nullable() -> Self {
+    pub fn nullable(stubbed_result: RefCell<Result<Vec<PathBuf>, ListFilesError>>) -> Self {
         Self {
-            list_files_wrapper: Box::new(StubbedListFiles {}),
+            list_files_wrapper: Box::new(StubbedListFiles::new(stubbed_result)),
         }
     }
     pub fn new() -> Self {
@@ -65,10 +60,17 @@ impl ListFilesWrapper for RealListFiles {
     }
 }
 
-struct StubbedListFiles {}
+struct StubbedListFiles {
+    stubbed_result: RefCell<Result<Vec<PathBuf>, ListFilesError>>,
+}
+impl StubbedListFiles {
+    fn new(stubbed_result: RefCell<Result<Vec<PathBuf>, ListFilesError>>) -> Self {
+        Self { stubbed_result }
+    }
+}
 impl ListFilesWrapper for StubbedListFiles {
     fn list_files(&self, _dir: &str) -> Result<Vec<PathBuf>, ListFilesError> {
-        Ok(vec![])
+        *self.stubbed_result.borrow()
     }
 }
 
@@ -78,11 +80,11 @@ mod tests {
 
     #[test]
     fn returns_vec_of_dir_contents() {
-        let path = PathBuf::new();
-        let list_files = ListFiles::nullable();
+        let paths = vec![PathBuf::new()];
+        let list_files = ListFiles::nullable(RefCell::new(Ok(paths.to_owned())));
 
         let result = list_files.list_files("./a/directory");
 
-        assert_eq!(result.unwrap(), vec![path]);
+        assert_eq!(result.unwrap(), paths);
     }
 }
