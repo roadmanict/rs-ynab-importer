@@ -1,6 +1,8 @@
 use std::{
     fmt::Display,
     fs::{self, DirEntry, ReadDir},
+    io,
+    os::unix::fs::DirEntryExt2,
 };
 
 #[derive(Debug)]
@@ -32,20 +34,15 @@ impl ListFiles {
         Self {}
     }
 
-    pub fn list_files(&self, dir: &str) -> Result<Vec<String>, ListFilesError> {
-        let paths = fs::read_dir(dir)?;
-        let mut paths_vector: Vec<String> = vec![];
+    pub fn list_files(&self, dir: &str) -> Result<Vec<&str>, ListFilesError> {
+        Ok(fs::read_dir(dir)?
+            .collect::<Result<Vec<DirEntry>, io::Error>>()?
+            .iter()
+            .map(|entry| entry.path().to_str())
+            .flatten()
+            .collect::<Vec<&str>>())
 
-        let mut dir_entry: RealFSDirEntry;
-        for path_result in paths {
-            dir_entry = RealFSDirEntry::new(path_result?);
 
-            if let Some(str_path) = dir_entry.str_path() {
-                paths_vector.push(str_path.to_owned());
-            }
-        }
-
-        Ok(paths_vector)
     }
 }
 
@@ -69,14 +66,15 @@ impl FSDirEntry for RealFSDirEntry {
 
 trait FSReadDir: Iterator {}
 struct RealFSReadDir {}
-impl<T> FSReadDir for T
-where
-    T: Iterator,
-{
-    fn next(&mut self) -> Option<Box<dyn FSDirEntry>> {
+impl FSReadDir for RealFSReadDir {}
+impl Iterator for RealFSReadDir {
+    type Item;
+
+    fn next(&mut self) -> Option<Self::Item> {
         todo!()
     }
 }
+
 trait FS {
     fn read_dir(path: &str) -> Result<ReadDir, std::io::Error>;
 }
