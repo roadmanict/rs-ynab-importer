@@ -1,9 +1,30 @@
-use std::fs;
+extern crate xml;
+
+use std::{fs::File, io::BufReader};
+
+use xml::{reader::XmlEvent, EventReader};
 
 fn main() {
-    let paths = fs::read_dir("/tmp/asn-bank").unwrap();
+    let file = File::open("resources/example.xml").unwrap();
+    let file = BufReader::new(file);
 
-    for path in paths {
-        println!("path {}", path.unwrap().path().display());
+    let parser = EventReader::new(file);
+
+    for e in parser {
+        match e {
+            Ok(XmlEvent::StartElement {
+                name,
+                attributes,
+                namespace,
+            }) => {
+                match name.local_name.to_lowercase().as_str() {
+                    "ntry" => println!("{:?}", attributes),
+                    _ => {}
+                }
+            }
+            Ok(XmlEvent::EndElement { name }) => println!("{}", name),
+            Err(_) => todo!(),
+            _ => {}
+        }
     }
 }

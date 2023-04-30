@@ -1,0 +1,2362 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Document xmlns="urn:iso:std:iso:20022:tech:xsd:camt.053.001.02">
+    <BkToCstmrStmt>
+        <GrpHdr>
+            <MsgId>CAMT053ASN000000000002</MsgId>
+            <CreDtTm>2023-04-30T20:26:13.179854+02:00</CreDtTm>
+        </GrpHdr>
+        <Stmt>
+            <Id>CAMT05300000000000200001</Id>
+            <ElctrncSeqNb>23120</ElctrncSeqNb>
+            <CreDtTm>2023-04-30T20:26:13.331115+02:00</CreDtTm>
+            <Acct>
+                <Id>
+                    <IBAN>NL97ASNB8830219525</IBAN>
+                </Id>
+                <Ccy>EUR</Ccy>
+                <Svcr>
+                    <FinInstnId>
+                        <BIC>ASNBNL21</BIC>
+                    </FinInstnId>
+                </Svcr>
+            </Acct>
+            <Bal>
+                <Tp>
+                    <CdOrPrtry>
+                        <Cd>OPBD</Cd>
+                    </CdOrPrtry>
+                </Tp>
+                <Amt Ccy="EUR">413.42</Amt>
+                <CdtDbtInd>CRDT</CdtDbtInd>
+                <Dt>
+                    <Dt>2023-04-01</Dt>
+                </Dt>
+            </Bal>
+            <Bal>
+                <Tp>
+                    <CdOrPrtry>
+                        <Cd>CLBD</Cd>
+                    </CdOrPrtry>
+                </Tp>
+                <Amt Ccy="EUR">1752.46</Amt>
+                <CdtDbtInd>CRDT</CdtDbtInd>
+                <Dt>
+                    <Dt>2023-04-28</Dt>
+                </Dt>
+            </Bal>
+            <Ntry>
+                <NtryRef>20230428-51415098</NtryRef>
+                <Amt Ccy="EUR">10</Amt>
+                <CdtDbtInd>DBIT</CdtDbtInd>
+                <RvslInd>false</RvslInd>
+                <Sts>BOOK</Sts>
+                <BookgDt>
+                    <Dt>2023-04-28</Dt>
+                </BookgDt>
+                <ValDt>
+                    <Dt>2023-04-28</Dt>
+                </ValDt>
+                <BkTxCd>
+                    <Prtry>
+                        <Cd>9714</Cd>
+                        <Issr>ASNBANK</Issr>
+                    </Prtry>
+                </BkTxCd>
+                <NtryDtls>
+                    <TxDtls>
+                        <Refs>
+                            <InstrId>INNDNL2U20260423000199610009918</InstrId>
+                            <EndToEndId>500226198241</EndToEndId>
+                            <TxId>AMS727343166</TxId>
+                            <MndtId>1.50884684-001</MndtId>
+                        </Refs>
+                        <RltdPties>
+                            <Cdtr>
+<Nm>BEN NEDERLAND</Nm>
+                            </Cdtr>
+                            <CdtrAcct>
+<Id>
+    <IBAN>NL61COBA0733974775</IBAN>
+</Id>
+                            </CdtrAcct>
+                        </RltdPties>
+                        <RltdAgts>
+                            <CdtrAgt>
+<FinInstnId>
+    <BIC>COBANL2X</BIC>
+</FinInstnId>
+                            </CdtrAgt>
+                        </RltdAgts>
+                        <Purp>
+                            <Cd>OTHR</Cd>
+                        </Purp>
+                        <RmtInf>
+                            <Ustrd>Klant 1.50884684 Factuur 908053695899</Ustrd>
+                        </RmtInf>
+                    </TxDtls>
+                </NtryDtls>
+            </Ntry>
+            <Ntry>
+                <NtryRef>20230427-52801730</NtryRef>
+                <Amt Ccy="EUR">19.3</Amt>
+                <CdtDbtInd>DBIT</CdtDbtInd>
+                <RvslInd>false</RvslInd>
+                <Sts>BOOK</Sts>
+                <BookgDt>
+                    <Dt>2023-04-27</Dt>
+                </BookgDt>
+                <ValDt>
+                    <Dt>2023-04-27</Dt>
+                </ValDt>
+                <BkTxCd>
+                    <Prtry>
+                        <Cd>7913</Cd>
+                        <Issr>ASNBANK</Issr>
+                    </Prtry>
+                </BkTxCd>
+                <NtryDtls>
+                    <TxDtls>
+                        <Refs>
+                            <TxId>OVQFW5/966582</TxId>
+                        </Refs>
+                        <RmtInf>
+                            <Ustrd>CCV*CAFETARIA SIM     &gt;GRONINGEN27.04.2023 18U57 KV005 CT371516 MCC:5814 Contactloze betaling NLNEDERLAND</Ustrd>
+                        </RmtInf>
+                    </TxDtls>
+                </NtryDtls>
+            </Ntry>
+            <Ntry>
+                <NtryRef>20230427-52221590</NtryRef>
+                <Amt Ccy="EUR">13.98</Amt>
+                <CdtDbtInd>DBIT</CdtDbtInd>
+                <RvslInd>false</RvslInd>
+                <Sts>BOOK</Sts>
+                <BookgDt>
+                    <Dt>2023-04-27</Dt>
+                </BookgDt>
+                <ValDt>
+                    <Dt>2023-04-27</Dt>
+                </ValDt>
+                <BkTxCd>
+                    <Prtry>
+                        <Cd>7913</Cd>
+                        <Issr>ASNBANK</Issr>
+                    </Prtry>
+                </BkTxCd>
+                <NtryDtls>
+                    <TxDtls>
+                        <Refs>
+                            <TxId>2BVDDC/266298</TxId>
+                        </Refs>
+                        <RmtInf>
+                            <Ustrd>Etos Boezerooij VOF   &gt;GRONINGEN27.04.2023 14U57 KV005 Z7B8T5 MCC:5122 Contactloze betaling NLNEDERLAND</Ustrd>
+                        </RmtInf>
+                    </TxDtls>
+                </NtryDtls>
+            </Ntry>
+            <Ntry>
+                <NtryRef>20230427-51591838</NtryRef>
+                <Amt Ccy="EUR">150.45</Amt>
+                <CdtDbtInd>DBIT</CdtDbtInd>
+                <RvslInd>false</RvslInd>
+                <Sts>BOOK</Sts>
+                <BookgDt>
+                    <Dt>2023-04-27</Dt>
+                </BookgDt>
+                <ValDt>
+                    <Dt>2023-04-27</Dt>
+                </ValDt>
+                <BkTxCd>
+                    <Prtry>
+                        <Cd>9714</Cd>
+                        <Issr>ASNBANK</Issr>
+                    </Prtry>
+                </BkTxCd>
+                <NtryDtls>
+                    <TxDtls>
+                        <Refs>
+                            <InstrId>INNDNL2U20260423000009610022088</InstrId>
+                            <EndToEndId>10271827838</EndToEndId>
+                            <TxId>DOMREC17324751SEQ003573DAT20230425</TxId>
+                            <MndtId>5370669</MndtId>
+                        </Refs>
+                        <RltdPties>
+                            <Cdtr>
+<Nm>NV UNIVE ZORG</Nm>
+                            </Cdtr>
+                            <CdtrAcct>
+<Id>
+    <IBAN>NL20INGB0000686129</IBAN>
+</Id>
+                            </CdtrAcct>
+                        </RltdPties>
+                        <RltdAgts>
+                            <CdtrAgt>
+<FinInstnId>
+    <BIC>INGBNL2A</BIC>
+</FinInstnId>
+                            </CdtrAgt>
+                        </RltdAgts>
+                        <RmtInf>
+                            <Ustrd>PREMIE mei. 2023.</Ustrd>
+                        </RmtInf>
+                    </TxDtls>
+                </NtryDtls>
+            </Ntry>
+            <Ntry>
+                <NtryRef>20230427-50318687</NtryRef>
+                <Amt Ccy="EUR">5</Amt>
+                <CdtDbtInd>DBIT</CdtDbtInd>
+                <RvslInd>false</RvslInd>
+                <Sts>BOOK</Sts>
+                <BookgDt>
+                    <Dt>2023-04-27</Dt>
+                </BookgDt>
+                <ValDt>
+                    <Dt>2023-04-27</Dt>
+                </ValDt>
+                <BkTxCd>
+                    <Prtry>
+                        <Cd>7913</Cd>
+                        <Issr>ASNBANK</Issr>
+                    </Prtry>
+                </BkTxCd>
+                <NtryDtls>
+                    <TxDtls>
+                        <Refs>
+                            <TxId>OVEQS9/006606</TxId>
+                        </Refs>
+                        <RmtInf>
+                            <Ustrd>Sultan Kebab          &gt;GRONINGEN27.04.2023  1U32 KV005 Z903FB MCC:5814 Contactloze betaling NLNEDERLAND</Ustrd>
+                        </RmtInf>
+                    </TxDtls>
+                </NtryDtls>
+            </Ntry>
+            <Ntry>
+                <NtryRef>20230427-50318275</NtryRef>
+                <Amt Ccy="EUR">20</Amt>
+                <CdtDbtInd>DBIT</CdtDbtInd>
+                <RvslInd>false</RvslInd>
+                <Sts>BOOK</Sts>
+                <BookgDt>
+                    <Dt>2023-04-27</Dt>
+                </BookgDt>
+                <ValDt>
+                    <Dt>2023-04-27</Dt>
+                </ValDt>
+                <BkTxCd>
+                    <Prtry>
+                        <Cd>7913</Cd>
+                        <Issr>ASNBANK</Issr>
+                    </Prtry>
+                </BkTxCd>
+                <NtryDtls>
+                    <TxDtls>
+                        <Refs>
+                            <TxId>115AU9/006676</TxId>
+                        </Refs>
+                        <RmtInf>
+                            <Ustrd>Sultan Kebab          &gt;GRONINGEN27.04.2023  1U31 KV005 Z903FB MCC:5814 Contactloze betaling NLNEDERLAND</Ustrd>
+                        </RmtInf>
+                    </TxDtls>
+                </NtryDtls>
+            </Ntry>
+            <Ntry>
+                <NtryRef>20230427-50242254</NtryRef>
+                <Amt Ccy="EUR">20</Amt>
+                <CdtDbtInd>DBIT</CdtDbtInd>
+                <RvslInd>false</RvslInd>
+                <Sts>BOOK</Sts>
+                <BookgDt>
+                    <Dt>2023-04-27</Dt>
+                </BookgDt>
+                <ValDt>
+                    <Dt>2023-04-27</Dt>
+                </ValDt>
+                <BkTxCd>
+                    <Prtry>
+                        <Cd>7913</Cd>
+                        <Issr>ASNBANK</Issr>
+                    </Prtry>
+                </BkTxCd>
+                <NtryDtls>
+                    <TxDtls>
+                        <Refs>
+                            <TxId>1158JL/031586</TxId>
+                        </Refs>
+                        <RmtInf>
+                            <Ustrd>C&amp;M*Nachtcafe Warhol  &gt;Groningen27.04.2023  0U34 KV005 CT836867 MCC:5813 Contactloze betaling NLNEDERLAND</Ustrd>
+                        </RmtInf>
+                    </TxDtls>
+                </NtryDtls>
+            </Ntry>
+            <Ntry>
+                <NtryRef>20230426-53073155</NtryRef>
+                <Amt Ccy="EUR">7.7</Amt>
+                <CdtDbtInd>DBIT</CdtDbtInd>
+                <RvslInd>false</RvslInd>
+                <Sts>BOOK</Sts>
+                <BookgDt>
+                    <Dt>2023-04-26</Dt>
+                </BookgDt>
+                <ValDt>
+                    <Dt>2023-04-26</Dt>
+                </ValDt>
+                <BkTxCd>
+                    <Prtry>
+                        <Cd>7913</Cd>
+                        <Issr>ASNBANK</Issr>
+                    </Prtry>
+                </BkTxCd>
+                <NtryDtls>
+                    <TxDtls>
+                        <Refs>
+                            <TxId>OV9Z4S/067968</TxId>
+                        </Refs>
+                        <RmtInf>
+                            <Ustrd>Jumbo Ciboga          &gt;GRONINGEN26.04.2023 17U54 KV005 0SSQ71 MCC:5411 Contactloze betaling NLNEDERLAND</Ustrd>
+                        </RmtInf>
+                    </TxDtls>
+                </NtryDtls>
+            </Ntry>
+            <Ntry>
+                <NtryRef>20230426-53064112</NtryRef>
+                <Amt Ccy="EUR">26.99</Amt>
+                <CdtDbtInd>DBIT</CdtDbtInd>
+                <RvslInd>false</RvslInd>
+                <Sts>BOOK</Sts>
+                <BookgDt>
+                    <Dt>2023-04-26</Dt>
+                </BookgDt>
+                <ValDt>
+                    <Dt>2023-04-26</Dt>
+                </ValDt>
+                <BkTxCd>
+                    <Prtry>
+                        <Cd>7913</Cd>
+                        <Issr>ASNBANK</Issr>
+                    </Prtry>
+                </BkTxCd>
+                <NtryDtls>
+                    <TxDtls>
+                        <Refs>
+                            <TxId>OV9VW8/081216</TxId>
+                        </Refs>
+                        <RmtInf>
+                            <Ustrd>Slijterij Groningen B &gt;GRONINGEN26.04.2023 17U51 KV005 4DK952 MCC:5411 Contactloze betaling NLNEDERLAND</Ustrd>
+                        </RmtInf>
+                    </TxDtls>
+                </NtryDtls>
+            </Ntry>
+            <Ntry>
+                <NtryRef>20230426-51854378</NtryRef>
+                <Amt Ccy="EUR">7</Amt>
+                <CdtDbtInd>DBIT</CdtDbtInd>
+                <RvslInd>false</RvslInd>
+                <Sts>BOOK</Sts>
+                <BookgDt>
+                    <Dt>2023-04-26</Dt>
+                </BookgDt>
+                <ValDt>
+                    <Dt>2023-04-26</Dt>
+                </ValDt>
+                <BkTxCd>
+                    <Prtry>
+                        <Cd>7913</Cd>
+                        <Issr>ASNBANK</Issr>
+                    </Prtry>
+                </BkTxCd>
+                <NtryDtls>
+                    <TxDtls>
+                        <Refs>
+                            <TxId>10RC8B/215707</TxId>
+                        </Refs>
+                        <RmtInf>
+                            <Ustrd>SUBWAY 48166 ZUIDERDIE&gt;GRONINGEN26.04.2023 12U25 KV005 31539196 MCC:5814 Contactloze betaling NLNEDERLAND</Ustrd>
+                        </RmtInf>
+                    </TxDtls>
+                </NtryDtls>
+            </Ntry>
+            <Ntry>
+                <NtryRef>20230426-51288681</NtryRef>
+                <Amt Ccy="EUR">8.79</Amt>
+                <CdtDbtInd>DBIT</CdtDbtInd>
+                <RvslInd>false</RvslInd>
+                <Sts>BOOK</Sts>
+                <BookgDt>
+                    <Dt>2023-04-26</Dt>
+                </BookgDt>
+                <ValDt>
+                    <Dt>2023-04-26</Dt>
+                </ValDt>
+                <BkTxCd>
+                    <Prtry>
+                        <Cd>9714</Cd>
+                        <Issr>ASNBANK</Issr>
+                    </Prtry>
+                </BkTxCd>
+                <NtryDtls>
+                    <TxDtls>
+                        <Refs>
+                            <InstrId>INNDNL2U20250423000009110009599</InstrId>
+                            <EndToEndId>202304240139132781</EndToEndId>
+                            <TxId>DOMREC17325015SEQ003811DAT20230424</TxId>
+                            <MndtId>MANDAAT1491003</MndtId>
+                        </Refs>
+                        <RltdPties>
+                            <UltmtDbtr>
+<Nm>GPH Weggemans</Nm>
+                            </UltmtDbtr>
+                            <Cdtr>
+<Nm>DELA Natura Levensverzekering</Nm>
+                            </Cdtr>
+                            <CdtrAcct>
+<Id>
+    <IBAN>NL15INGB0002286622</IBAN>
+</Id>
+                            </CdtrAcct>
+                        </RltdPties>
+                        <RltdAgts>
+                            <CdtrAgt>
+<FinInstnId>
+    <BIC>INGBNL2A</BIC>
+</FinInstnId>
+                            </CdtrAgt>
+                        </RltdAgts>
+                        <Purp>
+                            <Cd>OTHR</Cd>
+                        </Purp>
+                        <RmtInf>
+                            <Ustrd>Uw Yarden premie met factuurnummer 202304240139132781</Ustrd>
+                        </RmtInf>
+                    </TxDtls>
+                </NtryDtls>
+            </Ntry>
+            <Ntry>
+                <NtryRef>20230425-55602508</NtryRef>
+                <Amt Ccy="EUR">5</Amt>
+                <CdtDbtInd>DBIT</CdtDbtInd>
+                <RvslInd>false</RvslInd>
+                <Sts>BOOK</Sts>
+                <BookgDt>
+                    <Dt>2023-04-25</Dt>
+                </BookgDt>
+                <ValDt>
+                    <Dt>2023-04-25</Dt>
+                </ValDt>
+                <BkTxCd>
+                    <Prtry>
+                        <Cd>7913</Cd>
+                        <Issr>ASNBANK</Issr>
+                    </Prtry>
+                </BkTxCd>
+                <NtryDtls>
+                    <TxDtls>
+                        <Refs>
+                            <TxId>OUYG8P/931510</TxId>
+                        </Refs>
+                        <RmtInf>
+                            <Ustrd>CCV*CAFETARIA SIM     &gt;GRONINGEN25.04.2023 19U30 KV005 CT371516 MCC:5814 Contactloze betaling NLNEDERLAND</Ustrd>
+                        </RmtInf>
+                    </TxDtls>
+                </NtryDtls>
+            </Ntry>
+            <Ntry>
+                <NtryRef>20230425-54528619</NtryRef>
+                <Amt Ccy="EUR">69.82</Amt>
+                <CdtDbtInd>DBIT</CdtDbtInd>
+                <RvslInd>false</RvslInd>
+                <Sts>BOOK</Sts>
+                <BookgDt>
+                    <Dt>2023-04-25</Dt>
+                </BookgDt>
+                <ValDt>
+                    <Dt>2023-04-25</Dt>
+                </ValDt>
+                <BkTxCd>
+                    <Prtry>
+                        <Cd>9806</Cd>
+                        <Issr>ASNBANK</Issr>
+                    </Prtry>
+                </BkTxCd>
+                <NtryDtls>
+                    <TxDtls>
+                        <Refs>
+                            <EndToEndId>25-04-2023 13:18 0030013782758032</EndToEndId>
+                            <TxId>SCT2023042502221000000014670</TxId>
+                        </Refs>
+                        <RltdPties>
+                            <Cdtr>
+<Nm>Infomedics B.V.</Nm>
+                            </Cdtr>
+                            <CdtrAcct>
+<Id>
+    <IBAN>NL34ABNA0243240058</IBAN>
+</Id>
+                            </CdtrAcct>
+                        </RltdPties>
+                        <RltdAgts>
+                            <CdtrAgt>
+<FinInstnId>
+    <BIC>ABNANL2AXXX</BIC>
+</FinInstnId>
+                            </CdtrAgt>
+                        </RltdAgts>
+                        <Purp>
+                            <Cd>EPAY</Cd>
+                        </Purp>
+                        <RmtInf>
+                            <Ustrd>803141215099 0030013782758032 Invoice 82202087587071 Infomedics</Ustrd>
+                        </RmtInf>
+                    </TxDtls>
+                </NtryDtls>
+            </Ntry>
+            <Ntry>
+                <NtryRef>20230425-53792751</NtryRef>
+                <Amt Ccy="EUR">7</Amt>
+                <CdtDbtInd>DBIT</CdtDbtInd>
+                <RvslInd>false</RvslInd>
+                <Sts>BOOK</Sts>
+                <BookgDt>
+                    <Dt>2023-04-25</Dt>
+                </BookgDt>
+                <ValDt>
+                    <Dt>2023-04-25</Dt>
+                </ValDt>
+                <BkTxCd>
+                    <Prtry>
+                        <Cd>7913</Cd>
+                        <Issr>ASNBANK</Issr>
+                    </Prtry>
+                </BkTxCd>
+                <NtryDtls>
+                    <TxDtls>
+                        <Refs>
+                            <TxId>10PUI3/075458</TxId>
+                        </Refs>
+                        <RmtInf>
+                            <Ustrd>Lekkellekkel          &gt;GRONINGEN25.04.2023 12U10 KV005 CTG099 MCC:5812 Contactloze betaling NLNEDERLAND</Ustrd>
+                        </RmtInf>
+                    </TxDtls>
+                </NtryDtls>
+            </Ntry>
+            <Ntry>
+                <NtryRef>20230425-53647076</NtryRef>
+                <Amt Ccy="EUR">129.23</Amt>
+                <CdtDbtInd>DBIT</CdtDbtInd>
+                <RvslInd>false</RvslInd>
+                <Sts>BOOK</Sts>
+                <BookgDt>
+                    <Dt>2023-04-25</Dt>
+                </BookgDt>
+                <ValDt>
+                    <Dt>2023-04-25</Dt>
+                </ValDt>
+                <BkTxCd>
+                    <Prtry>
+                        <Cd>9714</Cd>
+                        <Issr>ASNBANK</Issr>
+                    </Prtry>
+                </BkTxCd>
+                <NtryDtls>
+                    <TxDtls>
+                        <Refs>
+                            <InstrId>INNDNL2U20240423000008110010319</InstrId>
+                            <EndToEndId>4023143666230495</EndToEndId>
+                            <TxId>DOMREC17282583SEQ007275DAT20230421</TxId>
+                            <MndtId>R9611888</MndtId>
+                        </Refs>
+                        <RltdPties>
+                            <Cdtr>
+<Nm>DUO Hoofdrekening</Nm>
+                            </Cdtr>
+                            <CdtrAcct>
+<Id>
+    <IBAN>NL45INGB0705001903</IBAN>
+</Id>
+                            </CdtrAcct>
+                        </RltdPties>
+                        <RltdAgts>
+                            <CdtrAgt>
+<FinInstnId>
+    <BIC>INGBNL2A</BIC>
+</FinInstnId>
+                            </CdtrAgt>
+                        </RltdAgts>
+                        <Purp>
+                            <Cd>OTHR</Cd>
+                        </Purp>
+                        <RmtInf>
+                            <Ustrd>4023143666230495 DUO langlopende studieschuld termijn 04/2023</Ustrd>
+                        </RmtInf>
+                    </TxDtls>
+                </NtryDtls>
+            </Ntry>
+            <Ntry>
+                <NtryRef>20230425-52308761</NtryRef>
+                <Amt Ccy="EUR">7.5</Amt>
+                <CdtDbtInd>CRDT</CdtDbtInd>
+                <RvslInd>false</RvslInd>
+                <Sts>BOOK</Sts>
+                <BookgDt>
+                    <Dt>2023-04-25</Dt>
+                </BookgDt>
+                <ValDt>
+                    <Dt>2023-04-25</Dt>
+                </ValDt>
+                <BkTxCd>
+                    <Prtry>
+                        <Cd>8949</Cd>
+                        <Issr>ASNBANK</Issr>
+                    </Prtry>
+                </BkTxCd>
+                <NtryDtls>
+                    <TxDtls>
+                        <Refs>
+                            <InstrId>INNDNL2U2023042500048569200000001</InstrId>
+                            <EndToEndId>NOTPROVIDED</EndToEndId>
+                            <TxId>OO9T001920217930</TxId>
+                        </Refs>
+                        <RltdPties>
+                            <Dbtr>
+<Nm>J.M. Weggemans eo M.T. Reijneveld</Nm>
+                            </Dbtr>
+                            <DbtrAcct>
+<Id>
+    <IBAN>NL97RABO0301488568</IBAN>
+</Id>
+                            </DbtrAcct>
+                        </RltdPties>
+                        <RltdAgts>
+                            <DbtrAgt>
+<FinInstnId>
+    <BIC>RABONL2U</BIC>
+</FinInstnId>
+                            </DbtrAgt>
+                        </RltdAgts>
+                        <RmtInf>
+                            <Ustrd>Apple</Ustrd>
+                        </RmtInf>
+                    </TxDtls>
+                </NtryDtls>
+            </Ntry>
+            <Ntry>
+                <NtryRef>20230425-52210508</NtryRef>
+                <Amt Ccy="EUR">600</Amt>
+                <CdtDbtInd>DBIT</CdtDbtInd>
+                <RvslInd>false</RvslInd>
+                <Sts>BOOK</Sts>
+                <BookgDt>
+                    <Dt>2023-04-25</Dt>
+                </BookgDt>
+                <ValDt>
+                    <Dt>2023-04-25</Dt>
+                </ValDt>
+                <BkTxCd>
+                    <Prtry>
+                        <Cd>9802</Cd>
+                        <Issr>ASNBANK</Issr>
+                    </Prtry>
+                </BkTxCd>
+                <NtryDtls>
+                    <TxDtls>
+                        <Refs>
+                            <EndToEndId>NOTPROVIDED</EndToEndId>
+                            <TxId>SCT2023042502133000000099121</TxId>
+                        </Refs>
+                        <RltdPties>
+                            <Cdtr>
+<Nm>GPH Weggemans</Nm>
+                            </Cdtr>
+                            <CdtrAcct>
+<Id>
+    <IBAN>NL87RABO0369185242</IBAN>
+</Id>
+                            </CdtrAcct>
+                        </RltdPties>
+                        <RltdAgts>
+                            <CdtrAgt>
+<FinInstnId>
+    <BIC>RABONL2UXXX</BIC>
+</FinInstnId>
+                            </CdtrAgt>
+                        </RltdAgts>
+                        <RmtInf>
+                            <Ustrd>Sparen</Ustrd>
+                        </RmtInf>
+                    </TxDtls>
+                </NtryDtls>
+            </Ntry>
+            <Ntry>
+                <NtryRef>20230425-52210507</NtryRef>
+                <Amt Ccy="EUR">1700</Amt>
+                <CdtDbtInd>DBIT</CdtDbtInd>
+                <RvslInd>false</RvslInd>
+                <Sts>BOOK</Sts>
+                <BookgDt>
+                    <Dt>2023-04-25</Dt>
+                </BookgDt>
+                <ValDt>
+                    <Dt>2023-04-25</Dt>
+                </ValDt>
+                <BkTxCd>
+                    <Prtry>
+                        <Cd>9802</Cd>
+                        <Issr>ASNBANK</Issr>
+                    </Prtry>
+                </BkTxCd>
+                <NtryDtls>
+                    <TxDtls>
+                        <Refs>
+                            <EndToEndId>NOTPROVIDED</EndToEndId>
+                            <TxId>SCT2023042502133000000099120</TxId>
+                        </Refs>
+                        <RltdPties>
+                            <Cdtr>
+<Nm>Gezamelijk</Nm>
+                            </Cdtr>
+                            <CdtrAcct>
+<Id>
+    <IBAN>NL64ASNB8830237094</IBAN>
+</Id>
+                            </CdtrAcct>
+                        </RltdPties>
+                        <RltdAgts>
+                            <CdtrAgt>
+<FinInstnId>
+    <BIC>ASNBNL21XXX</BIC>
+</FinInstnId>
+                            </CdtrAgt>
+                        </RltdAgts>
+                        <RmtInf/>
+                    </TxDtls>
+                </NtryDtls>
+            </Ntry>
+            <Ntry>
+                <NtryRef>20230425-51183261</NtryRef>
+                <Amt Ccy="EUR">2.2</Amt>
+                <CdtDbtInd>DBIT</CdtDbtInd>
+                <RvslInd>false</RvslInd>
+                <Sts>BOOK</Sts>
+                <BookgDt>
+                    <Dt>2023-04-25</Dt>
+                </BookgDt>
+                <ValDt>
+                    <Dt>2023-04-25</Dt>
+                </ValDt>
+                <BkTxCd>
+                    <Prtry>
+                        <Cd>7241</Cd>
+                        <Issr>ASNBANK</Issr>
+                    </Prtry>
+                </BkTxCd>
+                <NtryDtls>
+                    <TxDtls>
+                        <RmtInf>
+                            <Ustrd>Kosten gebruik betaalrekening inclusief 1 betaalpas</Ustrd>
+                        </RmtInf>
+                    </TxDtls>
+                </NtryDtls>
+            </Ntry>
+            <Ntry>
+                <NtryRef>20230424-52099985</NtryRef>
+                <Amt Ccy="EUR">102.5</Amt>
+                <CdtDbtInd>CRDT</CdtDbtInd>
+                <RvslInd>false</RvslInd>
+                <Sts>BOOK</Sts>
+                <BookgDt>
+                    <Dt>2023-04-24</Dt>
+                </BookgDt>
+                <ValDt>
+                    <Dt>2023-04-24</Dt>
+                </ValDt>
+                <BkTxCd>
+                    <Prtry>
+                        <Cd>8809</Cd>
+                        <Issr>ASNBANK</Issr>
+                    </Prtry>
+                </BkTxCd>
+                <NtryDtls>
+                    <TxDtls>
+                        <Refs>
+                            <InstrId>INNDNL2U20240423000309910014716</InstrId>
+                            <EndToEndId>ENL129800041505</EndToEndId>
+                            <TxId>ICFSCT230421061430TDE1NL35664647875</TxId>
+                        </Refs>
+                        <RltdPties>
+                            <Dbtr>
+<Nm>IBM International Treasury Services Unlimited Company</Nm>
+                            </Dbtr>
+                            <DbtrAcct>
+<Id>
+    <IBAN>DE34600700700160091500</IBAN>
+</Id>
+                            </DbtrAcct>
+                            <UltmtDbtr>
+<Nm>IBM Services Center Benelux BV</Nm>
+                            </UltmtDbtr>
+                        </RltdPties>
+                        <RltdAgts>
+                            <DbtrAgt>
+<FinInstnId>
+    <BIC>DEUTDESS</BIC>
+</FinInstnId>
+                            </DbtrAgt>
+                        </RltdAgts>
+                        <RmtInf>
+                            <Ustrd>093565788 CTR017040347</Ustrd>
+                        </RmtInf>
+                    </TxDtls>
+                </NtryDtls>
+            </Ntry>
+            <Ntry>
+                <NtryRef>20230424-51478129</NtryRef>
+                <Amt Ccy="EUR">8.46</Amt>
+                <CdtDbtInd>DBIT</CdtDbtInd>
+                <RvslInd>false</RvslInd>
+                <Sts>BOOK</Sts>
+                <BookgDt>
+                    <Dt>2023-04-24</Dt>
+                </BookgDt>
+                <ValDt>
+                    <Dt>2023-04-24</Dt>
+                </ValDt>
+                <BkTxCd>
+                    <Prtry>
+                        <Cd>9714</Cd>
+                        <Issr>ASNBANK</Issr>
+                    </Prtry>
+                </BkTxCd>
+                <NtryDtls>
+                    <TxDtls>
+                        <Refs>
+                            <InstrId>INNDNL2U20210423000007010043838</InstrId>
+                            <EndToEndId>E2E-ID-NL-217657846</EndToEndId>
+                            <TxId>DOMREC17282277SEQ008974DAT20230420</TxId>
+                            <MndtId>MANDATE-NL-61047-4</MndtId>
+                        </Refs>
+                        <RltdPties>
+                            <Cdtr>
+<Nm>Transip B.V.</Nm>
+                            </Cdtr>
+                            <CdtrAcct>
+<Id>
+    <IBAN>NL85INGB0654416265</IBAN>
+</Id>
+                            </CdtrAcct>
+                        </RltdPties>
+                        <RltdAgts>
+                            <CdtrAgt>
+<FinInstnId>
+    <BIC>INGBNL2A</BIC>
+</FinInstnId>
+                            </CdtrAgt>
+                        </RltdAgts>
+                        <RmtInf>
+                            <Ustrd>FACTUUR F0000.2304.0009.6530</Ustrd>
+                        </RmtInf>
+                    </TxDtls>
+                </NtryDtls>
+            </Ntry>
+            <Ntry>
+                <NtryRef>20230424-51272263</NtryRef>
+                <Amt Ccy="EUR">3218.48</Amt>
+                <CdtDbtInd>CRDT</CdtDbtInd>
+                <RvslInd>false</RvslInd>
+                <Sts>BOOK</Sts>
+                <BookgDt>
+                    <Dt>2023-04-24</Dt>
+                </BookgDt>
+                <ValDt>
+                    <Dt>2023-04-24</Dt>
+                </ValDt>
+                <BkTxCd>
+                    <Prtry>
+                        <Cd>8809</Cd>
+                        <Issr>ASNBANK</Issr>
+                    </Prtry>
+                </BkTxCd>
+                <NtryDtls>
+                    <TxDtls>
+                        <Refs>
+                            <InstrId>INNDNL2U20240423000249810005179</InstrId>
+                            <EndToEndId>ON-BEHALF-OF-CIC</EndToEndId>
+                            <TxId>ICFSCT230418150014TDE1NL35629027343</TxId>
+                        </Refs>
+                        <RltdPties>
+                            <Dbtr>
+<Nm>IBM International Treasury Services Unlimited Company</Nm>
+                            </Dbtr>
+                            <DbtrAcct>
+<Id>
+    <IBAN>DE45600700700160812400</IBAN>
+</Id>
+                            </DbtrAcct>
+                        </RltdPties>
+                        <RltdAgts>
+                            <DbtrAgt>
+<FinInstnId>
+    <BIC>DEUTDESS</BIC>
+</FinInstnId>
+                            </DbtrAgt>
+                        </RltdAgts>
+                        <Purp>
+                            <Cd>SALA</Cd>
+                        </Purp>
+                        <RmtInf>
+                            <Ustrd>ON BEHALF OF CIC</Ustrd>
+                        </RmtInf>
+                    </TxDtls>
+                </NtryDtls>
+            </Ntry>
+            <Ntry>
+                <NtryRef>20230422-51925950</NtryRef>
+                <Amt Ccy="EUR">300</Amt>
+                <CdtDbtInd>CRDT</CdtDbtInd>
+                <RvslInd>false</RvslInd>
+                <Sts>BOOK</Sts>
+                <BookgDt>
+                    <Dt>2023-04-22</Dt>
+                </BookgDt>
+                <ValDt>
+                    <Dt>2023-04-22</Dt>
+                </ValDt>
+                <BkTxCd>
+                    <Prtry>
+                        <Cd>6853</Cd>
+                        <Issr>ASNBANK</Issr>
+                    </Prtry>
+                </BkTxCd>
+                <NtryDtls>
+                    <TxDtls>
+                        <Refs>
+                            <TxId>9485819022052972</TxId>
+                        </Refs>
+                        <RltdPties>
+                            <Dbtr>
+<Nm>RA TRENTELMAN</Nm>
+                            </Dbtr>
+                            <DbtrAcct>
+<Id>
+    <IBAN>NL12ABNA0628890532</IBAN>
+</Id>
+                            </DbtrAcct>
+                        </RltdPties>
+                        <RmtInf>
+                            <Ustrd>Macbook</Ustrd>
+                        </RmtInf>
+                    </TxDtls>
+                </NtryDtls>
+            </Ntry>
+            <Ntry>
+                <NtryRef>20230420-51607247</NtryRef>
+                <Amt Ccy="EUR">7</Amt>
+                <CdtDbtInd>DBIT</CdtDbtInd>
+                <RvslInd>false</RvslInd>
+                <Sts>BOOK</Sts>
+                <BookgDt>
+                    <Dt>2023-04-20</Dt>
+                </BookgDt>
+                <ValDt>
+                    <Dt>2023-04-20</Dt>
+                </ValDt>
+                <BkTxCd>
+                    <Prtry>
+                        <Cd>7913</Cd>
+                        <Issr>ASNBANK</Issr>
+                    </Prtry>
+                </BkTxCd>
+                <NtryDtls>
+                    <TxDtls>
+                        <Refs>
+                            <TxId>OSQXSW/345080</TxId>
+                        </Refs>
+                        <RmtInf>
+                            <Ustrd>SUBWAY 48166 ZUIDERDIE&gt;GRONINGEN20.04.2023 12U25 KV005 31539196 MCC:5814 Contactloze betaling NLNEDERLAND</Ustrd>
+                        </RmtInf>
+                    </TxDtls>
+                </NtryDtls>
+            </Ntry>
+            <Ntry>
+                <NtryRef>20230419-51689374</NtryRef>
+                <Amt Ccy="EUR">6</Amt>
+                <CdtDbtInd>DBIT</CdtDbtInd>
+                <RvslInd>false</RvslInd>
+                <Sts>BOOK</Sts>
+                <BookgDt>
+                    <Dt>2023-04-19</Dt>
+                </BookgDt>
+                <ValDt>
+                    <Dt>2023-04-19</Dt>
+                </ValDt>
+                <BkTxCd>
+                    <Prtry>
+                        <Cd>7913</Cd>
+                        <Issr>ASNBANK</Issr>
+                    </Prtry>
+                </BkTxCd>
+                <NtryDtls>
+                    <TxDtls>
+                        <Refs>
+                            <TxId>WXJYOQ/422523</TxId>
+                        </Refs>
+                        <RmtInf>
+                            <Ustrd>SEP*SEPAY-BoltBloemen &gt;Groningen19.04.2023 16U36 KV005 80011800 MCC:5399 Contactloze betaling NLNEDERLAND</Ustrd>
+                        </RmtInf>
+                    </TxDtls>
+                </NtryDtls>
+            </Ntry>
+            <Ntry>
+                <NtryRef>20230419-51203892</NtryRef>
+                <Amt Ccy="EUR">29.5</Amt>
+                <CdtDbtInd>DBIT</CdtDbtInd>
+                <RvslInd>false</RvslInd>
+                <Sts>BOOK</Sts>
+                <BookgDt>
+                    <Dt>2023-04-19</Dt>
+                </BookgDt>
+                <ValDt>
+                    <Dt>2023-04-19</Dt>
+                </ValDt>
+                <BkTxCd>
+                    <Prtry>
+                        <Cd>7913</Cd>
+                        <Issr>ASNBANK</Issr>
+                    </Prtry>
+                </BkTxCd>
+                <NtryDtls>
+                    <TxDtls>
+                        <Refs>
+                            <TxId>OSEQS0/740662</TxId>
+                        </Refs>
+                        <RmtInf>
+                            <Ustrd>Zettle_*Barber Leon   &gt;Drachten 19.04.2023 13U31 KV005 70924084 MCC:7230 Contactloze betaling NLNEDERLAND</Ustrd>
+                        </RmtInf>
+                    </TxDtls>
+                </NtryDtls>
+            </Ntry>
+            <Ntry>
+                <NtryRef>20230419-51036623</NtryRef>
+                <Amt Ccy="EUR">3.6</Amt>
+                <CdtDbtInd>DBIT</CdtDbtInd>
+                <RvslInd>false</RvslInd>
+                <Sts>BOOK</Sts>
+                <BookgDt>
+                    <Dt>2023-04-19</Dt>
+                </BookgDt>
+                <ValDt>
+                    <Dt>2023-04-19</Dt>
+                </ValDt>
+                <BkTxCd>
+                    <Prtry>
+                        <Cd>7913</Cd>
+                        <Issr>ASNBANK</Issr>
+                    </Prtry>
+                </BkTxCd>
+                <NtryDtls>
+                    <TxDtls>
+                        <Refs>
+                            <TxId>OSDMPB/250359</TxId>
+                        </Refs>
+                        <RmtInf>
+                            <Ustrd>Albert Heijn 1552     &gt;GRONINGEN19.04.2023 12U32 KV005 C8ZGD4 MCC:5411 Contactloze betaling NLNEDERLAND</Ustrd>
+                        </RmtInf>
+                    </TxDtls>
+                </NtryDtls>
+            </Ntry>
+            <Ntry>
+                <NtryRef>20230418-51718267</NtryRef>
+                <Amt Ccy="EUR">62.51</Amt>
+                <CdtDbtInd>DBIT</CdtDbtInd>
+                <RvslInd>false</RvslInd>
+                <Sts>BOOK</Sts>
+                <BookgDt>
+                    <Dt>2023-04-18</Dt>
+                </BookgDt>
+                <ValDt>
+                    <Dt>2023-04-18</Dt>
+                </ValDt>
+                <BkTxCd>
+                    <Prtry>
+                        <Cd>9806</Cd>
+                        <Issr>ASNBANK</Issr>
+                    </Prtry>
+                </BkTxCd>
+                <NtryDtls>
+                    <TxDtls>
+                        <Refs>
+                            <EndToEndId>2023-04-18T17:17 0030013716617444</EndToEndId>
+                            <TxId>SCT2023041801811000000011434</TxId>
+                        </Refs>
+                        <RltdPties>
+                            <Cdtr>
+<Nm>Infomedics B.V.</Nm>
+                            </Cdtr>
+                            <CdtrAcct>
+<Id>
+    <IBAN>NL34ABNA0243240058</IBAN>
+</Id>
+                            </CdtrAcct>
+                        </RltdPties>
+                        <RltdAgts>
+                            <CdtrAgt>
+<FinInstnId>
+    <BIC>ABNANL2AXXX</BIC>
+</FinInstnId>
+                            </CdtrAgt>
+                        </RltdAgts>
+                        <Purp>
+                            <Cd>EPAY</Cd>
+                        </Purp>
+                        <RmtInf>
+                            <Ustrd>003112573499 0030013716617444 Invoice 82201499774071 Infomedics</Ustrd>
+                        </RmtInf>
+                    </TxDtls>
+                </NtryDtls>
+            </Ntry>
+            <Ntry>
+                <NtryRef>20230418-50982384</NtryRef>
+                <Amt Ccy="EUR">1000</Amt>
+                <CdtDbtInd>CRDT</CdtDbtInd>
+                <RvslInd>false</RvslInd>
+                <Sts>BOOK</Sts>
+                <BookgDt>
+                    <Dt>2023-04-18</Dt>
+                </BookgDt>
+                <ValDt>
+                    <Dt>2023-04-18</Dt>
+                </ValDt>
+                <BkTxCd>
+                    <Prtry>
+                        <Cd>2754</Cd>
+                        <Issr>ASNBANK</Issr>
+                    </Prtry>
+                </BkTxCd>
+                <NtryDtls>
+                    <TxDtls>
+                        <Refs>
+                            <EndToEndId>NOTPROVIDED</EndToEndId>
+                            <TxId>SIT202304180275400982384</TxId>
+                        </Refs>
+                        <RltdPties>
+                            <Dbtr>
+<Nm>WEGGEMANS G P H</Nm>
+                            </Dbtr>
+                            <DbtrAcct>
+<Id>
+    <IBAN>NL86ASNB8830237086</IBAN>
+</Id>
+                            </DbtrAcct>
+                        </RltdPties>
+                        <RltdAgts>
+                            <DbtrAgt>
+<FinInstnId>
+    <BIC>ASNBNL21</BIC>
+</FinInstnId>
+                            </DbtrAgt>
+                        </RltdAgts>
+                        <RmtInf/>
+                    </TxDtls>
+                </NtryDtls>
+            </Ntry>
+            <Ntry>
+                <NtryRef>20230418-50971520</NtryRef>
+                <Amt Ccy="EUR">6.9</Amt>
+                <CdtDbtInd>DBIT</CdtDbtInd>
+                <RvslInd>false</RvslInd>
+                <Sts>BOOK</Sts>
+                <BookgDt>
+                    <Dt>2023-04-18</Dt>
+                </BookgDt>
+                <ValDt>
+                    <Dt>2023-04-18</Dt>
+                </ValDt>
+                <BkTxCd>
+                    <Prtry>
+                        <Cd>7913</Cd>
+                        <Issr>ASNBANK</Issr>
+                    </Prtry>
+                </BkTxCd>
+                <NtryDtls>
+                    <TxDtls>
+                        <Refs>
+                            <TxId>2AVTFN/075212</TxId>
+                        </Refs>
+                        <RmtInf>
+                            <Ustrd>Lekkellekkel          &gt;GRONINGEN18.04.2023 12U17 KV005 CTG099 MCC:5812 Contactloze betaling NLNEDERLAND</Ustrd>
+                        </RmtInf>
+                    </TxDtls>
+                </NtryDtls>
+            </Ntry>
+            <Ntry>
+                <NtryRef>20230417-51080507</NtryRef>
+                <Amt Ccy="EUR">3.77</Amt>
+                <CdtDbtInd>DBIT</CdtDbtInd>
+                <RvslInd>false</RvslInd>
+                <Sts>BOOK</Sts>
+                <BookgDt>
+                    <Dt>2023-04-17</Dt>
+                </BookgDt>
+                <ValDt>
+                    <Dt>2023-04-17</Dt>
+                </ValDt>
+                <BkTxCd>
+                    <Prtry>
+                        <Cd>7913</Cd>
+                        <Issr>ASNBANK</Issr>
+                    </Prtry>
+                </BkTxCd>
+                <NtryDtls>
+                    <TxDtls>
+                        <Refs>
+                            <TxId>OQO7YQ/425763</TxId>
+                        </Refs>
+                        <RmtInf>
+                            <Ustrd>Albert Heijn 1552     &gt;GRONINGEN17.04.2023 12U08 KV005 C8BR7R MCC:5411 Contactloze betaling NLNEDERLAND</Ustrd>
+                        </RmtInf>
+                    </TxDtls>
+                </NtryDtls>
+            </Ntry>
+            <Ntry>
+                <NtryRef>20230417-50954719</NtryRef>
+                <Amt Ccy="EUR">300</Amt>
+                <CdtDbtInd>DBIT</CdtDbtInd>
+                <RvslInd>false</RvslInd>
+                <Sts>BOOK</Sts>
+                <BookgDt>
+                    <Dt>2023-04-17</Dt>
+                </BookgDt>
+                <ValDt>
+                    <Dt>2023-04-17</Dt>
+                </ValDt>
+                <BkTxCd>
+                    <Prtry>
+                        <Cd>9806</Cd>
+                        <Issr>ASNBANK</Issr>
+                    </Prtry>
+                </BkTxCd>
+                <NtryDtls>
+                    <TxDtls>
+                        <Refs>
+                            <EndToEndId>17-04-2023 11:40 0030013705140816</EndToEndId>
+                            <TxId>SCT2023041701710000000002070</TxId>
+                        </Refs>
+                        <RltdPties>
+                            <Cdtr>
+<Nm>Tikkie</Nm>
+                            </Cdtr>
+                            <CdtrAcct>
+<Id>
+    <IBAN>NL13ABNA0506417344</IBAN>
+</Id>
+                            </CdtrAcct>
+                        </RltdPties>
+                        <RltdAgts>
+                            <CdtrAgt>
+<FinInstnId>
+    <BIC>ABNANL2AXXX</BIC>
+</FinInstnId>
+                            </CdtrAgt>
+                        </RltdAgts>
+                        <Purp>
+                            <Cd>EPAY</Cd>
+                        </Purp>
+                        <RmtInf>
+                            <Ustrd>000634371781 0030013705140816 Van Buuren NL30KNAB0257228330</Ustrd>
+                        </RmtInf>
+                    </TxDtls>
+                </NtryDtls>
+            </Ntry>
+            <Ntry>
+                <NtryRef>20230416-50887944</NtryRef>
+                <Amt Ccy="EUR">25</Amt>
+                <CdtDbtInd>DBIT</CdtDbtInd>
+                <RvslInd>false</RvslInd>
+                <Sts>BOOK</Sts>
+                <BookgDt>
+                    <Dt>2023-04-16</Dt>
+                </BookgDt>
+                <ValDt>
+                    <Dt>2023-04-16</Dt>
+                </ValDt>
+                <BkTxCd>
+                    <Prtry>
+                        <Cd>7913</Cd>
+                        <Issr>ASNBANK</Issr>
+                    </Prtry>
+                </BkTxCd>
+                <NtryDtls>
+                    <TxDtls>
+                        <Refs>
+                            <TxId>OQGFYQ/883741</TxId>
+                        </Refs>
+                        <RmtInf>
+                            <Ustrd>McDonald's Hoendiep BV&gt;GRONINGEN16.04.2023 15U40 KV005 NPC11J MCC:5814 Contactloze betaling NLNEDERLAND</Ustrd>
+                        </RmtInf>
+                    </TxDtls>
+                </NtryDtls>
+            </Ntry>
+            <Ntry>
+                <NtryRef>20230415-51820554</NtryRef>
+                <Amt Ccy="EUR">2.99</Amt>
+                <CdtDbtInd>DBIT</CdtDbtInd>
+                <RvslInd>false</RvslInd>
+                <Sts>BOOK</Sts>
+                <BookgDt>
+                    <Dt>2023-04-15</Dt>
+                </BookgDt>
+                <ValDt>
+                    <Dt>2023-04-15</Dt>
+                </ValDt>
+                <BkTxCd>
+                    <Prtry>
+                        <Cd>7913</Cd>
+                        <Issr>ASNBANK</Issr>
+                    </Prtry>
+                </BkTxCd>
+                <NtryDtls>
+                    <TxDtls>
+                        <Refs>
+                            <TxId>WRVX5N/755008</TxId>
+                        </Refs>
+                        <RmtInf>
+                            <Ustrd>CCV*Onderdelenhuis.nl &gt;GRONINGEN15.04.2023 16U56 KV005 CT684596 MCC:5300 Contactloze betaling NLNEDERLAND</Ustrd>
+                        </RmtInf>
+                    </TxDtls>
+                </NtryDtls>
+            </Ntry>
+            <Ntry>
+                <NtryRef>20230415-51811753</NtryRef>
+                <Amt Ccy="EUR">4.58</Amt>
+                <CdtDbtInd>DBIT</CdtDbtInd>
+                <RvslInd>false</RvslInd>
+                <Sts>BOOK</Sts>
+                <BookgDt>
+                    <Dt>2023-04-15</Dt>
+                </BookgDt>
+                <ValDt>
+                    <Dt>2023-04-15</Dt>
+                </ValDt>
+                <BkTxCd>
+                    <Prtry>
+                        <Cd>7913</Cd>
+                        <Issr>ASNBANK</Issr>
+                    </Prtry>
+                </BkTxCd>
+                <NtryDtls>
+                    <TxDtls>
+                        <Refs>
+                            <TxId>WRVZNQ/070661</TxId>
+                        </Refs>
+                        <RmtInf>
+                            <Ustrd>Praxis 2358 Gron. City&gt;GRONINGEN15.04.2023 16U53 KV005 CYF67H MCC:5251 Contactloze betaling NLNEDERLAND</Ustrd>
+                        </RmtInf>
+                    </TxDtls>
+                </NtryDtls>
+            </Ntry>
+            <Ntry>
+                <NtryRef>20230415-51285583</NtryRef>
+                <Amt Ccy="EUR">1.93</Amt>
+                <CdtDbtInd>DBIT</CdtDbtInd>
+                <RvslInd>false</RvslInd>
+                <Sts>BOOK</Sts>
+                <BookgDt>
+                    <Dt>2023-04-15</Dt>
+                </BookgDt>
+                <ValDt>
+                    <Dt>2023-04-15</Dt>
+                </ValDt>
+                <BkTxCd>
+                    <Prtry>
+                        <Cd>7913</Cd>
+                        <Issr>ASNBANK</Issr>
+                    </Prtry>
+                </BkTxCd>
+                <NtryDtls>
+                    <TxDtls>
+                        <Refs>
+                            <TxId>2AMXIZ/151516</TxId>
+                        </Refs>
+                        <RmtInf>
+                            <Ustrd>Lidl 582 Groningen    &gt;GRONINGEN15.04.2023 14U07 KV005 J9KCF5 MCC:5411 Contactloze betaling NLNEDERLAND</Ustrd>
+                        </RmtInf>
+                    </TxDtls>
+                </NtryDtls>
+            </Ntry>
+            <Ntry>
+                <NtryRef>20230415-51274846</NtryRef>
+                <Amt Ccy="EUR">0.42</Amt>
+                <CdtDbtInd>DBIT</CdtDbtInd>
+                <RvslInd>false</RvslInd>
+                <Sts>BOOK</Sts>
+                <BookgDt>
+                    <Dt>2023-04-15</Dt>
+                </BookgDt>
+                <ValDt>
+                    <Dt>2023-04-15</Dt>
+                </ValDt>
+                <BkTxCd>
+                    <Prtry>
+                        <Cd>7913</Cd>
+                        <Issr>ASNBANK</Issr>
+                    </Prtry>
+                </BkTxCd>
+                <NtryDtls>
+                    <TxDtls>
+                        <Refs>
+                            <TxId>OQ2SK0/067114</TxId>
+                        </Refs>
+                        <RmtInf>
+                            <Ustrd>Gemeente Groningen    &gt;GRONINGEN15.04.2023 14U04 KV005 850XP9 MCC:7523 Contactloze betaling NLNEDERLAND</Ustrd>
+                        </RmtInf>
+                    </TxDtls>
+                </NtryDtls>
+            </Ntry>
+            <Ntry>
+                <NtryRef>20230414-51479475</NtryRef>
+                <Amt Ccy="EUR">17.81</Amt>
+                <CdtDbtInd>DBIT</CdtDbtInd>
+                <RvslInd>false</RvslInd>
+                <Sts>BOOK</Sts>
+                <BookgDt>
+                    <Dt>2023-04-14</Dt>
+                </BookgDt>
+                <ValDt>
+                    <Dt>2023-04-14</Dt>
+                </ValDt>
+                <BkTxCd>
+                    <Prtry>
+                        <Cd>7913</Cd>
+                        <Issr>ASNBANK</Issr>
+                    </Prtry>
+                </BkTxCd>
+                <NtryDtls>
+                    <TxDtls>
+                        <Refs>
+                            <TxId>OPNWPV/143004</TxId>
+                        </Refs>
+                        <RmtInf>
+                            <Ustrd>ALBERT HEIJN 1236     &gt;GRONINGEN14.04.2023 14U29 KV005 55RM82 MCC:5411 Contactloze betaling NLNEDERLAND</Ustrd>
+                        </RmtInf>
+                    </TxDtls>
+                </NtryDtls>
+            </Ntry>
+            <Ntry>
+                <NtryRef>20230414-51464575</NtryRef>
+                <Amt Ccy="EUR">2</Amt>
+                <CdtDbtInd>DBIT</CdtDbtInd>
+                <RvslInd>false</RvslInd>
+                <Sts>BOOK</Sts>
+                <BookgDt>
+                    <Dt>2023-04-14</Dt>
+                </BookgDt>
+                <ValDt>
+                    <Dt>2023-04-14</Dt>
+                </ValDt>
+                <BkTxCd>
+                    <Prtry>
+                        <Cd>7913</Cd>
+                        <Issr>ASNBANK</Issr>
+                    </Prtry>
+                </BkTxCd>
+                <NtryDtls>
+                    <TxDtls>
+                        <Refs>
+                            <TxId>OPNT1S/304403</TxId>
+                        </Refs>
+                        <RmtInf>
+                            <Ustrd>SumUp  *De kruidenspec&gt;Groningen14.04.2023 14U23 KV005 38F55910 MCC:5499 Contactloze betaling NLNEDERLAND</Ustrd>
+                        </RmtInf>
+                    </TxDtls>
+                </NtryDtls>
+            </Ntry>
+            <Ntry>
+                <NtryRef>20230414-50458036</NtryRef>
+                <Amt Ccy="EUR">19.99</Amt>
+                <CdtDbtInd>DBIT</CdtDbtInd>
+                <RvslInd>false</RvslInd>
+                <Sts>BOOK</Sts>
+                <BookgDt>
+                    <Dt>2023-04-14</Dt>
+                </BookgDt>
+                <ValDt>
+                    <Dt>2023-04-14</Dt>
+                </ValDt>
+                <BkTxCd>
+                    <Prtry>
+                        <Cd>9806</Cd>
+                        <Issr>ASNBANK</Issr>
+                    </Prtry>
+                </BkTxCd>
+                <NtryDtls>
+                    <TxDtls>
+                        <Refs>
+                            <EndToEndId>14-04-2023 09:49 0180310419043539</EndToEndId>
+                            <TxId>SCT2023041401542000000003782</TxId>
+                        </Refs>
+                        <RltdPties>
+                            <Cdtr>
+<Nm>Coolblue</Nm>
+                            </Cdtr>
+                            <CdtrAcct>
+<Id>
+    <IBAN>NL04ADYB2017400157</IBAN>
+</Id>
+                            </CdtrAcct>
+                        </RltdPties>
+                        <RltdAgts>
+                            <CdtrAgt>
+<FinInstnId>
+    <BIC>ADYBNL2AXXX</BIC>
+</FinInstnId>
+                            </CdtrAgt>
+                        </RltdAgts>
+                        <Purp>
+                            <Cd>EPAY</Cd>
+                        </Purp>
+                        <RmtInf>
+                            <Ustrd>CF93X655LLJMPPG2JFZS 0180310419043539 trnsnr:551475196</Ustrd>
+                        </RmtInf>
+                    </TxDtls>
+                </NtryDtls>
+            </Ntry>
+            <Ntry>
+                <NtryRef>20230413-52007224</NtryRef>
+                <Amt Ccy="EUR">33.66</Amt>
+                <CdtDbtInd>DBIT</CdtDbtInd>
+                <RvslInd>false</RvslInd>
+                <Sts>BOOK</Sts>
+                <BookgDt>
+                    <Dt>2023-04-13</Dt>
+                </BookgDt>
+                <ValDt>
+                    <Dt>2023-04-13</Dt>
+                </ValDt>
+                <BkTxCd>
+                    <Prtry>
+                        <Cd>7913</Cd>
+                        <Issr>ASNBANK</Issr>
+                    </Prtry>
+                </BkTxCd>
+                <NtryDtls>
+                    <TxDtls>
+                        <Refs>
+                            <TxId>WRDW2E/267933</TxId>
+                        </Refs>
+                        <RmtInf>
+                            <Ustrd>SHELL DE WIJERT       &gt;GRONINGEN13.04.2023 17U51 KV005 8SSC6Q MCC:5541 Contactloze betaling NLNEDERLAND</Ustrd>
+                        </RmtInf>
+                    </TxDtls>
+                </NtryDtls>
+            </Ntry>
+            <Ntry>
+                <NtryRef>20230413-50652941</NtryRef>
+                <Amt Ccy="EUR">9.99</Amt>
+                <CdtDbtInd>DBIT</CdtDbtInd>
+                <RvslInd>false</RvslInd>
+                <Sts>BOOK</Sts>
+                <BookgDt>
+                    <Dt>2023-04-13</Dt>
+                </BookgDt>
+                <ValDt>
+                    <Dt>2023-04-13</Dt>
+                </ValDt>
+                <BkTxCd>
+                    <Prtry>
+                        <Cd>9714</Cd>
+                        <Issr>ASNBANK</Issr>
+                    </Prtry>
+                </BkTxCd>
+                <NtryDtls>
+                    <TxDtls>
+                        <Refs>
+                            <InstrId>INNDNL2U20120423000280210021757</InstrId>
+                            <EndToEndId>1026371277569</EndToEndId>
+                            <TxId>1026371277569</TxId>
+                            <MndtId>5FLJ224ZZQYGC</MndtId>
+                        </Refs>
+                        <RltdPties>
+                            <Cdtr>
+<Nm>PayPal Europe S.a.r.l. et Cie S.C.A</Nm>
+                            </Cdtr>
+                            <CdtrAcct>
+<Id>
+    <IBAN>LU89751000135104200E</IBAN>
+</Id>
+                            </CdtrAcct>
+                        </RltdPties>
+                        <RltdAgts>
+                            <CdtrAgt>
+<FinInstnId>
+    <BIC>PPLXLUL2</BIC>
+</FinInstnId>
+                            </CdtrAgt>
+                        </RltdAgts>
+                        <RmtInf>
+                            <Ustrd>1026371277569 PAYPAL</Ustrd>
+                        </RmtInf>
+                    </TxDtls>
+                </NtryDtls>
+            </Ntry>
+            <Ntry>
+                <NtryRef>20230412-52229809</NtryRef>
+                <Amt Ccy="EUR">5</Amt>
+                <CdtDbtInd>DBIT</CdtDbtInd>
+                <RvslInd>false</RvslInd>
+                <Sts>BOOK</Sts>
+                <BookgDt>
+                    <Dt>2023-04-12</Dt>
+                </BookgDt>
+                <ValDt>
+                    <Dt>2023-04-12</Dt>
+                </ValDt>
+                <BkTxCd>
+                    <Prtry>
+                        <Cd>7913</Cd>
+                        <Issr>ASNBANK</Issr>
+                    </Prtry>
+                </BkTxCd>
+                <NtryDtls>
+                    <TxDtls>
+                        <Refs>
+                            <TxId>WR76GQ/899156</TxId>
+                        </Refs>
+                        <RmtInf>
+                            <Ustrd>CCV*CAFETARIA SIM     &gt;GRONINGEN12.04.2023 18U31 KV005 CT371516 MCC:5814 Contactloze betaling NLNEDERLAND</Ustrd>
+                        </RmtInf>
+                    </TxDtls>
+                </NtryDtls>
+            </Ntry>
+            <Ntry>
+                <NtryRef>20230412-51082466</NtryRef>
+                <Amt Ccy="EUR">8.88</Amt>
+                <CdtDbtInd>DBIT</CdtDbtInd>
+                <RvslInd>false</RvslInd>
+                <Sts>BOOK</Sts>
+                <BookgDt>
+                    <Dt>2023-04-12</Dt>
+                </BookgDt>
+                <ValDt>
+                    <Dt>2023-04-12</Dt>
+                </ValDt>
+                <BkTxCd>
+                    <Prtry>
+                        <Cd>7913</Cd>
+                        <Issr>ASNBANK</Issr>
+                    </Prtry>
+                </BkTxCd>
+                <NtryDtls>
+                    <TxDtls>
+                        <Refs>
+                            <TxId>OOUUDZ/346647</TxId>
+                        </Refs>
+                        <RmtInf>
+                            <Ustrd>Albert Heijn 1552     &gt;GRONINGEN12.04.2023 12U07 KV005 C7TZ5D MCC:5411 Contactloze betaling NLNEDERLAND</Ustrd>
+                        </RmtInf>
+                    </TxDtls>
+                </NtryDtls>
+            </Ntry>
+            <Ntry>
+                <NtryRef>20230412-51043613</NtryRef>
+                <Amt Ccy="EUR">44.48</Amt>
+                <CdtDbtInd>DBIT</CdtDbtInd>
+                <RvslInd>false</RvslInd>
+                <Sts>BOOK</Sts>
+                <BookgDt>
+                    <Dt>2023-04-12</Dt>
+                </BookgDt>
+                <ValDt>
+                    <Dt>2023-04-12</Dt>
+                </ValDt>
+                <BkTxCd>
+                    <Prtry>
+                        <Cd>9714</Cd>
+                        <Issr>ASNBANK</Issr>
+                    </Prtry>
+                </BkTxCd>
+                <NtryDtls>
+                    <TxDtls>
+                        <Refs>
+                            <InstrId>INNDNL2U20110423000061010029251</InstrId>
+                            <EndToEndId>250003084545</EndToEndId>
+                            <TxId>GT037018341502470AE</TxId>
+                            <MndtId>220000437201</MndtId>
+                        </Refs>
+                        <RltdPties>
+                            <Cdtr>
+<Nm>NS GROEP IZ NS REIZIGERS</Nm>
+                            </Cdtr>
+                            <CdtrAcct>
+<Id>
+    <IBAN>NL14ABNA0576850675</IBAN>
+</Id>
+                            </CdtrAcct>
+                        </RltdPties>
+                        <RltdAgts>
+                            <CdtrAgt>
+<FinInstnId>
+    <BIC>ABNANL2A</BIC>
+</FinInstnId>
+                            </CdtrAgt>
+                        </RltdAgts>
+                        <Purp>
+                            <Cd>OTHR</Cd>
+                        </Purp>
+                        <RmtInf>
+                            <Ustrd>Factuur: 450009925794</Ustrd>
+                        </RmtInf>
+                    </TxDtls>
+                </NtryDtls>
+            </Ntry>
+            <Ntry>
+                <NtryRef>20230411-51349509</NtryRef>
+                <Amt Ccy="EUR">12.09</Amt>
+                <CdtDbtInd>DBIT</CdtDbtInd>
+                <RvslInd>false</RvslInd>
+                <Sts>BOOK</Sts>
+                <BookgDt>
+                    <Dt>2023-04-11</Dt>
+                </BookgDt>
+                <ValDt>
+                    <Dt>2023-04-11</Dt>
+                </ValDt>
+                <BkTxCd>
+                    <Prtry>
+                        <Cd>9714</Cd>
+                        <Issr>ASNBANK</Issr>
+                    </Prtry>
+                </BkTxCd>
+                <NtryDtls>
+                    <TxDtls>
+                        <Refs>
+                            <InstrId>INNDNL2U20060423000006610004780</InstrId>
+                            <EndToEndId>E2E-ID-NL-217407088</EndToEndId>
+                            <TxId>DOMREC17252531SEQ000919DAT20230405</TxId>
+                            <MndtId>MANDATE-NL-61047-4</MndtId>
+                        </Refs>
+                        <RltdPties>
+                            <Cdtr>
+<Nm>Transip B.V.</Nm>
+                            </Cdtr>
+                            <CdtrAcct>
+<Id>
+    <IBAN>NL85INGB0654416265</IBAN>
+</Id>
+                            </CdtrAcct>
+                        </RltdPties>
+                        <RltdAgts>
+                            <CdtrAgt>
+<FinInstnId>
+    <BIC>INGBNL2A</BIC>
+</FinInstnId>
+                            </CdtrAgt>
+                        </RltdAgts>
+                        <RmtInf>
+                            <Ustrd>FACTUUR F0000.2304.0000.9096</Ustrd>
+                        </RmtInf>
+                    </TxDtls>
+                </NtryDtls>
+            </Ntry>
+            <Ntry>
+                <NtryRef>20230411-50630090</NtryRef>
+                <Amt Ccy="EUR">6.9</Amt>
+                <CdtDbtInd>DBIT</CdtDbtInd>
+                <RvslInd>false</RvslInd>
+                <Sts>BOOK</Sts>
+                <BookgDt>
+                    <Dt>2023-04-11</Dt>
+                </BookgDt>
+                <ValDt>
+                    <Dt>2023-04-11</Dt>
+                </ValDt>
+                <BkTxCd>
+                    <Prtry>
+                        <Cd>7913</Cd>
+                        <Issr>ASNBANK</Issr>
+                    </Prtry>
+                </BkTxCd>
+                <NtryDtls>
+                    <TxDtls>
+                        <Refs>
+                            <TxId>OOGMGO/075233</TxId>
+                        </Refs>
+                        <RmtInf>
+                            <Ustrd>Lekkellekkel          &gt;GRONINGEN11.04.2023 12U07 KV005 CTG099 MCC:5812 Contactloze betaling NLNEDERLAND</Ustrd>
+                        </RmtInf>
+                    </TxDtls>
+                </NtryDtls>
+            </Ntry>
+            <Ntry>
+                <NtryRef>20230410-50461021</NtryRef>
+                <Amt Ccy="EUR">29.95</Amt>
+                <CdtDbtInd>DBIT</CdtDbtInd>
+                <RvslInd>false</RvslInd>
+                <Sts>BOOK</Sts>
+                <BookgDt>
+                    <Dt>2023-04-10</Dt>
+                </BookgDt>
+                <ValDt>
+                    <Dt>2023-04-10</Dt>
+                </ValDt>
+                <BkTxCd>
+                    <Prtry>
+                        <Cd>9806</Cd>
+                        <Issr>ASNBANK</Issr>
+                    </Prtry>
+                </BkTxCd>
+                <NtryDtls>
+                    <TxDtls>
+                        <Refs>
+                            <EndToEndId>10-04-2023 12:22 1150013644302488</EndToEndId>
+                            <TxId>SCT2023041001287000000011139</TxId>
+                        </Refs>
+                        <RltdPties>
+                            <Cdtr>
+<Nm>Puikman V.O.F / Mijnbaard.nl via Mollie</Nm>
+                            </Cdtr>
+                            <CdtrAcct>
+<Id>
+    <IBAN>NL51DEUT0265262461</IBAN>
+</Id>
+                            </CdtrAcct>
+                        </RltdPties>
+                        <RltdAgts>
+                            <CdtrAgt>
+<FinInstnId>
+    <BIC>DEUTNL2AXXX</BIC>
+</FinInstnId>
+                            </CdtrAgt>
+                        </RltdAgts>
+                        <Purp>
+                            <Cd>EPAY</Cd>
+                        </Purp>
+                        <RmtInf>
+                            <Ustrd>M02889851MGAZUL3 1150013644302488 Mijnbaard NL order 1124359</Ustrd>
+                        </RmtInf>
+                    </TxDtls>
+                </NtryDtls>
+            </Ntry>
+            <Ntry>
+                <NtryRef>20230407-52053745</NtryRef>
+                <Amt Ccy="EUR">24.5</Amt>
+                <CdtDbtInd>DBIT</CdtDbtInd>
+                <RvslInd>false</RvslInd>
+                <Sts>BOOK</Sts>
+                <BookgDt>
+                    <Dt>2023-04-07</Dt>
+                </BookgDt>
+                <ValDt>
+                    <Dt>2023-04-07</Dt>
+                </ValDt>
+                <BkTxCd>
+                    <Prtry>
+                        <Cd>9806</Cd>
+                        <Issr>ASNBANK</Issr>
+                    </Prtry>
+                </BkTxCd>
+                <NtryDtls>
+                    <TxDtls>
+                        <Refs>
+                            <EndToEndId>07-04-2023 19:08 1150013626439014</EndToEndId>
+                            <TxId>SCT2023040701175000000010700</TxId>
+                        </Refs>
+                        <RltdPties>
+                            <Cdtr>
+<Nm>Sneleten.nl via Mollie</Nm>
+                            </Cdtr>
+                            <CdtrAcct>
+<Id>
+    <IBAN>NL51DEUT0265262461</IBAN>
+</Id>
+                            </CdtrAcct>
+                        </RltdPties>
+                        <RltdAgts>
+                            <CdtrAgt>
+<FinInstnId>
+    <BIC>DEUTNL2AXXX</BIC>
+</FinInstnId>
+                            </CdtrAgt>
+                        </RltdAgts>
+                        <Purp>
+                            <Cd>EPAY</Cd>
+                        </Purp>
+                        <RmtInf>
+                            <Ustrd>M01992421MGADWJY 1150013626439014 Bestelling EVFVZWD sneleten.nl</Ustrd>
+                        </RmtInf>
+                    </TxDtls>
+                </NtryDtls>
+            </Ntry>
+            <Ntry>
+                <NtryRef>20230407-50014363</NtryRef>
+                <Amt Ccy="EUR">181.5</Amt>
+                <CdtDbtInd>CRDT</CdtDbtInd>
+                <RvslInd>false</RvslInd>
+                <Sts>BOOK</Sts>
+                <BookgDt>
+                    <Dt>2023-04-06</Dt>
+                </BookgDt>
+                <ValDt>
+                    <Dt>2023-04-06</Dt>
+                </ValDt>
+                <BkTxCd>
+                    <Prtry>
+                        <Cd>6853</Cd>
+                        <Issr>ASNBANK</Issr>
+                    </Prtry>
+                </BkTxCd>
+                <NtryDtls>
+                    <TxDtls>
+                        <Refs>
+                            <TxId>3627473147397456</TxId>
+                        </Refs>
+                        <RltdPties>
+                            <Dbtr>
+<Nm>LBJ HOGENBIRK</Nm>
+                            </Dbtr>
+                            <DbtrAcct>
+<Id>
+    <IBAN>NL78ABNA0452460506</IBAN>
+</Id>
+                            </DbtrAcct>
+                        </RltdPties>
+                        <RmtInf>
+                            <Ustrd>Huisje Tsjechie p.p.</Ustrd>
+                        </RmtInf>
+                    </TxDtls>
+                </NtryDtls>
+            </Ntry>
+            <Ntry>
+                <NtryRef>20230407-50013970</NtryRef>
+                <Amt Ccy="EUR">181.5</Amt>
+                <CdtDbtInd>CRDT</CdtDbtInd>
+                <RvslInd>false</RvslInd>
+                <Sts>BOOK</Sts>
+                <BookgDt>
+                    <Dt>2023-04-06</Dt>
+                </BookgDt>
+                <ValDt>
+                    <Dt>2023-04-06</Dt>
+                </ValDt>
+                <BkTxCd>
+                    <Prtry>
+                        <Cd>6853</Cd>
+                        <Issr>ASNBANK</Issr>
+                    </Prtry>
+                </BkTxCd>
+                <NtryDtls>
+                    <TxDtls>
+                        <Refs>
+                            <TxId>3627473147397456</TxId>
+                        </Refs>
+                        <RltdPties>
+                            <Dbtr>
+<Nm>LBJ HOGENBIRK</Nm>
+                            </Dbtr>
+                            <DbtrAcct>
+<Id>
+    <IBAN>NL78ABNA0452460506</IBAN>
+</Id>
+                            </DbtrAcct>
+                        </RltdPties>
+                        <RmtInf>
+                            <Ustrd>Huisje Tsjechie p.p.</Ustrd>
+                        </RmtInf>
+                    </TxDtls>
+                </NtryDtls>
+            </Ntry>
+            <Ntry>
+                <NtryRef>20230405-54402542</NtryRef>
+                <Amt Ccy="EUR">37.48</Amt>
+                <CdtDbtInd>DBIT</CdtDbtInd>
+                <RvslInd>false</RvslInd>
+                <Sts>BOOK</Sts>
+                <BookgDt>
+                    <Dt>2023-04-05</Dt>
+                </BookgDt>
+                <ValDt>
+                    <Dt>2023-04-05</Dt>
+                </ValDt>
+                <BkTxCd>
+                    <Prtry>
+                        <Cd>9806</Cd>
+                        <Issr>ASNBANK</Issr>
+                    </Prtry>
+                </BkTxCd>
+                <NtryDtls>
+                    <TxDtls>
+                        <Refs>
+                            <EndToEndId>05-04-2023 21:11 0180309542049656</EndToEndId>
+                            <TxId>SCT2023040501045000000011950</TxId>
+                        </Refs>
+                        <RltdPties>
+                            <Cdtr>
+<Nm>Kruidvat</Nm>
+                            </Cdtr>
+                            <CdtrAcct>
+<Id>
+    <IBAN>NL04ADYB2017400157</IBAN>
+</Id>
+                            </CdtrAcct>
+                        </RltdPties>
+                        <RltdAgts>
+                            <CdtrAgt>
+<FinInstnId>
+    <BIC>ADYBNL2AXXX</BIC>
+</FinInstnId>
+                            </CdtrAgt>
+                        </RltdAgts>
+                        <Purp>
+                            <Cd>EPAY</Cd>
+                        </Purp>
+                        <RmtInf>
+                            <Ustrd>TZQVTLWTK6DPV832145UU 0180309542049656 1396000854 KruidvatNL</Ustrd>
+                        </RmtInf>
+                    </TxDtls>
+                </NtryDtls>
+            </Ntry>
+            <Ntry>
+                <NtryRef>20230405-53962882</NtryRef>
+                <Amt Ccy="EUR">1.85</Amt>
+                <CdtDbtInd>DBIT</CdtDbtInd>
+                <RvslInd>false</RvslInd>
+                <Sts>BOOK</Sts>
+                <BookgDt>
+                    <Dt>2023-04-05</Dt>
+                </BookgDt>
+                <ValDt>
+                    <Dt>2023-04-05</Dt>
+                </ValDt>
+                <BkTxCd>
+                    <Prtry>
+                        <Cd>7913</Cd>
+                        <Issr>ASNBANK</Issr>
+                    </Prtry>
+                </BkTxCd>
+                <NtryDtls>
+                    <TxDtls>
+                        <Refs>
+                            <TxId>4HBFZ6/445285</TxId>
+                        </Refs>
+                        <RmtInf>
+                            <Ustrd>HEMA EV005GRONINGENC  &gt;GRONINGEN 5.04.2023 17U08 KV005 MC9007 MCC:5311 Contactloze betaling NLNEDERLAND</Ustrd>
+                        </RmtInf>
+                    </TxDtls>
+                </NtryDtls>
+            </Ntry>
+            <Ntry>
+                <NtryRef>20230405-53117086</NtryRef>
+                <Amt Ccy="EUR">5.99</Amt>
+                <CdtDbtInd>DBIT</CdtDbtInd>
+                <RvslInd>false</RvslInd>
+                <Sts>BOOK</Sts>
+                <BookgDt>
+                    <Dt>2023-04-05</Dt>
+                </BookgDt>
+                <ValDt>
+                    <Dt>2023-04-05</Dt>
+                </ValDt>
+                <BkTxCd>
+                    <Prtry>
+                        <Cd>7913</Cd>
+                        <Issr>ASNBANK</Issr>
+                    </Prtry>
+                </BkTxCd>
+                <NtryDtls>
+                    <TxDtls>
+                        <Refs>
+                            <TxId>WYQHZL/112519</TxId>
+                        </Refs>
+                        <RmtInf>
+                            <Ustrd>ALBERT HEIJN 1552     &gt;GRONINGEN 5.04.2023 12U09 KV005 BD818V MCC:5411 Contactloze betaling NLNEDERLAND</Ustrd>
+                        </RmtInf>
+                    </TxDtls>
+                </NtryDtls>
+            </Ntry>
+            <Ntry>
+                <NtryRef>20230404-51731602</NtryRef>
+                <Amt Ccy="EUR">6.9</Amt>
+                <CdtDbtInd>DBIT</CdtDbtInd>
+                <RvslInd>false</RvslInd>
+                <Sts>BOOK</Sts>
+                <BookgDt>
+                    <Dt>2023-04-04</Dt>
+                </BookgDt>
+                <ValDt>
+                    <Dt>2023-04-04</Dt>
+                </ValDt>
+                <BkTxCd>
+                    <Prtry>
+                        <Cd>7913</Cd>
+                        <Issr>ASNBANK</Issr>
+                    </Prtry>
+                </BkTxCd>
+                <NtryDtls>
+                    <TxDtls>
+                        <Refs>
+                            <TxId>3096Z6/074802</TxId>
+                        </Refs>
+                        <RmtInf>
+                            <Ustrd>Lekkellekkel          &gt;GRONINGEN 4.04.2023 12U16 KV005 CTG099 MCC:5812 Contactloze betaling NLNEDERLAND</Ustrd>
+                        </RmtInf>
+                    </TxDtls>
+                </NtryDtls>
+            </Ntry>
+            <Ntry>
+                <NtryRef>20230403-52540594</NtryRef>
+                <Amt Ccy="EUR">1</Amt>
+                <CdtDbtInd>DBIT</CdtDbtInd>
+                <RvslInd>false</RvslInd>
+                <Sts>BOOK</Sts>
+                <BookgDt>
+                    <Dt>2023-04-03</Dt>
+                </BookgDt>
+                <ValDt>
+                    <Dt>2023-04-03</Dt>
+                </ValDt>
+                <BkTxCd>
+                    <Prtry>
+                        <Cd>7916</Cd>
+                        <Issr>ASNBANK</Issr>
+                    </Prtry>
+                </BkTxCd>
+                <NtryDtls>
+                    <TxDtls>
+                        <Refs>
+                            <TxId>OLNYH8/135967</TxId>
+                        </Refs>
+                        <RmtInf>
+                            <Ustrd>JACOBS DOUWE EGBERTS P&gt;UTRECHT  3.04.2023 14U09 KV006 00074701 MCC:5499 Apple Pay betaling   NLNEDERLAND</Ustrd>
+                        </RmtInf>
+                    </TxDtls>
+                </NtryDtls>
+            </Ntry>
+            <Ntry>
+                <NtryRef>20230403-51681710</NtryRef>
+                <Amt Ccy="EUR">3.77</Amt>
+                <CdtDbtInd>DBIT</CdtDbtInd>
+                <RvslInd>false</RvslInd>
+                <Sts>BOOK</Sts>
+                <BookgDt>
+                    <Dt>2023-04-03</Dt>
+                </BookgDt>
+                <ValDt>
+                    <Dt>2023-04-03</Dt>
+                </ValDt>
+                <BkTxCd>
+                    <Prtry>
+                        <Cd>7913</Cd>
+                        <Issr>ASNBANK</Issr>
+                    </Prtry>
+                </BkTxCd>
+                <NtryDtls>
+                    <TxDtls>
+                        <Refs>
+                            <TxId>WYCPMJ/197582</TxId>
+                        </Refs>
+                        <RmtInf>
+                            <Ustrd>ALBERT HEIJN 1552     &gt;GRONINGEN 3.04.2023 12U39 KV005 937QBL MCC:5411 Contactloze betaling NLNEDERLAND</Ustrd>
+                        </RmtInf>
+                    </TxDtls>
+                </NtryDtls>
+            </Ntry>
+            <Ntry>
+                <NtryRef>20230403-50529444</NtryRef>
+                <Amt Ccy="EUR">1</Amt>
+                <CdtDbtInd>DBIT</CdtDbtInd>
+                <RvslInd>false</RvslInd>
+                <Sts>BOOK</Sts>
+                <BookgDt>
+                    <Dt>2023-04-03</Dt>
+                </BookgDt>
+                <ValDt>
+                    <Dt>2023-04-03</Dt>
+                </ValDt>
+                <BkTxCd>
+                    <Prtry>
+                        <Cd>7916</Cd>
+                        <Issr>ASNBANK</Issr>
+                    </Prtry>
+                </BkTxCd>
+                <NtryDtls>
+                    <TxDtls>
+                        <Refs>
+                            <TxId>OLJZIU/315745</TxId>
+                        </Refs>
+                        <RmtInf>
+                            <Ustrd>JACOBS DOUWE EGBERTS P&gt;UTRECHT  3.04.2023 10U34 KV006 00074701 MCC:5499 Apple Pay betaling   NLNEDERLAND</Ustrd>
+                        </RmtInf>
+                    </TxDtls>
+                </NtryDtls>
+            </Ntry>
+            <Ntry>
+                <NtryRef>20230403-50300785</NtryRef>
+                <Amt Ccy="EUR">2.49</Amt>
+                <CdtDbtInd>DBIT</CdtDbtInd>
+                <RvslInd>false</RvslInd>
+                <Sts>BOOK</Sts>
+                <BookgDt>
+                    <Dt>2023-04-03</Dt>
+                </BookgDt>
+                <ValDt>
+                    <Dt>2023-04-03</Dt>
+                </ValDt>
+                <BkTxCd>
+                    <Prtry>
+                        <Cd>7913</Cd>
+                        <Issr>ASNBANK</Issr>
+                    </Prtry>
+                </BkTxCd>
+                <NtryDtls>
+                    <TxDtls>
+                        <Refs>
+                            <TxId>OLISZG/105878</TxId>
+                        </Refs>
+                        <RmtInf>
+                            <Ustrd>Kruidvat 6289         &gt;GRONINGEN 3.04.2023  9U03 KV005 TBG5RC MCC:5331 Contactloze betaling NLNEDERLAND</Ustrd>
+                        </RmtInf>
+                    </TxDtls>
+                </NtryDtls>
+            </Ntry>
+            <Ntry>
+                <NtryRef>20230401-52456633</NtryRef>
+                <Amt Ccy="EUR">111.59</Amt>
+                <CdtDbtInd>DBIT</CdtDbtInd>
+                <RvslInd>false</RvslInd>
+                <Sts>BOOK</Sts>
+                <BookgDt>
+                    <Dt>2023-04-01</Dt>
+                </BookgDt>
+                <ValDt>
+                    <Dt>2023-04-01</Dt>
+                </ValDt>
+                <BkTxCd>
+                    <Prtry>
+                        <Cd>7913</Cd>
+                        <Issr>ASNBANK</Issr>
+                    </Prtry>
+                </BkTxCd>
+                <NtryDtls>
+                    <TxDtls>
+                        <Refs>
+                            <TxId>29CWYU/735367</TxId>
+                        </Refs>
+                        <RmtInf>
+                            <Ustrd>Media Markt Groninge  &gt;GRONINGEN 1.04.2023 15U40 KV005 2G5L03 MCC:4812 Contactloze betaling NLNEDERLAND</Ustrd>
+                        </RmtInf>
+                    </TxDtls>
+                </NtryDtls>
+            </Ntry>
+        </Stmt>
+        <Stmt>
+            <Id>CAMT05300000000000200002</Id>
+            <ElctrncSeqNb>23120</ElctrncSeqNb>
+            <CreDtTm>2023-04-30T20:26:13.42964+02:00</CreDtTm>
+            <Acct>
+                <Id>
+                    <IBAN>NL86ASNB8830237086</IBAN>
+                </Id>
+                <Ccy>EUR</Ccy>
+                <Svcr>
+                    <FinInstnId>
+                        <BIC>ASNBNL21</BIC>
+                    </FinInstnId>
+                </Svcr>
+            </Acct>
+            <Bal>
+                <Tp>
+                    <CdOrPrtry>
+                        <Cd>OPBD</Cd>
+                    </CdOrPrtry>
+                </Tp>
+                <Amt Ccy="EUR">27440.34</Amt>
+                <CdtDbtInd>CRDT</CdtDbtInd>
+                <Dt>
+                    <Dt>2023-04-05</Dt>
+                </Dt>
+            </Bal>
+            <Bal>
+                <Tp>
+                    <CdOrPrtry>
+                        <Cd>CLBD</Cd>
+                    </CdOrPrtry>
+                </Tp>
+                <Amt Ccy="EUR">26449.44</Amt>
+                <CdtDbtInd>CRDT</CdtDbtInd>
+                <Dt>
+                    <Dt>2023-04-18</Dt>
+                </Dt>
+            </Bal>
+            <Ntry>
+                <NtryRef>20230418-60982387</NtryRef>
+                <Amt Ccy="EUR">1000</Amt>
+                <CdtDbtInd>DBIT</CdtDbtInd>
+                <RvslInd>false</RvslInd>
+                <Sts>BOOK</Sts>
+                <BookgDt>
+                    <Dt>2023-04-18</Dt>
+                </BookgDt>
+                <ValDt>
+                    <Dt>2023-04-18</Dt>
+                </ValDt>
+                <BkTxCd>
+                    <Prtry>
+                        <Cd>3754</Cd>
+                        <Issr>ASNBANK</Issr>
+                    </Prtry>
+                </BkTxCd>
+                <NtryDtls>
+                    <TxDtls>
+                        <Refs>
+                            <EndToEndId>NOTPROVIDED</EndToEndId>
+                            <TxId>SIT202304180375400982387</TxId>
+                        </Refs>
+                        <RltdPties>
+                            <Cdtr>
+<Nm>Persoonlijk</Nm>
+                            </Cdtr>
+                            <CdtrAcct>
+<Id>
+    <IBAN>NL97ASNB8830219525</IBAN>
+</Id>
+                            </CdtrAcct>
+                        </RltdPties>
+                        <RltdAgts>
+                            <CdtrAgt>
+<FinInstnId>
+    <BIC>ASNBNL21XXX</BIC>
+</FinInstnId>
+                            </CdtrAgt>
+                        </RltdAgts>
+                        <RmtInf/>
+                    </TxDtls>
+                </NtryDtls>
+            </Ntry>
+            <Ntry>
+                <NtryRef>20230405-61554244</NtryRef>
+                <Amt Ccy="EUR">9.1</Amt>
+                <CdtDbtInd>CRDT</CdtDbtInd>
+                <RvslInd>false</RvslInd>
+                <Sts>BOOK</Sts>
+                <BookgDt>
+                    <Dt>2023-04-05</Dt>
+                </BookgDt>
+                <ValDt>
+                    <Dt>2023-04-01</Dt>
+                </ValDt>
+                <BkTxCd>
+                    <Prtry>
+                        <Cd>6607</Cd>
+                        <Issr>ASNBANK</Issr>
+                    </Prtry>
+                </BkTxCd>
+                <NtryDtls>
+                    <TxDtls>
+                        <RmtInf>
+                            <Ustrd>Rente over positief saldo tot 01-04-23</Ustrd>
+                        </RmtInf>
+                    </TxDtls>
+                </NtryDtls>
+            </Ntry>
+        </Stmt>
+    </BkToCstmrStmt>
+</Document>
