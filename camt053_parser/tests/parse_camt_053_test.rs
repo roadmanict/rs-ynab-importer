@@ -1,4 +1,4 @@
-use ynab_importer::parse_file;
+use camt053_parser::parse_file;
 
 #[test]
 fn name() {

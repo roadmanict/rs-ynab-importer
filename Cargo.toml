@@ -1,6 +1,6 @@
 [workspace]
 members = [
-    "file_system",
-    "ynab_importer",
+    "camt053_parser",
     "ynab_csv",
+    "app",
 ]

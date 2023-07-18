@@ -37,6 +37,7 @@ pub enum ParseCamt053Error {
     ParseError(#[from] quick_xml::de::DeError),
 }
 
+// Account, Date, Payee, Memo, Inflow, Outflow
 pub fn parse_file(path: &str) -> Result<(), ParseCamt053Error> {
     let file = fs::read_to_string(path)?;
 

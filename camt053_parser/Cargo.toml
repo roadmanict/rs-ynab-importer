@@ -1,5 +1,5 @@
 [package]
-name = "ynab_importer"
+name = "camt053_parser"
 version = "0.1.0"
 edition = "2021"
 
