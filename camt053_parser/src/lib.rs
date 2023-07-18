@@ -1,5 +1,3 @@
-use std::fs;
-
 use quick_xml::de::from_str;
 use thiserror::Error;
 
@@ -13,8 +11,50 @@ enum BkToCstmrStmtItem {
 }
 
 #[derive(Debug, Deserialize, PartialEq)]
+struct Id {
+    #[serde(rename = "IBAN")]
+    iban: String,
+}
+
+#[derive(Debug, Deserialize, PartialEq)]
+#[serde(rename_all = "PascalCase")]
+struct Acct {
+    id: Id,
+}
+
+#[derive(Debug, Deserialize, PartialEq)]
+enum CdtDbtIndValue {
+    #[serde(rename = "DBIT")]
+    Dbit,
+    #[serde(rename = "CRDT")]
+    Crdt,
+}
+
+#[derive(Debug, Deserialize, PartialEq)]
+struct CdtDbtInd {
+    #[serde(rename = "$text")]
+    content: CdtDbtIndValue
+}
+
+#[derive(Debug, Deserialize, PartialEq)]
+#[serde(rename_all = "PascalCase")]
+struct BookgDt {
+    dt: String,
+}
+
+#[derive(Debug, Deserialize, PartialEq)]
+#[serde(rename_all = "PascalCase")]
+struct Ntry {
+    amt: String,
+    cdt_dbt_ind: CdtDbtInd,
+    bookg_dt: BookgDt,
+}
+
+#[derive(Debug, Deserialize, PartialEq)]
+#[serde(rename_all = "PascalCase")]
 struct Stmt {
-    Id: String,
+    acct: Acct,
+    ntry: Vec<Ntry>,
 }
 
 #[derive(Debug, Deserialize, PartialEq)]
@@ -38,10 +78,8 @@ pub enum ParseCamt053Error {
 }
 
 // Account, Date, Payee, Memo, Inflow, Outflow
-pub fn parse_file(path: &str) -> Result<(), ParseCamt053Error> {
-    let file = fs::read_to_string(path)?;
-
-    let camt_053: XmlDocument = from_str(&file)?;
+pub fn parse_file(xml_contents: &str) -> Result<(), ParseCamt053Error> {
+    let camt_053: XmlDocument = from_str(xml_contents)?;
 
     println!("{:?}", camt_053);
 

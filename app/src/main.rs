@@ -6,7 +6,5 @@ use ynab_csv::serialize_statements;
 fn main() -> Result<(), Box<dyn Error>> {
     let statements = parse_file("examples/example.xml")?;
 
-    serialize_statements(statements);
-
     Ok(())
 }
