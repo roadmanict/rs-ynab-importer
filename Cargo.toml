@@ -1,5 +1,6 @@
 [workspace]
 members = [
+    "common",
     "camt053_parser",
     "ynab_csv",
     "app",

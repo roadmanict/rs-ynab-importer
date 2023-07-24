@@ -14,11 +14,16 @@ dependencies = [
 name = "camt053_parser"
 version = "0.1.0"
 dependencies = [
+ "common",
  "quick-xml",
  "serde",
  "serde-xml-rs",
  "thiserror",
 ]
+
+[[package]]
+name = "common"
+version = "0.1.0"
 
 [[package]]
 name = "csv"
