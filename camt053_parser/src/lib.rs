@@ -3,6 +3,8 @@ use thiserror::Error;
 
 use serde::Deserialize;
 
+use common::Entry;
+
 #[derive(Debug, Deserialize, PartialEq)]
 enum BkToCstmrStmtItem {
     Stmt(Stmt),
@@ -33,7 +35,7 @@ enum CdtDbtIndValue {
 #[derive(Debug, Deserialize, PartialEq)]
 struct CdtDbtInd {
     #[serde(rename = "$text")]
-    content: CdtDbtIndValue
+    content: CdtDbtIndValue,
 }
 
 #[derive(Debug, Deserialize, PartialEq)]
@@ -77,11 +79,40 @@ pub enum ParseCamt053Error {
     ParseError(#[from] quick_xml::de::DeError),
 }
 
-// Account, Date, Payee, Memo, Inflow, Outflow
-pub fn parse_file(xml_contents: &str) -> Result<(), ParseCamt053Error> {
+#[derive(Debug)]
+pub struct EntriesContainer {
+    pub entries: Vec<Entry>,
+}
+
+impl From<XmlDocument> for EntriesContainer {
+    fn from(value: XmlDocument) -> Self {
+        let mut container = EntriesContainer { entries: vec![] };
+
+        let items = value.bk_to_cstmr_stmt.items;
+
+        for item in items {
+            if let BkToCstmrStmtItem::Stmt(stmt) = item {
+                let account = stmt.acct.id.iban;
+                for item in stmt.ntry {
+                    container.entries.push(Entry::new(
+                        account.to_owned(),
+                        item.bookg_dt.dt,
+                        String::from("Payee"),
+                        None,
+                        None,
+                        None,
+                    ));
+                }
+            }
+        }
+
+        container
+    }
+}
+
+pub fn parse_file(xml_contents: &str) -> Result<Vec<Entry>, ParseCamt053Error> {
     let camt_053: XmlDocument = from_str(xml_contents)?;
+    let container: EntriesContainer = camt_053.into();
 
-    println!("{:?}", camt_053);
-
-    todo!()
+    Ok(container.entries)
 }
