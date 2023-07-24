@@ -3,6 +3,8 @@ use thiserror::Error;
 
 use serde::Serialize;
 
+use common::Entry;
+
 #[derive(Debug, Serialize)]
 #[serde(rename_all = "PascalCase")]
 pub struct YnabCsv {
@@ -31,6 +33,18 @@ impl YnabCsv {
     }
 }
 
+impl From<Entry> for YnabCsv {
+    fn from(value: Entry) -> Self {
+        YnabCsv::new(
+            value.date,
+            value.payee,
+            value.memo,
+            value.outflow,
+            value.inflow,
+        )
+    }
+}
+
 #[derive(Debug, Error)]
 pub enum SerializeStatementsError {
     #[error("Error serializing csv")]
@@ -39,9 +53,14 @@ pub enum SerializeStatementsError {
     IOError(#[from] std::io::Error),
 }
 
-pub fn serialize_statements(statements: Vec<YnabCsv>) -> Result<(), SerializeStatementsError> {
-    let mut wtr = csv::Writer::from_writer(io::stdout());
+pub fn serialize_statements(statements: Vec<Entry>) -> Result<(), SerializeStatementsError> {
+    let mut ynab_csv: Vec<YnabCsv> = vec![];
     for stmt in statements {
+        ynab_csv.push(stmt.into());
+    }
+
+    let mut wtr = csv::Writer::from_writer(io::stdout());
+    for stmt in ynab_csv {
         wtr.serialize(stmt)?;
     }
 
@@ -56,7 +75,8 @@ mod tests {
 
     #[test]
     fn serialize_statements_test() {
-        serialize_statements(vec![YnabCsv::new(
+        serialize_statements(vec![Entry::new(
+            String::from("Account"),
             String::from("17-12-1999"),
             String::from("Albert Heijn"),
             Some(String::from("Memo")),
@@ -66,4 +86,3 @@ mod tests {
         .expect("stmt to be serialized");
     }
 }
-
