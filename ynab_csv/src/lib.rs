@@ -1,4 +1,5 @@
-use std::io;
+use std::{io::{Error, ErrorKind}, string::FromUtf8Error};
+
 use thiserror::Error;
 
 use serde::Serialize;
@@ -51,6 +52,8 @@ pub enum SerializeStatementsError {
     SerializeError(#[from] csv::Error),
     #[error("IO error")]
     IOError(#[from] std::io::Error),
+    #[error("Parse into string error")]
+    FromUtf8Error(#[from] std::string::FromUtf8Error),
 }
 
 pub fn serialize_statements(statements: Vec<Entry>) -> Result<(), SerializeStatementsError> {
@@ -59,12 +62,18 @@ pub fn serialize_statements(statements: Vec<Entry>) -> Result<(), SerializeState
         ynab_csv.push(stmt.into());
     }
 
-    let mut wtr = csv::Writer::from_writer(io::stdout());
+    let mut wtr = csv::Writer::from_writer(vec![]);
     for stmt in ynab_csv {
         wtr.serialize(stmt)?;
     }
 
-    wtr.flush()?;
+    let result = wtr
+        .into_inner()
+        .map_err(|_| Error::new(ErrorKind::Other, "Into Inner error"))?;
+
+    println!("{:?}", String::from_utf8(result)?);
+
+    todo!();
 
     Ok(())
 }
