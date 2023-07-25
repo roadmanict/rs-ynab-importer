@@ -5,26 +5,26 @@ use serde::Deserialize;
 
 use common::Entry;
 
-#[derive(Debug, Deserialize, PartialEq)]
+#[derive(Debug, Deserialize, PartialEq, Clone)]
 enum BkToCstmrStmtItem {
     Stmt(Stmt),
     #[serde(other)]
     Other,
 }
 
-#[derive(Debug, Deserialize, PartialEq)]
+#[derive(Debug, Deserialize, PartialEq, Clone)]
 struct Id {
     #[serde(rename = "IBAN")]
     iban: String,
 }
 
-#[derive(Debug, Deserialize, PartialEq)]
+#[derive(Debug, Deserialize, PartialEq, Clone)]
 #[serde(rename_all = "PascalCase")]
 struct Acct {
     id: Id,
 }
 
-#[derive(Debug, Deserialize, PartialEq)]
+#[derive(Debug, Deserialize, PartialEq, Clone)]
 enum CdtDbtIndValue {
     #[serde(rename = "DBIT")]
     Dbit,
@@ -32,19 +32,19 @@ enum CdtDbtIndValue {
     Crdt,
 }
 
-#[derive(Debug, Deserialize, PartialEq)]
+#[derive(Debug, Deserialize, PartialEq, Clone)]
 struct CdtDbtInd {
     #[serde(rename = "$text")]
     content: CdtDbtIndValue,
 }
 
-#[derive(Debug, Deserialize, PartialEq)]
+#[derive(Debug, Deserialize, PartialEq, Clone)]
 #[serde(rename_all = "PascalCase")]
 struct BookgDt {
     dt: String,
 }
 
-#[derive(Debug, Deserialize, PartialEq)]
+#[derive(Debug, Deserialize, PartialEq, Clone)]
 #[serde(rename_all = "PascalCase")]
 struct Ntry {
     amt: String,
@@ -52,22 +52,22 @@ struct Ntry {
     bookg_dt: BookgDt,
 }
 
-#[derive(Debug, Deserialize, PartialEq)]
+#[derive(Debug, Deserialize, PartialEq, Clone)]
 #[serde(rename_all = "PascalCase")]
 struct Stmt {
     acct: Acct,
     ntry: Vec<Ntry>,
 }
 
-#[derive(Debug, Deserialize, PartialEq)]
+#[derive(Debug, Deserialize, PartialEq, Clone)]
 struct BkToCstmrStmt {
     #[serde(rename = "$value")]
     items: Vec<BkToCstmrStmtItem>,
 }
 
-#[derive(Debug, Deserialize, PartialEq)]
+#[derive(Debug, Deserialize, PartialEq, Clone)]
 #[serde(rename_all = "PascalCase")]
-struct XmlDocument {
+pub struct XmlDocument {
     bk_to_cstmr_stmt: BkToCstmrStmt,
 }
 
@@ -122,9 +122,9 @@ pub struct Camt053Parser {
 }
 
 impl Camt053Parser {
-    pub fn create_nullable() -> Self {
+    pub fn create_nullable(xml_document: XmlDocument) -> Self {
         Camt053Parser {
-            xml_parser: Box::new(StubbedXmlParser {}),
+            xml_parser: Box::new(StubbedXmlParser { xml_document }),
         }
     }
 
@@ -157,13 +157,13 @@ impl XmlParser for RealXmlParser {
     }
 }
 
-struct StubbedXmlParser {}
+struct StubbedXmlParser {
+    xml_document: XmlDocument,
+}
 
 impl XmlParser for StubbedXmlParser {
-    fn parse_from_str(&self, xml_contents: &str) -> Result<XmlDocument, ParseCamt053Error> {
-        Ok(XmlDocument {
-            bk_to_cstmr_stmt: BkToCstmrStmt { items: vec![] },
-        })
+    fn parse_from_str(&self, _xml_contents: &str) -> Result<XmlDocument, ParseCamt053Error> {
+        Ok(self.xml_document.clone())
     }
 }
 
@@ -173,10 +173,16 @@ mod tests {
 
     #[test]
     fn test_stubbed_xml_parser() {
-        let camt_053_parser = Camt053Parser::create_nullable();
+        let xml_document = XmlDocument {
+            bk_to_cstmr_stmt: BkToCstmrStmt { items: vec![] },
+        };
+
+        let camt_053_parser = Camt053Parser::create_nullable(xml_document);
 
         assert_eq!(
-            camt_053_parser.parse_file("").expect("File to be parsed"),
+            camt_053_parser
+                .parse_file("<xml><is><mocked>")
+                .expect("File to be parsed"),
             vec![]
         )
     }
