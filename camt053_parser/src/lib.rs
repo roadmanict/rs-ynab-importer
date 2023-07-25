@@ -116,3 +116,68 @@ pub fn parse_file(xml_contents: &str) -> Result<Vec<Entry>, ParseCamt053Error> {
 
     Ok(container.entries)
 }
+
+pub struct Camt053Parser {
+    xml_parser: Box<dyn XmlParser>,
+}
+
+impl Camt053Parser {
+    pub fn create_nullable() -> Self {
+        Camt053Parser {
+            xml_parser: Box::new(StubbedXmlParser {}),
+        }
+    }
+
+    pub fn create() -> Self {
+        Camt053Parser {
+            xml_parser: Box::new(RealXmlParser {}),
+        }
+    }
+
+    pub fn parse_file(&self, xml_contents: &str) -> Result<Vec<Entry>, ParseCamt053Error> {
+        let camt_053 = self.xml_parser.parse_from_str(xml_contents)?;
+
+        let container: EntriesContainer = camt_053.into();
+
+        Ok(container.entries)
+    }
+}
+
+trait XmlParser {
+    fn parse_from_str(&self, xml_contents: &str) -> Result<XmlDocument, ParseCamt053Error>;
+}
+
+struct RealXmlParser {}
+
+impl XmlParser for RealXmlParser {
+    fn parse_from_str(&self, xml_contents: &str) -> Result<XmlDocument, ParseCamt053Error> {
+        let xml_document: XmlDocument = from_str(xml_contents)?;
+
+        Ok(xml_document)
+    }
+}
+
+struct StubbedXmlParser {}
+
+impl XmlParser for StubbedXmlParser {
+    fn parse_from_str(&self, xml_contents: &str) -> Result<XmlDocument, ParseCamt053Error> {
+        Ok(XmlDocument {
+            bk_to_cstmr_stmt: BkToCstmrStmt { items: vec![] },
+        })
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_stubbed_xml_parser() {
+        let camt_053_parser = Camt053Parser::create_nullable();
+
+        assert_eq!(
+            camt_053_parser.parse_file("").expect("File to be parsed"),
+            vec![]
+        )
+    }
+}
