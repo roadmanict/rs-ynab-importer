@@ -10,20 +10,20 @@ pub struct Entry {
 
 impl Entry {
     pub fn new(
-        account: String,
-        date: String,
-        payee: String,
-        memo: Option<String>,
-        inflow: Option<String>,
-        outflow: Option<String>,
+        account: &str,
+        date: &str,
+        payee: &str,
+        memo: Option<&str>,
+        inflow: Option<&str>,
+        outflow: Option<&str>,
     ) -> Self {
         Entry {
-            account,
-            date,
-            payee,
-            memo,
-            inflow,
-            outflow,
+            account: String::from(account),
+            date: String::from(date),
+            payee: String::from(payee),
+            memo: memo.map(|m| String::from(m)),
+            inflow: inflow.map(|i| String::from(i)),
+            outflow: outflow.map(|o| String::from(o)),
         }
     }
 }

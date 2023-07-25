@@ -85,11 +85,11 @@ mod tests {
     #[test]
     fn serialize_statements_test() {
         serialize_statements(vec![Entry::new(
-            String::from("Account"),
-            String::from("17-12-1999"),
-            String::from("Albert Heijn"),
-            Some(String::from("Memo")),
-            Some(String::from("120")),
+            "Account",
+            "17-12-1999",
+            "Albert Heijn",
+            Some("Memo"),
+            Some("120"),
             None,
         )])
         .expect("stmt to be serialized");
