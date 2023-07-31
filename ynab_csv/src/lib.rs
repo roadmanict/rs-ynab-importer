@@ -1,4 +1,4 @@
-use std::{io::{Error, ErrorKind}, string::FromUtf8Error};
+use std::io::{Error, ErrorKind};
 
 use thiserror::Error;
 
@@ -56,26 +56,64 @@ pub enum SerializeStatementsError {
     FromUtf8Error(#[from] std::string::FromUtf8Error),
 }
 
-pub fn serialize_statements(statements: Vec<Entry>) -> Result<(), SerializeStatementsError> {
-    let mut ynab_csv: Vec<YnabCsv> = vec![];
-    for stmt in statements {
-        ynab_csv.push(stmt.into());
+pub struct YnabCsvSerializer {
+    csv_serializer: Box<dyn CsvSerializer>,
+}
+
+impl YnabCsvSerializer {
+    pub fn create_nullable() -> YnabCsvSerializer {
+        YnabCsvSerializer {
+            csv_serializer: Box::new(StubbedCsvSerializer {}),
+        }
     }
 
-    let mut wtr = csv::Writer::from_writer(vec![]);
-    for stmt in ynab_csv {
-        wtr.serialize(stmt)?;
+    pub fn create() -> YnabCsvSerializer {
+        YnabCsvSerializer {
+            csv_serializer: Box::new(RealCsvSerializer {}),
+        }
     }
 
-    let result = wtr
-        .into_inner()
-        .map_err(|_| Error::new(ErrorKind::Other, "Into Inner error"))?;
+    pub fn serialize(&self, entries: Vec<Entry>) -> Result<&str, SerializeStatementsError> {
+        let mut ynab_csv: Vec<YnabCsv> = vec![];
+        for stmt in entries {
+            ynab_csv.push(stmt.into());
+        }
 
-    println!("{:?}", String::from_utf8(result)?);
+        let mut wtr = csv::Writer::from_writer(vec![]);
+        for stmt in ynab_csv {
+            wtr.serialize(stmt)?;
+        }
 
-    todo!();
+        let result = wtr
+            .into_inner()
+            .map_err(|_| Error::new(ErrorKind::Other, "Into Inner error"))?;
 
-    Ok(())
+        println!("{:?}", String::from_utf8(result)?);
+
+        Ok("")
+    }
+}
+
+trait CsvSerializer {
+    fn serialize(&self, entries: Vec<Entry>) -> Result<&str, SerializeStatementsError>;
+}
+
+#[derive(Debug)]
+struct RealCsvSerializer {}
+
+impl CsvSerializer for RealCsvSerializer {
+    fn serialize(&self, entries: Vec<Entry>) -> Result<&str, SerializeStatementsError> {
+        todo!()
+    }
+}
+
+#[derive(Debug)]
+struct StubbedCsvSerializer {}
+
+impl CsvSerializer for StubbedCsvSerializer {
+    fn serialize(&self, entries: Vec<Entry>) -> Result<&str, SerializeStatementsError> {
+        todo!()
+    }
 }
 
 #[cfg(test)]
@@ -84,7 +122,8 @@ mod tests {
 
     #[test]
     fn serialize_statements_test() {
-        serialize_statements(vec![Entry::new(
+        let ynab_csv_serializer = YnabCsvSerializer::create_nullable();
+        ynab_csv_serializer.serialize(vec![Entry::new(
             "Account",
             "17-12-1999",
             "Albert Heijn",
