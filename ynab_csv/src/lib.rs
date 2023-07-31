@@ -73,14 +73,29 @@ impl YnabCsvSerializer {
         }
     }
 
-    pub fn serialize(&self, entries: Vec<Entry>) -> Result<&str, SerializeStatementsError> {
+    pub fn serialize(&self, entries: Vec<Entry>) -> Result<String, SerializeStatementsError> {
         let mut ynab_csv: Vec<YnabCsv> = vec![];
         for stmt in entries {
             ynab_csv.push(stmt.into());
         }
 
+        let result = self.csv_serializer.serialize(ynab_csv)?;
+
+        Ok(result)
+    }
+}
+
+trait CsvSerializer {
+    fn serialize(&self, entries: Vec<YnabCsv>) -> Result<String, SerializeStatementsError>;
+}
+
+#[derive(Debug)]
+struct RealCsvSerializer {}
+
+impl CsvSerializer for RealCsvSerializer {
+    fn serialize(&self, entries: Vec<YnabCsv>) -> Result<String, SerializeStatementsError> {
         let mut wtr = csv::Writer::from_writer(vec![]);
-        for stmt in ynab_csv {
+        for stmt in entries {
             wtr.serialize(stmt)?;
         }
 
@@ -88,22 +103,9 @@ impl YnabCsvSerializer {
             .into_inner()
             .map_err(|_| Error::new(ErrorKind::Other, "Into Inner error"))?;
 
-        println!("{:?}", String::from_utf8(result)?);
+        let result = String::from_utf8(result)?;
 
-        Ok("")
-    }
-}
-
-trait CsvSerializer {
-    fn serialize(&self, entries: Vec<Entry>) -> Result<&str, SerializeStatementsError>;
-}
-
-#[derive(Debug)]
-struct RealCsvSerializer {}
-
-impl CsvSerializer for RealCsvSerializer {
-    fn serialize(&self, entries: Vec<Entry>) -> Result<&str, SerializeStatementsError> {
-        todo!()
+        Ok(result)
     }
 }
 
@@ -111,7 +113,7 @@ impl CsvSerializer for RealCsvSerializer {
 struct StubbedCsvSerializer {}
 
 impl CsvSerializer for StubbedCsvSerializer {
-    fn serialize(&self, entries: Vec<Entry>) -> Result<&str, SerializeStatementsError> {
+    fn serialize(&self, entries: Vec<YnabCsv>) -> Result<String, SerializeStatementsError> {
         todo!()
     }
 }
@@ -123,14 +125,17 @@ mod tests {
     #[test]
     fn serialize_statements_test() {
         let ynab_csv_serializer = YnabCsvSerializer::create_nullable();
-        ynab_csv_serializer.serialize(vec![Entry::new(
-            "Account",
-            "17-12-1999",
-            "Albert Heijn",
-            Some("Memo"),
-            Some("120"),
-            None,
-        )])
-        .expect("stmt to be serialized");
+        let result = ynab_csv_serializer
+            .serialize(vec![Entry::new(
+                "Account",
+                "17-12-1999",
+                "Albert Heijn",
+                Some("Memo"),
+                Some("120"),
+                None,
+            )])
+            .expect("stmt to be serialized");
+
+        assert_eq!(result, "asdf");
     }
 }
