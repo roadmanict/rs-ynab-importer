@@ -1,12 +1,16 @@
-use std::io::{Error, ErrorKind};
+use std::{
+    io::{Error, ErrorKind},
+    rc::Rc,
+};
 
 use thiserror::Error;
 
 use serde::Serialize;
 
 use common::Entry;
+use output_tracker::{OutputListener, OutputTracker};
 
-#[derive(Debug, Serialize)]
+#[derive(Debug, Serialize, Clone, PartialEq)]
 #[serde(rename_all = "PascalCase")]
 pub struct YnabCsv {
     date: String,
@@ -57,20 +61,27 @@ pub enum SerializeStatementsError {
 }
 
 pub struct YnabCsvSerializer {
+    output_listener: OutputListener<Vec<YnabCsv>>,
     csv_serializer: Box<dyn CsvSerializer>,
 }
 
-impl YnabCsvSerializer {
+impl<'a> YnabCsvSerializer {
     pub fn create_nullable() -> YnabCsvSerializer {
         YnabCsvSerializer {
+            output_listener: OutputListener::new(),
             csv_serializer: Box::new(StubbedCsvSerializer {}),
         }
     }
 
     pub fn create() -> YnabCsvSerializer {
         YnabCsvSerializer {
+            output_listener: OutputListener::new(),
             csv_serializer: Box::new(RealCsvSerializer {}),
         }
+    }
+
+    pub fn track_output(&mut self) -> Rc<OutputTracker<Vec<YnabCsv>>> {
+        self.output_listener.create_tracker()
     }
 
     pub fn serialize(&self, entries: Vec<Entry>) -> Result<String, SerializeStatementsError> {
@@ -78,6 +89,8 @@ impl YnabCsvSerializer {
         for stmt in entries {
             ynab_csv.push(stmt.into());
         }
+
+        self.output_listener.track(&ynab_csv);
 
         let result = self.csv_serializer.serialize(ynab_csv)?;
 
@@ -114,7 +127,7 @@ struct StubbedCsvSerializer {}
 
 impl CsvSerializer for StubbedCsvSerializer {
     fn serialize(&self, entries: Vec<YnabCsv>) -> Result<String, SerializeStatementsError> {
-        todo!()
+        Ok("asdf".to_string())
     }
 }
 
@@ -124,7 +137,9 @@ mod tests {
 
     #[test]
     fn serialize_statements_test() {
-        let ynab_csv_serializer = YnabCsvSerializer::create_nullable();
+        let mut ynab_csv_serializer = YnabCsvSerializer::create_nullable();
+        let tracker = ynab_csv_serializer.track_output();
+
         let result = ynab_csv_serializer
             .serialize(vec![Entry::new(
                 "Account",
@@ -135,6 +150,19 @@ mod tests {
                 None,
             )])
             .expect("stmt to be serialized");
+
+        let mut output = tracker.flush();
+
+        assert_eq!(
+            output.remove(0),
+            vec![YnabCsv::new(
+                "17-12-1999".to_string(),
+                "Albert Heijn".to_string(),
+                Some("Memo".to_string()),
+                None,
+                Some("120".to_string()),
+            )]
+        );
 
         assert_eq!(result, "asdf");
     }

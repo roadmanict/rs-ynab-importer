@@ -1,4 +1,4 @@
-use std::cell::RefCell;
+use std::{cell::RefCell, rc::Rc};
 
 pub struct OutputTracker<T> {
     output: RefCell<Vec<T>>,
@@ -31,11 +31,11 @@ where
     }
 }
 
-pub struct OutputListener<'a, T> {
-    listeners: Vec<&'a OutputTracker<T>>,
+pub struct OutputListener<T> {
+    listeners: Vec<Rc<OutputTracker<T>>>,
 }
 
-impl<'a, T> OutputListener<'a, T>
+impl<T> OutputListener<T>
 where
     T: Clone,
 {
@@ -43,14 +43,17 @@ where
         OutputListener { listeners: vec![] }
     }
 
-    pub fn track(&mut self, data: T) {
+    pub fn track(&self, data: &T) {
         for listener in self.listeners.iter() {
             listener.add(data.clone());
         }
     }
 
-    pub fn add_tracker(&mut self, tracker: &'a OutputTracker<T>) {
-        self.listeners.push(tracker);
+    pub fn create_tracker(&mut self) -> Rc<OutputTracker<T>> {
+        let tracker = Rc::new(OutputTracker::new());
+        self.listeners.push(tracker.clone());
+
+        tracker
     }
 }
 
@@ -60,11 +63,10 @@ mod tests {
 
     #[test]
     fn event_emitter_emit() {
-        let tracker = OutputTracker::new();
         let mut output_listener = OutputListener::new();
-        output_listener.add_tracker(&tracker);
+        let tracker = output_listener.create_tracker();
 
-        output_listener.track(String::from("test"));
+        output_listener.track(&String::from("test"));
 
         assert_eq!(tracker.data(), vec![String::from("test")]);
         assert_eq!(tracker.flush(), vec![String::from("test")]);
