@@ -51,7 +51,7 @@ where
 
     pub fn create_tracker(&mut self) -> Rc<OutputTracker<T>> {
         let tracker = Rc::new(OutputTracker::new());
-        self.listeners.push(tracker.clone());
+        self.listeners.push(Rc::clone(&tracker));
 
         tracker
     }
