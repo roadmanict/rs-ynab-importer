@@ -11,7 +11,7 @@
             <CreDtTm>2023-04-30T20:26:13.331115+02:00</CreDtTm>
             <Acct>
                 <Id>
-                    <IBAN>NL97ASNB8830219525</IBAN>
+                    <IBAN>NL00BANK0000000000</IBAN>
                 </Id>
                 <Ccy>EUR</Ccy>
                 <Svcr>
@@ -72,19 +72,19 @@
                         </Refs>
                         <RltdPties>
                             <Cdtr>
-<Nm>BEN NEDERLAND</Nm>
+                                <Nm>BEN NEDERLAND</Nm>
                             </Cdtr>
                             <CdtrAcct>
-<Id>
-    <IBAN>NL61COBA0733974775</IBAN>
-</Id>
+                                <Id>
+                                    <IBAN>NL61COBA0733974775</IBAN>
+                                </Id>
                             </CdtrAcct>
                         </RltdPties>
                         <RltdAgts>
                             <CdtrAgt>
-<FinInstnId>
-    <BIC>COBANL2X</BIC>
-</FinInstnId>
+                                <FinInstnId>
+                                    <BIC>COBANL2X</BIC>
+                                </FinInstnId>
                             </CdtrAgt>
                         </RltdAgts>
                         <Purp>
@@ -120,7 +120,8 @@
                             <TxId>OVQFW5/966582</TxId>
                         </Refs>
                         <RmtInf>
-                            <Ustrd>CCV*CAFETARIA SIM     &gt;GRONINGEN27.04.2023 18U57 KV005 CT371516 MCC:5814 Contactloze betaling NLNEDERLAND</Ustrd>
+                            <Ustrd>CCV*CAFETARIA SIM &gt;GRONINGEN27.04.2023 18U57 KV005 CT371516
+                                MCC:5814 Contactloze betaling NLNEDERLAND</Ustrd>
                         </RmtInf>
                     </TxDtls>
                 </NtryDtls>
@@ -149,7 +150,8 @@
                             <TxId>2BVDDC/266298</TxId>
                         </Refs>
                         <RmtInf>
-                            <Ustrd>Etos Boezerooij VOF   &gt;GRONINGEN27.04.2023 14U57 KV005 Z7B8T5 MCC:5122 Contactloze betaling NLNEDERLAND</Ustrd>
+                            <Ustrd>Etos Boezerooij VOF &gt;GRONINGEN27.04.2023 14U57 KV005 Z7B8T5
+                                MCC:5122 Contactloze betaling NLNEDERLAND</Ustrd>
                         </RmtInf>
                     </TxDtls>
                 </NtryDtls>
@@ -182,19 +184,19 @@
                         </Refs>
                         <RltdPties>
                             <Cdtr>
-<Nm>NV UNIVE ZORG</Nm>
+                                <Nm>NV UNIVE ZORG</Nm>
                             </Cdtr>
                             <CdtrAcct>
-<Id>
-    <IBAN>NL20INGB0000686129</IBAN>
-</Id>
+                                <Id>
+                                    <IBAN>NL20INGB0000686129</IBAN>
+                                </Id>
                             </CdtrAcct>
                         </RltdPties>
                         <RltdAgts>
                             <CdtrAgt>
-<FinInstnId>
-    <BIC>INGBNL2A</BIC>
-</FinInstnId>
+                                <FinInstnId>
+                                    <BIC>INGBNL2A</BIC>
+                                </FinInstnId>
                             </CdtrAgt>
                         </RltdAgts>
                         <RmtInf>
@@ -227,7 +229,8 @@
                             <TxId>OVEQS9/006606</TxId>
                         </Refs>
                         <RmtInf>
-                            <Ustrd>Sultan Kebab          &gt;GRONINGEN27.04.2023  1U32 KV005 Z903FB MCC:5814 Contactloze betaling NLNEDERLAND</Ustrd>
+                            <Ustrd>Sultan Kebab &gt;GRONINGEN27.04.2023 1U32 KV005 Z903FB MCC:5814
+                                Contactloze betaling NLNEDERLAND</Ustrd>
                         </RmtInf>
                     </TxDtls>
                 </NtryDtls>
@@ -256,7 +259,8 @@
                             <TxId>115AU9/006676</TxId>
                         </Refs>
                         <RmtInf>
-                            <Ustrd>Sultan Kebab          &gt;GRONINGEN27.04.2023  1U31 KV005 Z903FB MCC:5814 Contactloze betaling NLNEDERLAND</Ustrd>
+                            <Ustrd>Sultan Kebab &gt;GRONINGEN27.04.2023 1U31 KV005 Z903FB MCC:5814
+                                Contactloze betaling NLNEDERLAND</Ustrd>
                         </RmtInf>
                     </TxDtls>
                 </NtryDtls>
@@ -285,7 +289,8 @@
                             <TxId>1158JL/031586</TxId>
                         </Refs>
                         <RmtInf>
-                            <Ustrd>C&amp;M*Nachtcafe Warhol  &gt;Groningen27.04.2023  0U34 KV005 CT836867 MCC:5813 Contactloze betaling NLNEDERLAND</Ustrd>
+                            <Ustrd>C&amp;M*Nachtcafe Warhol &gt;Groningen27.04.2023 0U34 KV005
+                                CT836867 MCC:5813 Contactloze betaling NLNEDERLAND</Ustrd>
                         </RmtInf>
                     </TxDtls>
                 </NtryDtls>
@@ -314,7 +319,8 @@
                             <TxId>OV9Z4S/067968</TxId>
                         </Refs>
                         <RmtInf>
-                            <Ustrd>Jumbo Ciboga          &gt;GRONINGEN26.04.2023 17U54 KV005 0SSQ71 MCC:5411 Contactloze betaling NLNEDERLAND</Ustrd>
+                            <Ustrd>Jumbo Ciboga &gt;GRONINGEN26.04.2023 17U54 KV005 0SSQ71 MCC:5411
+                                Contactloze betaling NLNEDERLAND</Ustrd>
                         </RmtInf>
                     </TxDtls>
                 </NtryDtls>
@@ -343,7 +349,8 @@
                             <TxId>OV9VW8/081216</TxId>
                         </Refs>
                         <RmtInf>
-                            <Ustrd>Slijterij Groningen B &gt;GRONINGEN26.04.2023 17U51 KV005 4DK952 MCC:5411 Contactloze betaling NLNEDERLAND</Ustrd>
+                            <Ustrd>Slijterij Groningen B &gt;GRONINGEN26.04.2023 17U51 KV005 4DK952
+                                MCC:5411 Contactloze betaling NLNEDERLAND</Ustrd>
                         </RmtInf>
                     </TxDtls>
                 </NtryDtls>
@@ -372,7 +379,8 @@
                             <TxId>10RC8B/215707</TxId>
                         </Refs>
                         <RmtInf>
-                            <Ustrd>SUBWAY 48166 ZUIDERDIE&gt;GRONINGEN26.04.2023 12U25 KV005 31539196 MCC:5814 Contactloze betaling NLNEDERLAND</Ustrd>
+                            <Ustrd>SUBWAY 48166 ZUIDERDIE&gt;GRONINGEN26.04.2023 12U25 KV005
+                                31539196 MCC:5814 Contactloze betaling NLNEDERLAND</Ustrd>
                         </RmtInf>
                     </TxDtls>
                 </NtryDtls>
@@ -405,22 +413,22 @@
                         </Refs>
                         <RltdPties>
                             <UltmtDbtr>
-<Nm>GPH Weggemans</Nm>
+                                <Nm>GPH Weggemans</Nm>
                             </UltmtDbtr>
                             <Cdtr>
-<Nm>DELA Natura Levensverzekering</Nm>
+                                <Nm>DELA Natura Levensverzekering</Nm>
                             </Cdtr>
                             <CdtrAcct>
-<Id>
-    <IBAN>NL15INGB0002286622</IBAN>
-</Id>
+                                <Id>
+                                    <IBAN>NL15INGB0002286622</IBAN>
+                                </Id>
                             </CdtrAcct>
                         </RltdPties>
                         <RltdAgts>
                             <CdtrAgt>
-<FinInstnId>
-    <BIC>INGBNL2A</BIC>
-</FinInstnId>
+                                <FinInstnId>
+                                    <BIC>INGBNL2A</BIC>
+                                </FinInstnId>
                             </CdtrAgt>
                         </RltdAgts>
                         <Purp>
@@ -456,7 +464,8 @@
                             <TxId>OUYG8P/931510</TxId>
                         </Refs>
                         <RmtInf>
-                            <Ustrd>CCV*CAFETARIA SIM     &gt;GRONINGEN25.04.2023 19U30 KV005 CT371516 MCC:5814 Contactloze betaling NLNEDERLAND</Ustrd>
+                            <Ustrd>CCV*CAFETARIA SIM &gt;GRONINGEN25.04.2023 19U30 KV005 CT371516
+                                MCC:5814 Contactloze betaling NLNEDERLAND</Ustrd>
                         </RmtInf>
                     </TxDtls>
                 </NtryDtls>
@@ -487,19 +496,19 @@
                         </Refs>
                         <RltdPties>
                             <Cdtr>
-<Nm>Infomedics B.V.</Nm>
+                                <Nm>Infomedics B.V.</Nm>
                             </Cdtr>
                             <CdtrAcct>
-<Id>
-    <IBAN>NL34ABNA0243240058</IBAN>
-</Id>
+                                <Id>
+                                    <IBAN>NL34ABNA0243240058</IBAN>
+                                </Id>
                             </CdtrAcct>
                         </RltdPties>
                         <RltdAgts>
                             <CdtrAgt>
-<FinInstnId>
-    <BIC>ABNANL2AXXX</BIC>
-</FinInstnId>
+                                <FinInstnId>
+                                    <BIC>ABNANL2AXXX</BIC>
+                                </FinInstnId>
                             </CdtrAgt>
                         </RltdAgts>
                         <Purp>
@@ -535,7 +544,8 @@
                             <TxId>10PUI3/075458</TxId>
                         </Refs>
                         <RmtInf>
-                            <Ustrd>Lekkellekkel          &gt;GRONINGEN25.04.2023 12U10 KV005 CTG099 MCC:5812 Contactloze betaling NLNEDERLAND</Ustrd>
+                            <Ustrd>Lekkellekkel &gt;GRONINGEN25.04.2023 12U10 KV005 CTG099 MCC:5812
+                                Contactloze betaling NLNEDERLAND</Ustrd>
                         </RmtInf>
                     </TxDtls>
                 </NtryDtls>
@@ -568,19 +578,19 @@
                         </Refs>
                         <RltdPties>
                             <Cdtr>
-<Nm>DUO Hoofdrekening</Nm>
+                                <Nm>DUO Hoofdrekening</Nm>
                             </Cdtr>
                             <CdtrAcct>
-<Id>
-    <IBAN>NL45INGB0705001903</IBAN>
-</Id>
+                                <Id>
+                                    <IBAN>NL45INGB0705001903</IBAN>
+                                </Id>
                             </CdtrAcct>
                         </RltdPties>
                         <RltdAgts>
                             <CdtrAgt>
-<FinInstnId>
-    <BIC>INGBNL2A</BIC>
-</FinInstnId>
+                                <FinInstnId>
+                                    <BIC>INGBNL2A</BIC>
+                                </FinInstnId>
                             </CdtrAgt>
                         </RltdAgts>
                         <Purp>
@@ -619,19 +629,19 @@
                         </Refs>
                         <RltdPties>
                             <Dbtr>
-<Nm>J.M. Weggemans eo M.T. Reijneveld</Nm>
+                                <Nm>J.M. Weggemans eo M.T. Reijneveld</Nm>
                             </Dbtr>
                             <DbtrAcct>
-<Id>
-    <IBAN>NL97RABO0301488568</IBAN>
-</Id>
+                                <Id>
+                                    <IBAN>NL97RABO0301488568</IBAN>
+                                </Id>
                             </DbtrAcct>
                         </RltdPties>
                         <RltdAgts>
                             <DbtrAgt>
-<FinInstnId>
-    <BIC>RABONL2U</BIC>
-</FinInstnId>
+                                <FinInstnId>
+                                    <BIC>RABONL2U</BIC>
+                                </FinInstnId>
                             </DbtrAgt>
                         </RltdAgts>
                         <RmtInf>
@@ -666,19 +676,19 @@
                         </Refs>
                         <RltdPties>
                             <Cdtr>
-<Nm>GPH Weggemans</Nm>
+                                <Nm>GPH Weggemans</Nm>
                             </Cdtr>
                             <CdtrAcct>
-<Id>
-    <IBAN>NL87RABO0369185242</IBAN>
-</Id>
+                                <Id>
+                                    <IBAN>NL87RABO0369185242</IBAN>
+                                </Id>
                             </CdtrAcct>
                         </RltdPties>
                         <RltdAgts>
                             <CdtrAgt>
-<FinInstnId>
-    <BIC>RABONL2UXXX</BIC>
-</FinInstnId>
+                                <FinInstnId>
+                                    <BIC>RABONL2UXXX</BIC>
+                                </FinInstnId>
                             </CdtrAgt>
                         </RltdAgts>
                         <RmtInf>
@@ -713,22 +723,22 @@
                         </Refs>
                         <RltdPties>
                             <Cdtr>
-<Nm>Gezamelijk</Nm>
+                                <Nm>Gezamelijk</Nm>
                             </Cdtr>
                             <CdtrAcct>
-<Id>
-    <IBAN>NL64ASNB8830237094</IBAN>
-</Id>
+                                <Id>
+                                    <IBAN>NL64ASNB8830237094</IBAN>
+                                </Id>
                             </CdtrAcct>
                         </RltdPties>
                         <RltdAgts>
                             <CdtrAgt>
-<FinInstnId>
-    <BIC>ASNBNL21XXX</BIC>
-</FinInstnId>
+                                <FinInstnId>
+                                    <BIC>ASNBNL21XXX</BIC>
+                                </FinInstnId>
                             </CdtrAgt>
                         </RltdAgts>
-                        <RmtInf/>
+                        <RmtInf />
                     </TxDtls>
                 </NtryDtls>
             </Ntry>
@@ -785,22 +795,22 @@
                         </Refs>
                         <RltdPties>
                             <Dbtr>
-<Nm>IBM International Treasury Services Unlimited Company</Nm>
+                                <Nm>IBM International Treasury Services Unlimited Company</Nm>
                             </Dbtr>
                             <DbtrAcct>
-<Id>
-    <IBAN>DE34600700700160091500</IBAN>
-</Id>
+                                <Id>
+                                    <IBAN>DE34600700700160091500</IBAN>
+                                </Id>
                             </DbtrAcct>
                             <UltmtDbtr>
-<Nm>IBM Services Center Benelux BV</Nm>
+                                <Nm>IBM Services Center Benelux BV</Nm>
                             </UltmtDbtr>
                         </RltdPties>
                         <RltdAgts>
                             <DbtrAgt>
-<FinInstnId>
-    <BIC>DEUTDESS</BIC>
-</FinInstnId>
+                                <FinInstnId>
+                                    <BIC>DEUTDESS</BIC>
+                                </FinInstnId>
                             </DbtrAgt>
                         </RltdAgts>
                         <RmtInf>
@@ -837,19 +847,19 @@
                         </Refs>
                         <RltdPties>
                             <Cdtr>
-<Nm>Transip B.V.</Nm>
+                                <Nm>Transip B.V.</Nm>
                             </Cdtr>
                             <CdtrAcct>
-<Id>
-    <IBAN>NL85INGB0654416265</IBAN>
-</Id>
+                                <Id>
+                                    <IBAN>NL85INGB0654416265</IBAN>
+                                </Id>
                             </CdtrAcct>
                         </RltdPties>
                         <RltdAgts>
                             <CdtrAgt>
-<FinInstnId>
-    <BIC>INGBNL2A</BIC>
-</FinInstnId>
+                                <FinInstnId>
+                                    <BIC>INGBNL2A</BIC>
+                                </FinInstnId>
                             </CdtrAgt>
                         </RltdAgts>
                         <RmtInf>
@@ -885,19 +895,19 @@
                         </Refs>
                         <RltdPties>
                             <Dbtr>
-<Nm>IBM International Treasury Services Unlimited Company</Nm>
+                                <Nm>IBM International Treasury Services Unlimited Company</Nm>
                             </Dbtr>
                             <DbtrAcct>
-<Id>
-    <IBAN>DE45600700700160812400</IBAN>
-</Id>
+                                <Id>
+                                    <IBAN>DE45600700700160812400</IBAN>
+                                </Id>
                             </DbtrAcct>
                         </RltdPties>
                         <RltdAgts>
                             <DbtrAgt>
-<FinInstnId>
-    <BIC>DEUTDESS</BIC>
-</FinInstnId>
+                                <FinInstnId>
+                                    <BIC>DEUTDESS</BIC>
+                                </FinInstnId>
                             </DbtrAgt>
                         </RltdAgts>
                         <Purp>
@@ -934,12 +944,12 @@
                         </Refs>
                         <RltdPties>
                             <Dbtr>
-<Nm>RA TRENTELMAN</Nm>
+                                <Nm>RA TRENTELMAN</Nm>
                             </Dbtr>
                             <DbtrAcct>
-<Id>
-    <IBAN>NL12ABNA0628890532</IBAN>
-</Id>
+                                <Id>
+                                    <IBAN>NL12ABNA0628890532</IBAN>
+                                </Id>
                             </DbtrAcct>
                         </RltdPties>
                         <RmtInf>
@@ -972,7 +982,8 @@
                             <TxId>OSQXSW/345080</TxId>
                         </Refs>
                         <RmtInf>
-                            <Ustrd>SUBWAY 48166 ZUIDERDIE&gt;GRONINGEN20.04.2023 12U25 KV005 31539196 MCC:5814 Contactloze betaling NLNEDERLAND</Ustrd>
+                            <Ustrd>SUBWAY 48166 ZUIDERDIE&gt;GRONINGEN20.04.2023 12U25 KV005
+                                31539196 MCC:5814 Contactloze betaling NLNEDERLAND</Ustrd>
                         </RmtInf>
                     </TxDtls>
                 </NtryDtls>
@@ -1001,7 +1012,8 @@
                             <TxId>WXJYOQ/422523</TxId>
                         </Refs>
                         <RmtInf>
-                            <Ustrd>SEP*SEPAY-BoltBloemen &gt;Groningen19.04.2023 16U36 KV005 80011800 MCC:5399 Contactloze betaling NLNEDERLAND</Ustrd>
+                            <Ustrd>SEP*SEPAY-BoltBloemen &gt;Groningen19.04.2023 16U36 KV005
+                                80011800 MCC:5399 Contactloze betaling NLNEDERLAND</Ustrd>
                         </RmtInf>
                     </TxDtls>
                 </NtryDtls>
@@ -1030,7 +1042,8 @@
                             <TxId>OSEQS0/740662</TxId>
                         </Refs>
                         <RmtInf>
-                            <Ustrd>Zettle_*Barber Leon   &gt;Drachten 19.04.2023 13U31 KV005 70924084 MCC:7230 Contactloze betaling NLNEDERLAND</Ustrd>
+                            <Ustrd>Zettle_*Barber Leon &gt;Drachten 19.04.2023 13U31 KV005 70924084
+                                MCC:7230 Contactloze betaling NLNEDERLAND</Ustrd>
                         </RmtInf>
                     </TxDtls>
                 </NtryDtls>
@@ -1059,7 +1072,8 @@
                             <TxId>OSDMPB/250359</TxId>
                         </Refs>
                         <RmtInf>
-                            <Ustrd>Albert Heijn 1552     &gt;GRONINGEN19.04.2023 12U32 KV005 C8ZGD4 MCC:5411 Contactloze betaling NLNEDERLAND</Ustrd>
+                            <Ustrd>Albert Heijn 1552 &gt;GRONINGEN19.04.2023 12U32 KV005 C8ZGD4
+                                MCC:5411 Contactloze betaling NLNEDERLAND</Ustrd>
                         </RmtInf>
                     </TxDtls>
                 </NtryDtls>
@@ -1090,19 +1104,19 @@
                         </Refs>
                         <RltdPties>
                             <Cdtr>
-<Nm>Infomedics B.V.</Nm>
+                                <Nm>Infomedics B.V.</Nm>
                             </Cdtr>
                             <CdtrAcct>
-<Id>
-    <IBAN>NL34ABNA0243240058</IBAN>
-</Id>
+                                <Id>
+                                    <IBAN>NL34ABNA0243240058</IBAN>
+                                </Id>
                             </CdtrAcct>
                         </RltdPties>
                         <RltdAgts>
                             <CdtrAgt>
-<FinInstnId>
-    <BIC>ABNANL2AXXX</BIC>
-</FinInstnId>
+                                <FinInstnId>
+                                    <BIC>ABNANL2AXXX</BIC>
+                                </FinInstnId>
                             </CdtrAgt>
                         </RltdAgts>
                         <Purp>
@@ -1140,22 +1154,22 @@
                         </Refs>
                         <RltdPties>
                             <Dbtr>
-<Nm>WEGGEMANS G P H</Nm>
+                                <Nm>WEGGEMANS G P H</Nm>
                             </Dbtr>
                             <DbtrAcct>
-<Id>
-    <IBAN>NL86ASNB8830237086</IBAN>
-</Id>
+                                <Id>
+                                    <IBAN>NL86ASNB8830237086</IBAN>
+                                </Id>
                             </DbtrAcct>
                         </RltdPties>
                         <RltdAgts>
                             <DbtrAgt>
-<FinInstnId>
-    <BIC>ASNBNL21</BIC>
-</FinInstnId>
+                                <FinInstnId>
+                                    <BIC>ASNBNL21</BIC>
+                                </FinInstnId>
                             </DbtrAgt>
                         </RltdAgts>
-                        <RmtInf/>
+                        <RmtInf />
                     </TxDtls>
                 </NtryDtls>
             </Ntry>
@@ -1183,7 +1197,8 @@
                             <TxId>2AVTFN/075212</TxId>
                         </Refs>
                         <RmtInf>
-                            <Ustrd>Lekkellekkel          &gt;GRONINGEN18.04.2023 12U17 KV005 CTG099 MCC:5812 Contactloze betaling NLNEDERLAND</Ustrd>
+                            <Ustrd>Lekkellekkel &gt;GRONINGEN18.04.2023 12U17 KV005 CTG099 MCC:5812
+                                Contactloze betaling NLNEDERLAND</Ustrd>
                         </RmtInf>
                     </TxDtls>
                 </NtryDtls>
@@ -1212,7 +1227,8 @@
                             <TxId>OQO7YQ/425763</TxId>
                         </Refs>
                         <RmtInf>
-                            <Ustrd>Albert Heijn 1552     &gt;GRONINGEN17.04.2023 12U08 KV005 C8BR7R MCC:5411 Contactloze betaling NLNEDERLAND</Ustrd>
+                            <Ustrd>Albert Heijn 1552 &gt;GRONINGEN17.04.2023 12U08 KV005 C8BR7R
+                                MCC:5411 Contactloze betaling NLNEDERLAND</Ustrd>
                         </RmtInf>
                     </TxDtls>
                 </NtryDtls>
@@ -1243,19 +1259,19 @@
                         </Refs>
                         <RltdPties>
                             <Cdtr>
-<Nm>Tikkie</Nm>
+                                <Nm>Tikkie</Nm>
                             </Cdtr>
                             <CdtrAcct>
-<Id>
-    <IBAN>NL13ABNA0506417344</IBAN>
-</Id>
+                                <Id>
+                                    <IBAN>NL13ABNA0506417344</IBAN>
+                                </Id>
                             </CdtrAcct>
                         </RltdPties>
                         <RltdAgts>
                             <CdtrAgt>
-<FinInstnId>
-    <BIC>ABNANL2AXXX</BIC>
-</FinInstnId>
+                                <FinInstnId>
+                                    <BIC>ABNANL2AXXX</BIC>
+                                </FinInstnId>
                             </CdtrAgt>
                         </RltdAgts>
                         <Purp>
@@ -1291,7 +1307,8 @@
                             <TxId>OQGFYQ/883741</TxId>
                         </Refs>
                         <RmtInf>
-                            <Ustrd>McDonald's Hoendiep BV&gt;GRONINGEN16.04.2023 15U40 KV005 NPC11J MCC:5814 Contactloze betaling NLNEDERLAND</Ustrd>
+                            <Ustrd>McDonald's Hoendiep BV&gt;GRONINGEN16.04.2023 15U40 KV005 NPC11J
+                                MCC:5814 Contactloze betaling NLNEDERLAND</Ustrd>
                         </RmtInf>
                     </TxDtls>
                 </NtryDtls>
@@ -1320,7 +1337,8 @@
                             <TxId>WRVX5N/755008</TxId>
                         </Refs>
                         <RmtInf>
-                            <Ustrd>CCV*Onderdelenhuis.nl &gt;GRONINGEN15.04.2023 16U56 KV005 CT684596 MCC:5300 Contactloze betaling NLNEDERLAND</Ustrd>
+                            <Ustrd>CCV*Onderdelenhuis.nl &gt;GRONINGEN15.04.2023 16U56 KV005
+                                CT684596 MCC:5300 Contactloze betaling NLNEDERLAND</Ustrd>
                         </RmtInf>
                     </TxDtls>
                 </NtryDtls>
@@ -1349,7 +1367,8 @@
                             <TxId>WRVZNQ/070661</TxId>
                         </Refs>
                         <RmtInf>
-                            <Ustrd>Praxis 2358 Gron. City&gt;GRONINGEN15.04.2023 16U53 KV005 CYF67H MCC:5251 Contactloze betaling NLNEDERLAND</Ustrd>
+                            <Ustrd>Praxis 2358 Gron. City&gt;GRONINGEN15.04.2023 16U53 KV005 CYF67H
+                                MCC:5251 Contactloze betaling NLNEDERLAND</Ustrd>
                         </RmtInf>
                     </TxDtls>
                 </NtryDtls>
@@ -1378,7 +1397,8 @@
                             <TxId>2AMXIZ/151516</TxId>
                         </Refs>
                         <RmtInf>
-                            <Ustrd>Lidl 582 Groningen    &gt;GRONINGEN15.04.2023 14U07 KV005 J9KCF5 MCC:5411 Contactloze betaling NLNEDERLAND</Ustrd>
+                            <Ustrd>Lidl 582 Groningen &gt;GRONINGEN15.04.2023 14U07 KV005 J9KCF5
+                                MCC:5411 Contactloze betaling NLNEDERLAND</Ustrd>
                         </RmtInf>
                     </TxDtls>
                 </NtryDtls>
@@ -1407,7 +1427,8 @@
                             <TxId>OQ2SK0/067114</TxId>
                         </Refs>
                         <RmtInf>
-                            <Ustrd>Gemeente Groningen    &gt;GRONINGEN15.04.2023 14U04 KV005 850XP9 MCC:7523 Contactloze betaling NLNEDERLAND</Ustrd>
+                            <Ustrd>Gemeente Groningen &gt;GRONINGEN15.04.2023 14U04 KV005 850XP9
+                                MCC:7523 Contactloze betaling NLNEDERLAND</Ustrd>
                         </RmtInf>
                     </TxDtls>
                 </NtryDtls>
@@ -1436,7 +1457,8 @@
                             <TxId>OPNWPV/143004</TxId>
                         </Refs>
                         <RmtInf>
-                            <Ustrd>ALBERT HEIJN 1236     &gt;GRONINGEN14.04.2023 14U29 KV005 55RM82 MCC:5411 Contactloze betaling NLNEDERLAND</Ustrd>
+                            <Ustrd>ALBERT HEIJN 1236 &gt;GRONINGEN14.04.2023 14U29 KV005 55RM82
+                                MCC:5411 Contactloze betaling NLNEDERLAND</Ustrd>
                         </RmtInf>
                     </TxDtls>
                 </NtryDtls>
@@ -1465,7 +1487,8 @@
                             <TxId>OPNT1S/304403</TxId>
                         </Refs>
                         <RmtInf>
-                            <Ustrd>SumUp  *De kruidenspec&gt;Groningen14.04.2023 14U23 KV005 38F55910 MCC:5499 Contactloze betaling NLNEDERLAND</Ustrd>
+                            <Ustrd>SumUp *De kruidenspec&gt;Groningen14.04.2023 14U23 KV005 38F55910
+                                MCC:5499 Contactloze betaling NLNEDERLAND</Ustrd>
                         </RmtInf>
                     </TxDtls>
                 </NtryDtls>
@@ -1496,19 +1519,19 @@
                         </Refs>
                         <RltdPties>
                             <Cdtr>
-<Nm>Coolblue</Nm>
+                                <Nm>Coolblue</Nm>
                             </Cdtr>
                             <CdtrAcct>
-<Id>
-    <IBAN>NL04ADYB2017400157</IBAN>
-</Id>
+                                <Id>
+                                    <IBAN>NL04ADYB2017400157</IBAN>
+                                </Id>
                             </CdtrAcct>
                         </RltdPties>
                         <RltdAgts>
                             <CdtrAgt>
-<FinInstnId>
-    <BIC>ADYBNL2AXXX</BIC>
-</FinInstnId>
+                                <FinInstnId>
+                                    <BIC>ADYBNL2AXXX</BIC>
+                                </FinInstnId>
                             </CdtrAgt>
                         </RltdAgts>
                         <Purp>
@@ -1544,7 +1567,8 @@
                             <TxId>WRDW2E/267933</TxId>
                         </Refs>
                         <RmtInf>
-                            <Ustrd>SHELL DE WIJERT       &gt;GRONINGEN13.04.2023 17U51 KV005 8SSC6Q MCC:5541 Contactloze betaling NLNEDERLAND</Ustrd>
+                            <Ustrd>SHELL DE WIJERT &gt;GRONINGEN13.04.2023 17U51 KV005 8SSC6Q
+                                MCC:5541 Contactloze betaling NLNEDERLAND</Ustrd>
                         </RmtInf>
                     </TxDtls>
                 </NtryDtls>
@@ -1577,19 +1601,19 @@
                         </Refs>
                         <RltdPties>
                             <Cdtr>
-<Nm>PayPal Europe S.a.r.l. et Cie S.C.A</Nm>
+                                <Nm>PayPal Europe S.a.r.l. et Cie S.C.A</Nm>
                             </Cdtr>
                             <CdtrAcct>
-<Id>
-    <IBAN>LU89751000135104200E</IBAN>
-</Id>
+                                <Id>
+                                    <IBAN>LU89751000135104200E</IBAN>
+                                </Id>
                             </CdtrAcct>
                         </RltdPties>
                         <RltdAgts>
                             <CdtrAgt>
-<FinInstnId>
-    <BIC>PPLXLUL2</BIC>
-</FinInstnId>
+                                <FinInstnId>
+                                    <BIC>PPLXLUL2</BIC>
+                                </FinInstnId>
                             </CdtrAgt>
                         </RltdAgts>
                         <RmtInf>
@@ -1622,7 +1646,8 @@
                             <TxId>WR76GQ/899156</TxId>
                         </Refs>
                         <RmtInf>
-                            <Ustrd>CCV*CAFETARIA SIM     &gt;GRONINGEN12.04.2023 18U31 KV005 CT371516 MCC:5814 Contactloze betaling NLNEDERLAND</Ustrd>
+                            <Ustrd>CCV*CAFETARIA SIM &gt;GRONINGEN12.04.2023 18U31 KV005 CT371516
+                                MCC:5814 Contactloze betaling NLNEDERLAND</Ustrd>
                         </RmtInf>
                     </TxDtls>
                 </NtryDtls>
@@ -1651,7 +1676,8 @@
                             <TxId>OOUUDZ/346647</TxId>
                         </Refs>
                         <RmtInf>
-                            <Ustrd>Albert Heijn 1552     &gt;GRONINGEN12.04.2023 12U07 KV005 C7TZ5D MCC:5411 Contactloze betaling NLNEDERLAND</Ustrd>
+                            <Ustrd>Albert Heijn 1552 &gt;GRONINGEN12.04.2023 12U07 KV005 C7TZ5D
+                                MCC:5411 Contactloze betaling NLNEDERLAND</Ustrd>
                         </RmtInf>
                     </TxDtls>
                 </NtryDtls>
@@ -1684,19 +1710,19 @@
                         </Refs>
                         <RltdPties>
                             <Cdtr>
-<Nm>NS GROEP IZ NS REIZIGERS</Nm>
+                                <Nm>NS GROEP IZ NS REIZIGERS</Nm>
                             </Cdtr>
                             <CdtrAcct>
-<Id>
-    <IBAN>NL14ABNA0576850675</IBAN>
-</Id>
+                                <Id>
+                                    <IBAN>NL14ABNA0576850675</IBAN>
+                                </Id>
                             </CdtrAcct>
                         </RltdPties>
                         <RltdAgts>
                             <CdtrAgt>
-<FinInstnId>
-    <BIC>ABNANL2A</BIC>
-</FinInstnId>
+                                <FinInstnId>
+                                    <BIC>ABNANL2A</BIC>
+                                </FinInstnId>
                             </CdtrAgt>
                         </RltdAgts>
                         <Purp>
@@ -1736,19 +1762,19 @@
                         </Refs>
                         <RltdPties>
                             <Cdtr>
-<Nm>Transip B.V.</Nm>
+                                <Nm>Transip B.V.</Nm>
                             </Cdtr>
                             <CdtrAcct>
-<Id>
-    <IBAN>NL85INGB0654416265</IBAN>
-</Id>
+                                <Id>
+                                    <IBAN>NL85INGB0654416265</IBAN>
+                                </Id>
                             </CdtrAcct>
                         </RltdPties>
                         <RltdAgts>
                             <CdtrAgt>
-<FinInstnId>
-    <BIC>INGBNL2A</BIC>
-</FinInstnId>
+                                <FinInstnId>
+                                    <BIC>INGBNL2A</BIC>
+                                </FinInstnId>
                             </CdtrAgt>
                         </RltdAgts>
                         <RmtInf>
@@ -1781,7 +1807,8 @@
                             <TxId>OOGMGO/075233</TxId>
                         </Refs>
                         <RmtInf>
-                            <Ustrd>Lekkellekkel          &gt;GRONINGEN11.04.2023 12U07 KV005 CTG099 MCC:5812 Contactloze betaling NLNEDERLAND</Ustrd>
+                            <Ustrd>Lekkellekkel &gt;GRONINGEN11.04.2023 12U07 KV005 CTG099 MCC:5812
+                                Contactloze betaling NLNEDERLAND</Ustrd>
                         </RmtInf>
                     </TxDtls>
                 </NtryDtls>
@@ -1812,19 +1839,19 @@
                         </Refs>
                         <RltdPties>
                             <Cdtr>
-<Nm>Puikman V.O.F / Mijnbaard.nl via Mollie</Nm>
+                                <Nm>Puikman V.O.F / Mijnbaard.nl via Mollie</Nm>
                             </Cdtr>
                             <CdtrAcct>
-<Id>
-    <IBAN>NL51DEUT0265262461</IBAN>
-</Id>
+                                <Id>
+                                    <IBAN>NL51DEUT0265262461</IBAN>
+                                </Id>
                             </CdtrAcct>
                         </RltdPties>
                         <RltdAgts>
                             <CdtrAgt>
-<FinInstnId>
-    <BIC>DEUTNL2AXXX</BIC>
-</FinInstnId>
+                                <FinInstnId>
+                                    <BIC>DEUTNL2AXXX</BIC>
+                                </FinInstnId>
                             </CdtrAgt>
                         </RltdAgts>
                         <Purp>
@@ -1862,19 +1889,19 @@
                         </Refs>
                         <RltdPties>
                             <Cdtr>
-<Nm>Sneleten.nl via Mollie</Nm>
+                                <Nm>Sneleten.nl via Mollie</Nm>
                             </Cdtr>
                             <CdtrAcct>
-<Id>
-    <IBAN>NL51DEUT0265262461</IBAN>
-</Id>
+                                <Id>
+                                    <IBAN>NL51DEUT0265262461</IBAN>
+                                </Id>
                             </CdtrAcct>
                         </RltdPties>
                         <RltdAgts>
                             <CdtrAgt>
-<FinInstnId>
-    <BIC>DEUTNL2AXXX</BIC>
-</FinInstnId>
+                                <FinInstnId>
+                                    <BIC>DEUTNL2AXXX</BIC>
+                                </FinInstnId>
                             </CdtrAgt>
                         </RltdAgts>
                         <Purp>
@@ -1911,12 +1938,12 @@
                         </Refs>
                         <RltdPties>
                             <Dbtr>
-<Nm>LBJ HOGENBIRK</Nm>
+                                <Nm>LBJ HOGENBIRK</Nm>
                             </Dbtr>
                             <DbtrAcct>
-<Id>
-    <IBAN>NL78ABNA0452460506</IBAN>
-</Id>
+                                <Id>
+                                    <IBAN>NL78ABNA0452460506</IBAN>
+                                </Id>
                             </DbtrAcct>
                         </RltdPties>
                         <RmtInf>
@@ -1950,12 +1977,12 @@
                         </Refs>
                         <RltdPties>
                             <Dbtr>
-<Nm>LBJ HOGENBIRK</Nm>
+                                <Nm>LBJ HOGENBIRK</Nm>
                             </Dbtr>
                             <DbtrAcct>
-<Id>
-    <IBAN>NL78ABNA0452460506</IBAN>
-</Id>
+                                <Id>
+                                    <IBAN>NL78ABNA0452460506</IBAN>
+                                </Id>
                             </DbtrAcct>
                         </RltdPties>
                         <RmtInf>
@@ -1990,19 +2017,19 @@
                         </Refs>
                         <RltdPties>
                             <Cdtr>
-<Nm>Kruidvat</Nm>
+                                <Nm>Kruidvat</Nm>
                             </Cdtr>
                             <CdtrAcct>
-<Id>
-    <IBAN>NL04ADYB2017400157</IBAN>
-</Id>
+                                <Id>
+                                    <IBAN>NL04ADYB2017400157</IBAN>
+                                </Id>
                             </CdtrAcct>
                         </RltdPties>
                         <RltdAgts>
                             <CdtrAgt>
-<FinInstnId>
-    <BIC>ADYBNL2AXXX</BIC>
-</FinInstnId>
+                                <FinInstnId>
+                                    <BIC>ADYBNL2AXXX</BIC>
+                                </FinInstnId>
                             </CdtrAgt>
                         </RltdAgts>
                         <Purp>
@@ -2038,7 +2065,8 @@
                             <TxId>4HBFZ6/445285</TxId>
                         </Refs>
                         <RmtInf>
-                            <Ustrd>HEMA EV005GRONINGENC  &gt;GRONINGEN 5.04.2023 17U08 KV005 MC9007 MCC:5311 Contactloze betaling NLNEDERLAND</Ustrd>
+                            <Ustrd>HEMA EV005GRONINGENC &gt;GRONINGEN 5.04.2023 17U08 KV005 MC9007
+                                MCC:5311 Contactloze betaling NLNEDERLAND</Ustrd>
                         </RmtInf>
                     </TxDtls>
                 </NtryDtls>
@@ -2067,7 +2095,8 @@
                             <TxId>WYQHZL/112519</TxId>
                         </Refs>
                         <RmtInf>
-                            <Ustrd>ALBERT HEIJN 1552     &gt;GRONINGEN 5.04.2023 12U09 KV005 BD818V MCC:5411 Contactloze betaling NLNEDERLAND</Ustrd>
+                            <Ustrd>ALBERT HEIJN 1552 &gt;GRONINGEN 5.04.2023 12U09 KV005 BD818V
+                                MCC:5411 Contactloze betaling NLNEDERLAND</Ustrd>
                         </RmtInf>
                     </TxDtls>
                 </NtryDtls>
@@ -2096,7 +2125,8 @@
                             <TxId>3096Z6/074802</TxId>
                         </Refs>
                         <RmtInf>
-                            <Ustrd>Lekkellekkel          &gt;GRONINGEN 4.04.2023 12U16 KV005 CTG099 MCC:5812 Contactloze betaling NLNEDERLAND</Ustrd>
+                            <Ustrd>Lekkellekkel &gt;GRONINGEN 4.04.2023 12U16 KV005 CTG099 MCC:5812
+                                Contactloze betaling NLNEDERLAND</Ustrd>
                         </RmtInf>
                     </TxDtls>
                 </NtryDtls>
@@ -2125,7 +2155,8 @@
                             <TxId>OLNYH8/135967</TxId>
                         </Refs>
                         <RmtInf>
-                            <Ustrd>JACOBS DOUWE EGBERTS P&gt;UTRECHT  3.04.2023 14U09 KV006 00074701 MCC:5499 Apple Pay betaling   NLNEDERLAND</Ustrd>
+                            <Ustrd>JACOBS DOUWE EGBERTS P&gt;UTRECHT 3.04.2023 14U09 KV006 00074701
+                                MCC:5499 Apple Pay betaling NLNEDERLAND</Ustrd>
                         </RmtInf>
                     </TxDtls>
                 </NtryDtls>
@@ -2154,7 +2185,8 @@
                             <TxId>WYCPMJ/197582</TxId>
                         </Refs>
                         <RmtInf>
-                            <Ustrd>ALBERT HEIJN 1552     &gt;GRONINGEN 3.04.2023 12U39 KV005 937QBL MCC:5411 Contactloze betaling NLNEDERLAND</Ustrd>
+                            <Ustrd>ALBERT HEIJN 1552 &gt;GRONINGEN 3.04.2023 12U39 KV005 937QBL
+                                MCC:5411 Contactloze betaling NLNEDERLAND</Ustrd>
                         </RmtInf>
                     </TxDtls>
                 </NtryDtls>
@@ -2183,7 +2215,8 @@
                             <TxId>OLJZIU/315745</TxId>
                         </Refs>
                         <RmtInf>
-                            <Ustrd>JACOBS DOUWE EGBERTS P&gt;UTRECHT  3.04.2023 10U34 KV006 00074701 MCC:5499 Apple Pay betaling   NLNEDERLAND</Ustrd>
+                            <Ustrd>JACOBS DOUWE EGBERTS P&gt;UTRECHT 3.04.2023 10U34 KV006 00074701
+                                MCC:5499 Apple Pay betaling NLNEDERLAND</Ustrd>
                         </RmtInf>
                     </TxDtls>
                 </NtryDtls>
@@ -2212,7 +2245,8 @@
                             <TxId>OLISZG/105878</TxId>
                         </Refs>
                         <RmtInf>
-                            <Ustrd>Kruidvat 6289         &gt;GRONINGEN 3.04.2023  9U03 KV005 TBG5RC MCC:5331 Contactloze betaling NLNEDERLAND</Ustrd>
+                            <Ustrd>Kruidvat 6289 &gt;GRONINGEN 3.04.2023 9U03 KV005 TBG5RC MCC:5331
+                                Contactloze betaling NLNEDERLAND</Ustrd>
                         </RmtInf>
                     </TxDtls>
                 </NtryDtls>
@@ -2241,7 +2275,8 @@
                             <TxId>29CWYU/735367</TxId>
                         </Refs>
                         <RmtInf>
-                            <Ustrd>Media Markt Groninge  &gt;GRONINGEN 1.04.2023 15U40 KV005 2G5L03 MCC:4812 Contactloze betaling NLNEDERLAND</Ustrd>
+                            <Ustrd>Media Markt Groninge &gt;GRONINGEN 1.04.2023 15U40 KV005 2G5L03
+                                MCC:4812 Contactloze betaling NLNEDERLAND</Ustrd>
                         </RmtInf>
                     </TxDtls>
                 </NtryDtls>
@@ -2312,22 +2347,22 @@
                         </Refs>
                         <RltdPties>
                             <Cdtr>
-<Nm>Persoonlijk</Nm>
+                                <Nm>Persoonlijk</Nm>
                             </Cdtr>
                             <CdtrAcct>
-<Id>
-    <IBAN>NL97ASNB8830219525</IBAN>
-</Id>
+                                <Id>
+                                    <IBAN>NL00BANK0000000000</IBAN>
+                                </Id>
                             </CdtrAcct>
                         </RltdPties>
                         <RltdAgts>
                             <CdtrAgt>
-<FinInstnId>
-    <BIC>ASNBNL21XXX</BIC>
-</FinInstnId>
+                                <FinInstnId>
+                                    <BIC>ASNBNL21XXX</BIC>
+                                </FinInstnId>
                             </CdtrAgt>
                         </RltdAgts>
-                        <RmtInf/>
+                        <RmtInf />
                     </TxDtls>
                 </NtryDtls>
             </Ntry>

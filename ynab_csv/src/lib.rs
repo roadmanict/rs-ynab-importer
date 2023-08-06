@@ -42,7 +42,7 @@ impl From<Entry> for YnabCsv {
     fn from(value: Entry) -> Self {
         YnabCsv::new(
             value.date,
-            Some(value.payee),
+            value.payee,
             value.memo,
             value.outflow,
             value.inflow,
