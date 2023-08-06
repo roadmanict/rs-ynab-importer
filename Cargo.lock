@@ -7,6 +7,7 @@ name = "app"
 version = "0.1.0"
 dependencies = [
  "camt053_parser",
+ "thiserror",
  "ynab_csv",
 ]
 

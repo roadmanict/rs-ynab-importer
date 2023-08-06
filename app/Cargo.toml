@@ -7,4 +7,5 @@ edition = "2021"
 
 [dependencies]
 camt053_parser = { path = "../camt053_parser" }
+thiserror = "1.0.44"
 ynab_csv = { path = "../ynab_csv" }

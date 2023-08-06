@@ -1,13 +1,23 @@
-use std::{error::Error, fs, env};
+use std::{env, error::Error, fs};
+use thiserror::Error;
 
 use camt053_parser::Camt053Parser;
 use ynab_csv::YnabCsvSerializer;
 
+#[derive(Debug, Error)]
+pub enum TransactionImporterError {
+    #[error("No file input")]
+    NoFileInputError(),
+}
+
 fn main() -> Result<(), Box<dyn Error>> {
     let current_dir = env::current_dir()?;
     let args: Vec<String> = env::args().collect();
-    let xml_path = current_dir.join(args.get(1).ok_or("")?);
-    
+    let xml_path = current_dir.join(
+        args.get(1)
+            .ok_or(TransactionImporterError::NoFileInputError())?,
+    );
+
     println!("{:?}", xml_path);
 
     let camt053_parser = Camt053Parser::create();
