@@ -1,12 +1,22 @@
-use std::error::Error;
+use std::{error::Error, fs, env};
 
-use camt053_parser::parse_file;
+use camt053_parser::Camt053Parser;
 use ynab_csv::YnabCsvSerializer;
 
 fn main() -> Result<(), Box<dyn Error>> {
+    let current_dir = env::current_dir()?;
+    let args: Vec<String> = env::args().collect();
+    let xml_path = current_dir.join(args.get(1).ok_or("")?);
+    
+    println!("{:?}", xml_path);
+
+    let camt053_parser = Camt053Parser::create();
     let ynab_csv_serializer = YnabCsvSerializer::create();
-    let entries = parse_file("examples/example.xml")?;
-    ynab_csv_serializer.serialize(entries)?;
+    let xml = fs::read_to_string(xml_path)?;
+    let entries = camt053_parser.parse_file(&xml)?;
+    let ynab_csv = ynab_csv_serializer.serialize(entries)?;
+
+    println!("{}", ynab_csv);
 
     Ok(())
 }

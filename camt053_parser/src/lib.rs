@@ -124,13 +124,6 @@ impl From<XmlDocument> for EntriesContainer {
     }
 }
 
-pub fn parse_file(xml_contents: &str) -> Result<Vec<Entry>, ParseCamt053Error> {
-    let camt_053: XmlDocument = from_str(xml_contents)?;
-    let container: EntriesContainer = camt_053.into();
-
-    Ok(container.entries)
-}
-
 pub struct Camt053Parser {
     xml_parser: Box<dyn XmlParser>,
 }
