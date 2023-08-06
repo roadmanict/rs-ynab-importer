@@ -2,7 +2,7 @@
 pub struct Entry {
     pub account: String,
     pub date: String,
-    pub payee: String,
+    pub payee: Option<String>,
     pub memo: Option<String>,
     pub inflow: Option<String>,
     pub outflow: Option<String>,
@@ -10,20 +10,20 @@ pub struct Entry {
 
 impl Entry {
     pub fn new(
-        account: &str,
-        date: &str,
-        payee: &str,
-        memo: Option<&str>,
-        inflow: Option<&str>,
-        outflow: Option<&str>,
+        account: String,
+        date: String,
+        payee: Option<String>,
+        memo: Option<String>,
+        inflow: Option<String>,
+        outflow: Option<String>,
     ) -> Self {
         Entry {
-            account: String::from(account),
-            date: String::from(date),
-            payee: String::from(payee),
-            memo: memo.map(|m| String::from(m)),
-            inflow: inflow.map(|i| String::from(i)),
-            outflow: outflow.map(|o| String::from(o)),
+            account,
+            date,
+            payee,
+            memo,
+            inflow,
+            outflow,
         }
     }
 }

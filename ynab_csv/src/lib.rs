@@ -142,11 +142,11 @@ mod tests {
 
         let result = ynab_csv_serializer
             .serialize(vec![Entry::new(
-                "Account",
-                "17-12-1999",
-                "Albert Heijn",
-                Some("Memo"),
-                Some("120"),
+                "Account".to_string(),
+                "17-12-1999".to_string(),
+                Some("Albert Heijn".to_string()),
+                Some("Memo".to_string()),
+                Some("120".to_string()),
                 None,
             )])
             .expect("stmt to be serialized");

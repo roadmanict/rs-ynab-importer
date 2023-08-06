@@ -55,12 +55,12 @@ struct Ntry {
 impl Ntry {
     pub fn new(amount: &str, credit_debit_indicator: CdtDbtIndValue, date: &str) -> Self {
         Ntry {
-            amt: String::from(amount),
+            amt: amount.to_string(),
             cdt_dbt_ind: CdtDbtInd {
                 content: credit_debit_indicator,
             },
             bookg_dt: BookgDt {
-                dt: String::from(date),
+                dt: date.to_string(),
             },
         }
     }
@@ -109,9 +109,9 @@ impl From<XmlDocument> for EntriesContainer {
                 let account = stmt.acct.id.iban;
                 for item in stmt.ntry {
                     container.entries.push(Entry::new(
-                        &account,
-                        &item.bookg_dt.dt,
-                        "Payee",
+                        account.to_owned(),
+                        item.bookg_dt.dt,
+                        None,
                         None,
                         None,
                         None,
@@ -201,7 +201,7 @@ mod tests {
                 items: vec![BkToCstmrStmtItem::Stmt(Stmt {
                     acct: Acct {
                         id: Id {
-                            iban: String::from("Iban1234account"),
+                            iban: "Iban1234account".to_string(),
                         },
                     },
                     ntry: vec![Ntry::new("100", CdtDbtIndValue::Crdt, "19-12-2023")],
@@ -216,9 +216,9 @@ mod tests {
                 .parse_file("<xml><is><mocked>")
                 .expect("File to be parsed"),
             vec![Entry::new(
-                "Iban1234account",
-                "19-12-2023",
-                "Payee",
+                "Iban1234account".to_string(),
+                "19-12-2023".to_string(),
+                None,
                 None,
                 None,
                 None

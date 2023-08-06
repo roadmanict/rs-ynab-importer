@@ -18,8 +18,6 @@ fn main() -> Result<(), Box<dyn Error>> {
             .ok_or(TransactionImporterError::NoFileInputError())?,
     );
 
-    println!("{:?}", xml_path);
-
     let camt053_parser = Camt053Parser::create();
     let ynab_csv_serializer = YnabCsvSerializer::create();
     let xml = fs::read_to_string(xml_path)?;

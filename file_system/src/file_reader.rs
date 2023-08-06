@@ -123,6 +123,6 @@ mod tests {
         let result = file_reader.read_file(&"some_path_to_file");
 
         assert!(result.is_ok());
-        assert_eq!(result.unwrap(), String::from("Test content"));
+        assert_eq!(result.unwrap(), "Test content".to_string());
     }
 }

@@ -66,10 +66,10 @@ mod tests {
         let mut output_listener = OutputListener::new();
         let tracker = output_listener.create_tracker();
 
-        output_listener.track(&String::from("test"));
+        output_listener.track(&"test".to_string());
 
-        assert_eq!(tracker.data(), vec![String::from("test")]);
-        assert_eq!(tracker.flush(), vec![String::from("test")]);
+        assert_eq!(tracker.data(), vec!["test".to_string()]);
+        assert_eq!(tracker.flush(), vec!["test".to_string()]);
         assert_eq!(tracker.data(), Vec::<String>::new());
     }
 }
