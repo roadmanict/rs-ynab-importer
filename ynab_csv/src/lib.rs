@@ -14,7 +14,7 @@ use output_tracker::{OutputListener, OutputTracker};
 #[serde(rename_all = "PascalCase")]
 pub struct YnabCsv {
     date: String,
-    payee: String,
+    payee: Option<String>,
     memo: Option<String>,
     outflow: Option<String>,
     inflow: Option<String>,
@@ -23,7 +23,7 @@ pub struct YnabCsv {
 impl YnabCsv {
     pub fn new(
         date: String,
-        payee: String,
+        payee: Option<String>,
         memo: Option<String>,
         outflow: Option<String>,
         inflow: Option<String>,
@@ -42,7 +42,7 @@ impl From<Entry> for YnabCsv {
     fn from(value: Entry) -> Self {
         YnabCsv::new(
             value.date,
-            value.payee,
+            Some(value.payee),
             value.memo,
             value.outflow,
             value.inflow,
@@ -157,7 +157,7 @@ mod tests {
             output.remove(0),
             vec![YnabCsv::new(
                 "17-12-1999".to_string(),
-                "Albert Heijn".to_string(),
+                Some("Albert Heijn".to_string()),
                 Some("Memo".to_string()),
                 None,
                 Some("120".to_string()),
