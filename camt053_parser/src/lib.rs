@@ -1,89 +1,9 @@
+pub mod model;
 use quick_xml::de::from_str;
 use thiserror::Error;
 
-use serde::Deserialize;
-
+use crate::model::{BkToCstmrStmtItem, XmlDocument};
 use common::Entry;
-
-#[derive(Debug, Deserialize, PartialEq, Clone)]
-enum BkToCstmrStmtItem {
-    Stmt(Stmt),
-    #[serde(other)]
-    Other,
-}
-
-#[derive(Debug, Deserialize, PartialEq, Clone)]
-struct Id {
-    #[serde(rename = "IBAN")]
-    iban: String,
-}
-
-#[derive(Debug, Deserialize, PartialEq, Clone)]
-#[serde(rename_all = "PascalCase")]
-struct Acct {
-    id: Id,
-}
-
-#[derive(Debug, Deserialize, PartialEq, Clone)]
-enum CdtDbtIndValue {
-    #[serde(rename = "DBIT")]
-    Dbit,
-    #[serde(rename = "CRDT")]
-    Crdt,
-}
-
-#[derive(Debug, Deserialize, PartialEq, Clone)]
-struct CdtDbtInd {
-    #[serde(rename = "$text")]
-    content: CdtDbtIndValue,
-}
-
-#[derive(Debug, Deserialize, PartialEq, Clone)]
-#[serde(rename_all = "PascalCase")]
-struct BookgDt {
-    dt: String,
-}
-
-#[derive(Debug, Deserialize, PartialEq, Clone)]
-#[serde(rename_all = "PascalCase")]
-struct Ntry {
-    amt: String,
-    cdt_dbt_ind: CdtDbtInd,
-    bookg_dt: BookgDt,
-}
-
-impl Ntry {
-    pub fn new(amount: &str, credit_debit_indicator: CdtDbtIndValue, date: &str) -> Self {
-        Ntry {
-            amt: amount.to_string(),
-            cdt_dbt_ind: CdtDbtInd {
-                content: credit_debit_indicator,
-            },
-            bookg_dt: BookgDt {
-                dt: date.to_string(),
-            },
-        }
-    }
-}
-
-#[derive(Debug, Deserialize, PartialEq, Clone)]
-#[serde(rename_all = "PascalCase")]
-struct Stmt {
-    acct: Acct,
-    ntry: Vec<Ntry>,
-}
-
-#[derive(Debug, Deserialize, PartialEq, Clone)]
-struct BkToCstmrStmt {
-    #[serde(rename = "$value")]
-    items: Vec<BkToCstmrStmtItem>,
-}
-
-#[derive(Debug, Deserialize, PartialEq, Clone)]
-#[serde(rename_all = "PascalCase")]
-pub struct XmlDocument {
-    bk_to_cstmr_stmt: BkToCstmrStmt,
-}
 
 #[derive(Error, Debug)]
 pub enum ParseCamt053Error {
@@ -112,7 +32,7 @@ impl From<XmlDocument> for EntriesContainer {
                         account.to_owned(),
                         item.bookg_dt.dt,
                         None,
-                        None,
+                        item.ntry_dtls.tx_dtls.rmt_inf.ustrd,
                         None,
                         None,
                     ));
@@ -176,10 +96,12 @@ impl XmlParser for StubbedXmlParser {
 
 #[cfg(test)]
 mod tests {
+    use crate::model::*;
+
     use super::*;
 
     #[test]
-    fn test_stubbed_xml_parser() {
+    fn test_empty_xml_parser() {
         let xml_document = XmlDocument {
             bk_to_cstmr_stmt: BkToCstmrStmt { items: vec![] },
         };
@@ -204,7 +126,12 @@ mod tests {
                             iban: "Iban1234account".to_string(),
                         },
                     },
-                    ntry: vec![Ntry::new("100", CdtDbtIndValue::Crdt, "19-12-2023")],
+                    ntry: vec![Ntry::new(
+                        "100",
+                        CdtDbtIndValue::Crdt,
+                        "19-12-2023",
+                        "Memo".to_string(),
+                    )],
                 })],
             },
         };
@@ -219,7 +146,7 @@ mod tests {
                 "Iban1234account".to_string(),
                 "19-12-2023".to_string(),
                 None,
-                None,
+                Some("Memo".to_string()),
                 None,
                 None
             )]
