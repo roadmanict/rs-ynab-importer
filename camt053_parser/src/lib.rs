@@ -31,7 +31,7 @@ impl From<XmlDocument> for EntriesContainer {
                     container.entries.push(Entry::new(
                         account.to_owned(),
                         item.bookg_dt.dt,
-                        None,
+                        item.ntry_dtls.tx_dtls.rltd_pties.map(|r| r.cdtr.map(|c| c.nm)).flatten(),
                         item.ntry_dtls.tx_dtls.rmt_inf.ustrd,
                         None,
                         None,
@@ -130,7 +130,8 @@ mod tests {
                         "100",
                         CdtDbtIndValue::Crdt,
                         "19-12-2023",
-                        "Memo".to_string(),
+                        Some("Memo".to_string()),
+                        Some("Payee".to_string()),
                     )],
                 })],
             },
@@ -145,7 +146,7 @@ mod tests {
             vec![Entry::new(
                 "Iban1234account".to_string(),
                 "19-12-2023".to_string(),
-                None,
+                Some("Payee".to_string()),
                 Some("Memo".to_string()),
                 None,
                 None
