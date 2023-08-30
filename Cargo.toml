@@ -6,3 +6,4 @@ members = [
     "ynab_csv",
     "app",
 ]
+resolver = "2"
