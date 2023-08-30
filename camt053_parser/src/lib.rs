@@ -29,6 +29,24 @@ impl From<XmlDocument> for EntriesContainer {
             if let BkToCstmrStmtItem::Stmt(stmt) = item {
                 let account = stmt.acct.id.iban;
                 for item in stmt.ntry {
+                    let mut payee = item
+                        .ntry_dtls
+                        .tx_dtls
+                        .rltd_pties
+                        .map(|r| r.cdtr.map(|c| c.nm))
+                        .flatten();
+                    let mut memo = item.ntry_dtls.tx_dtls.rmt_inf.ustrd;
+
+                    if let Some(txt) = memo.as_ref() {
+                        let memo_split = txt.split(">").collect::<Vec<_>>();
+                        if memo_split.len() > 1 {
+                            payee = Some(memo_split[0].trim().to_owned());
+                            memo = Some(memo_split[1].trim().to_owned());
+
+
+                        }
+                    }
+
                     let mut inflow: Option<String> = None;
                     let mut outflow: Option<String> = None;
 
@@ -40,12 +58,8 @@ impl From<XmlDocument> for EntriesContainer {
                     container.entries.push(Entry::new(
                         account.to_owned(),
                         item.bookg_dt.dt,
-                        item.ntry_dtls
-                            .tx_dtls
-                            .rltd_pties
-                            .map(|r| r.cdtr.map(|c| c.nm))
-                            .flatten(),
-                        item.ntry_dtls.tx_dtls.rmt_inf.ustrd,
+                        payee,
+                        memo,
                         inflow,
                         outflow,
                     ));
@@ -130,7 +144,7 @@ mod tests {
     }
 
     #[test]
-    fn test_xml_document_has_entries() {
+    fn test_xml_document_has_entries_with_payee() {
         let xml_document = XmlDocument {
             bk_to_cstmr_stmt: BkToCstmrStmt {
                 items: vec![BkToCstmrStmtItem::Stmt(Stmt {
@@ -145,6 +159,82 @@ mod tests {
                         "19-12-2023",
                         Some("Memo".to_string()),
                         Some("Payee".to_string()),
+                    )],
+                })],
+            },
+        };
+
+        let camt_053_parser = Camt053Parser::create_nullable(xml_document);
+
+        assert_eq!(
+            camt_053_parser
+                .parse_file("<xml><is><mocked>")
+                .expect("File to be parsed"),
+            vec![Entry::new(
+                "Iban1234account".to_string(),
+                "19-12-2023".to_string(),
+                Some("Payee".to_string()),
+                Some("Memo".to_string()),
+                Some("100".to_string()),
+                None,
+            )]
+        )
+    }
+
+    #[test]
+    fn test_xml_document_has_entries_without_payee() {
+        let xml_document = XmlDocument {
+            bk_to_cstmr_stmt: BkToCstmrStmt {
+                items: vec![BkToCstmrStmtItem::Stmt(Stmt {
+                    acct: Acct {
+                        id: Id {
+                            iban: "Iban1234account".to_string(),
+                        },
+                    },
+                    ntry: vec![Ntry::new(
+                        "100",
+                        CdtDbtIndValue::Crdt,
+                        "19-12-2023",
+                        Some("Memo".to_string()),
+                        None,
+                    )],
+                })],
+            },
+        };
+
+        let camt_053_parser = Camt053Parser::create_nullable(xml_document);
+
+        assert_eq!(
+            camt_053_parser
+                .parse_file("<xml><is><mocked>")
+                .expect("File to be parsed"),
+            vec![Entry::new(
+                "Iban1234account".to_string(),
+                "19-12-2023".to_string(),
+                None,
+                Some("Memo".to_string()),
+                Some("100".to_string()),
+                None,
+            )]
+        )
+    }
+
+    #[test]
+    fn test_xml_document_has_entries_splits_memo_gt() {
+        let xml_document = XmlDocument {
+            bk_to_cstmr_stmt: BkToCstmrStmt {
+                items: vec![BkToCstmrStmtItem::Stmt(Stmt {
+                    acct: Acct {
+                        id: Id {
+                            iban: "Iban1234account".to_string(),
+                        },
+                    },
+                    ntry: vec![Ntry::new(
+                        "100",
+                        CdtDbtIndValue::Crdt,
+                        "19-12-2023",
+                        Some("Payee > Memo".to_string()),
+                        None,
                     )],
                 })],
             },
