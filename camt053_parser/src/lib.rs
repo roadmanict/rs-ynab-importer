@@ -1,4 +1,5 @@
 pub mod model;
+use model::CdtDbtIndValue;
 use quick_xml::de::from_str;
 use thiserror::Error;
 
@@ -28,13 +29,25 @@ impl From<XmlDocument> for EntriesContainer {
             if let BkToCstmrStmtItem::Stmt(stmt) = item {
                 let account = stmt.acct.id.iban;
                 for item in stmt.ntry {
+                    let mut inflow: Option<String> = None;
+                    let mut outflow: Option<String> = None;
+
+                    match item.cdt_dbt_ind.content {
+                        CdtDbtIndValue::Dbit => outflow = Some(item.amt),
+                        CdtDbtIndValue::Crdt => inflow = Some(item.amt),
+                    }
+
                     container.entries.push(Entry::new(
                         account.to_owned(),
                         item.bookg_dt.dt,
-                        item.ntry_dtls.tx_dtls.rltd_pties.map(|r| r.cdtr.map(|c| c.nm)).flatten(),
+                        item.ntry_dtls
+                            .tx_dtls
+                            .rltd_pties
+                            .map(|r| r.cdtr.map(|c| c.nm))
+                            .flatten(),
                         item.ntry_dtls.tx_dtls.rmt_inf.ustrd,
-                        None,
-                        None,
+                        inflow,
+                        outflow,
                     ));
                 }
             }
@@ -148,8 +161,8 @@ mod tests {
                 "19-12-2023".to_string(),
                 Some("Payee".to_string()),
                 Some("Memo".to_string()),
+                Some("100".to_string()),
                 None,
-                None
             )]
         )
     }

@@ -30,7 +30,7 @@ pub enum CdtDbtIndValue {
 #[derive(Debug, Deserialize, PartialEq, Clone)]
 pub struct CdtDbtInd {
     #[serde(rename = "$text")]
-    content: CdtDbtIndValue,
+    pub content: CdtDbtIndValue,
 }
 
 #[derive(Debug, Deserialize, PartialEq, Clone)]
@@ -73,8 +73,8 @@ pub struct NtryDtls {
 #[derive(Debug, Deserialize, PartialEq, Clone)]
 #[serde(rename_all = "PascalCase")]
 pub struct Ntry {
-    amt: String,
-    cdt_dbt_ind: CdtDbtInd,
+    pub amt: String,
+    pub cdt_dbt_ind: CdtDbtInd,
     pub bookg_dt: BookgDt,
     pub ntry_dtls: NtryDtls,
 }

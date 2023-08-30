@@ -20,7 +20,7 @@ fn name() {
             Some("BEN NEDERLAND".to_string()),
             Some("Klant 1.50884684 Factuur 908053695899".to_string()),
             None,
-            None
+            Some("10".to_string())
         )
     );
 }
