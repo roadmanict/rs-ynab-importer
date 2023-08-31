@@ -33,7 +33,7 @@ impl From<XmlDocument> for EntriesContainer {
                         .ntry_dtls
                         .tx_dtls
                         .rltd_pties
-                        .map(|r| r.cdtr.map(|c| c.nm))
+                        .map(|r| r.cdtr.or(r.dbtr).map(|c| c.nm))
                         .flatten();
                     let mut memo = item.ntry_dtls.tx_dtls.rmt_inf.ustrd;
 
@@ -42,8 +42,6 @@ impl From<XmlDocument> for EntriesContainer {
                         if memo_split.len() > 1 {
                             payee = Some(memo_split[0].trim().to_owned());
                             memo = Some(memo_split[1].trim().to_owned());
-
-
                         }
                     }
 
@@ -59,7 +57,13 @@ impl From<XmlDocument> for EntriesContainer {
                         account.to_owned(),
                         item.bookg_dt.dt,
                         payee,
-                        memo,
+                        memo.map(|s| {
+                            s.replace("\n", "")
+                                .split(' ')
+                                .filter(|s| !s.is_empty())
+                                .collect::<Vec<_>>()
+                                .join(" ")
+                        }),
                         inflow,
                         outflow,
                     ));

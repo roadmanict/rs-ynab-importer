@@ -55,6 +55,7 @@ pub struct Cdtr {
 #[serde(rename_all = "PascalCase")]
 pub struct RltdPties {
     pub cdtr: Option<Cdtr>,
+    pub dbtr: Option<Cdtr>,
 }
 
 #[derive(Debug, Deserialize, PartialEq, Clone)]
@@ -89,6 +90,7 @@ impl Ntry {
     ) -> Self {
         let rltd_pties = payee.map(|p| RltdPties {
             cdtr: Some(Cdtr { nm: p }),
+            dbtr: None,
         });
 
         Ntry {

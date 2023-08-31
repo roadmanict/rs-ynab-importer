@@ -27,11 +27,11 @@ fn name() {
         result.remove(0),
         Entry::new(
             "NL00BANK0000000000".to_string(),
-            "2023-04-28".to_string(),
-            Some("BEN NEDERLAND".to_string()),
-            Some("Klant 1.50884684 Factuur 908053695899".to_string()),
+            "2023-04-27".to_string(),
+            Some("CCV*CAFETARIA SIM".to_string()),
+            Some("GRONINGEN27.04.2023 18U57 KV005 CT371516 MCC:5814 Contactloze betaling NLNEDERLAND".to_string()),
             None,
-            Some("10".to_string())
+            Some("19.3".to_string())
         )
     );
 }
