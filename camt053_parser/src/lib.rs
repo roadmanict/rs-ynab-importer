@@ -35,7 +35,13 @@ impl From<XmlDocument> for EntriesContainer {
                         .rltd_pties
                         .map(|r| r.cdtr.or(r.dbtr).map(|c| c.nm))
                         .flatten();
-                    let mut memo = item.ntry_dtls.tx_dtls.rmt_inf.ustrd;
+                    let mut memo = item
+                        .ntry_dtls
+                        .tx_dtls
+                        .rmt_inf
+                        .ustrd
+                        .get(0)
+                        .map(|s| s.to_owned());
 
                     if let Some(txt) = memo.as_ref() {
                         let memo_split = txt.split(">").collect::<Vec<_>>();
@@ -237,7 +243,7 @@ mod tests {
                         "100",
                         CdtDbtIndValue::Crdt,
                         "19-12-2023",
-                        Some("Payee > Memo".to_string()),
+                        vec!["Payee > Memo".to_string()],
                         None,
                     )],
                 })],

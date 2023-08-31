@@ -60,8 +60,6 @@ fn main() -> Result<(), Box<dyn Error>> {
     let xml = fs::read_to_string(&args.file)?;
     let entries = camt053_parser.parse_file(&xml)?;
 
-    println!("entries: {:?}", entries);
-
     let mut entries = entries
         .into_iter()
         .filter(|e| e.account.eq(account))

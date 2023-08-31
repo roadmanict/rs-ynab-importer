@@ -42,7 +42,8 @@ pub struct BookgDt {
 #[derive(Debug, Deserialize, PartialEq, Clone)]
 #[serde(rename_all = "PascalCase")]
 pub struct RmtInf {
-    pub ustrd: Option<String>,
+    #[serde(default)]
+    pub ustrd: Vec<String>,
 }
 
 #[derive(Debug, Deserialize, PartialEq, Clone)]
@@ -85,7 +86,7 @@ impl Ntry {
         amount: &str,
         credit_debit_indicator: CdtDbtIndValue,
         date: &str,
-        memo: Option<String>,
+        memo: Vec<String>,
         payee: Option<String>,
     ) -> Self {
         let rltd_pties = payee.map(|p| RltdPties {
