@@ -116,6 +116,7 @@ impl Ntry {
 #[serde(rename_all = "PascalCase")]
 pub struct Stmt {
     pub acct: Acct,
+    #[serde(default)]
     pub ntry: Vec<Ntry>,
 }
 
