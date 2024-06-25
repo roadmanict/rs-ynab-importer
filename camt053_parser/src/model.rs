@@ -62,7 +62,7 @@ pub struct RltdPties {
 #[derive(Debug, Deserialize, PartialEq, Clone)]
 #[serde(rename_all = "PascalCase")]
 pub struct TxDtls {
-    pub rmt_inf: RmtInf,
+    pub rmt_inf: Option<RmtInf>,
     pub rltd_pties: Option<RltdPties>,
 }
 
@@ -86,7 +86,7 @@ impl Ntry {
         amount: &str,
         credit_debit_indicator: CdtDbtIndValue,
         date: &str,
-        memo: Vec<String>,
+        memo: Option<Vec<String>>,
         payee: Option<String>,
     ) -> Self {
         let rltd_pties = payee.map(|p| RltdPties {
@@ -104,7 +104,7 @@ impl Ntry {
             },
             ntry_dtls: NtryDtls {
                 tx_dtls: TxDtls {
-                    rmt_inf: RmtInf { ustrd: memo },
+                    rmt_inf: memo.map(|m| RmtInf { ustrd: m }),
                     rltd_pties,
                 },
             },

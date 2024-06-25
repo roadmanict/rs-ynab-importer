@@ -39,8 +39,9 @@ impl From<XmlDocument> for EntriesContainer {
                         .ntry_dtls
                         .tx_dtls
                         .rmt_inf
-                        .ustrd
-                        .get(0)
+                        .map(|r| r.ustrd)
+                        .map(|u| u.get(0))
+                        .flatten()
                         .map(|s| s.to_owned());
 
                     if let Some(txt) = memo.as_ref() {
@@ -167,7 +168,7 @@ mod tests {
                         "100",
                         CdtDbtIndValue::Crdt,
                         "19-12-2023",
-                        Some("Memo".to_string()),
+                        Some(vec!["Memo".to_string()]),
                         Some("Payee".to_string()),
                     )],
                 })],
@@ -205,7 +206,7 @@ mod tests {
                         "100",
                         CdtDbtIndValue::Crdt,
                         "19-12-2023",
-                        Some("Memo".to_string()),
+                        Some(vec!["Memo".to_string()]),
                         None,
                     )],
                 })],
