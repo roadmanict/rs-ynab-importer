@@ -39,9 +39,7 @@ impl From<XmlDocument> for EntriesContainer {
                         .ntry_dtls
                         .tx_dtls
                         .rmt_inf
-                        .map(|r| r.ustrd)
-                        .map(|u| u.get(0))
-                        .flatten()
+                        .and_then(|r| r.ustrd.get(0).cloned())
                         .map(|s| s.to_owned());
 
                     if let Some(txt) = memo.as_ref() {
