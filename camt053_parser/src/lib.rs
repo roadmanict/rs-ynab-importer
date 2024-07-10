@@ -242,7 +242,7 @@ mod tests {
                         "100",
                         CdtDbtIndValue::Crdt,
                         "19-12-2023",
-                        vec!["Payee > Memo".to_string()],
+                        Some(vec!["Payee > Memo".to_string()]),
                         None,
                     )],
                 })],
