@@ -33,17 +33,16 @@ impl From<XmlDocument> for EntriesContainer {
                         .ntry_dtls
                         .tx_dtls
                         .rltd_pties
-                        .map(|r| r.cdtr.or(r.dbtr).map(|c| c.nm))
-                        .flatten();
+                        .and_then(|r| r.cdtr.or(r.dbtr).map(|c| c.nm));
                     let mut memo = item.addtl_ntry_inf.or(item
                         .ntry_dtls
                         .tx_dtls
                         .rmt_inf
-                        .and_then(|r| r.ustrd.get(0).cloned())
+                        .and_then(|r| r.ustrd.first().cloned())
                         .map(|s| s.to_owned()));
 
                     if let Some(txt) = memo.as_ref() {
-                        let memo_split = txt.split(">").collect::<Vec<_>>();
+                        let memo_split = txt.split('>').collect::<Vec<_>>();
                         if memo_split.len() > 1 {
                             payee = Some(memo_split[0].trim().to_owned());
                             memo = Some(memo_split[1].trim().to_owned());
@@ -63,7 +62,7 @@ impl From<XmlDocument> for EntriesContainer {
                         item.bookg_dt.dt,
                         payee,
                         memo.map(|s| {
-                            s.replace("\n", "")
+                            s.replace('\n', "")
                                 .split(' ')
                                 .filter(|s| !s.is_empty())
                                 .collect::<Vec<_>>()
