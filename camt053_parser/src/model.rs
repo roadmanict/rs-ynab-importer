@@ -79,6 +79,7 @@ pub struct Ntry {
     pub cdt_dbt_ind: CdtDbtInd,
     pub bookg_dt: BookgDt,
     pub ntry_dtls: NtryDtls,
+    pub addtl_ntry_inf: Option<String>,
 }
 
 impl Ntry {
@@ -86,7 +87,7 @@ impl Ntry {
         amount: &str,
         credit_debit_indicator: CdtDbtIndValue,
         date: &str,
-        memo: Option<Vec<String>>,
+        memo: Option<String>,
         payee: Option<String>,
     ) -> Self {
         let rltd_pties = payee.map(|p| RltdPties {
@@ -104,10 +105,11 @@ impl Ntry {
             },
             ntry_dtls: NtryDtls {
                 tx_dtls: TxDtls {
-                    rmt_inf: memo.map(|m| RmtInf { ustrd: m }),
+                    rmt_inf: memo.clone().map(|m| RmtInf { ustrd: vec![m] }),
                     rltd_pties,
                 },
             },
+            addtl_ntry_inf: memo,
         }
     }
 }
