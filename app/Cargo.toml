@@ -8,7 +8,7 @@ edition = "2021"
 [dependencies]
 camt053_parser = { path = "../camt053_parser" }
 thiserror = "1.0.63"
-clap = { version = "4.5.13", features = ["derive"] }
+clap = { version = "4.5.15", features = ["derive"] }
 ynab_csv = { path = "../ynab_csv" }
 serde = { version = "1.0.188", features = ["derive"] }
 serde_yaml = "0.9.25"
