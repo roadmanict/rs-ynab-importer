@@ -10,4 +10,4 @@ common = { path = "../common" }
 output_tracker = { path = "../output_tracker" }
 csv = "1.2.2"
 serde = { version = "1.0.213", features = ["derive"] }
-thiserror = "1.0.64"
+thiserror = "1.0.65"
