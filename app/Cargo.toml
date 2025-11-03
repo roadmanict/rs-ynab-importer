@@ -12,5 +12,5 @@ clap = { version = "4.5.50", features = ["derive"] }
 ynab_csv = { path = "../ynab_csv" }
 serde = { version = "1.0.228", features = ["derive"] }
 serde_yaml = "0.9.25"
-home = "0.5.11"
+home = "0.5.12"
 regex = "1.10.6"
